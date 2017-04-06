@@ -1,0 +1,86 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity controleRodada is 
+
+	port (clock, reset, finalizaRodada, rodada, sinalAtraso, demorou, resposta : in std_logic;
+			contaAtraso , aguardando, fimRodada, erro : out std_logic;
+			estado : out std_logic_vector (3 downto 0));
+
+end controleRodada;
+
+architecture Estados of controleRodada is 
+type Estados is (Inicial, Atraso, Aguarda, Demorado, Respondeu, Afobado);
+signal Eatual, Eprox : Estados;
+begin
+	process (clock, reset) 
+	begin
+		if reset = '1' then Eatual <= Inicial;
+		elsif clock'event and clock = '1' then Eatual <= Eprox;
+		end if;
+	end process;
+	
+	process (rodada, sinalAtraso, demorou, finalizaRodada, resposta, Eatual)
+	begin 
+		case Eatual is 
+			when Inicial => 	if ( rodada = '1') then 
+										Eprox <= Atraso; 
+									else 
+										Eprox <= Inicial;
+									end if;
+			when Atraso => 	if (sinalAtraso = '1' and demorou = '0' and resposta = '0') then
+										Eprox <= Aguarda; 
+									elsif (sinalAtraso = '0' and demorou = '0' and resposta = '1') then
+										Eprox <= Afobado;
+									elsif sinalAtraso = '1' and demorou = '0' and resposta = '1' then 
+										Eprox <= Afobado;
+									else
+										Eprox <= Atraso;
+									end if;
+			when Aguarda => 	if ( sinalAtraso = '0' and demorou = '0' and resposta = '1' ) then
+										Eprox <= Respondeu; 
+									elsif (sinalAtraso = '0' and demorou = '1' and resposta = '0' ) then
+										Eprox <= Demorado;
+									elsif  sinalAtraso = '0' and demorou = '1' and resposta = '1' then 
+										Eprox <= Demorado;
+									else 
+										Eprox <= Aguarda;
+									end if;
+			when Demorado => 	if ( finalizaRodada = '1' and sinalAtraso = '0' and demorou = '0') then
+										Eprox <= Inicial; 
+									else
+										Eprox <= Demorado;
+									end if;
+			when Respondeu => if ( finalizaRodada = '1' and sinalAtraso = '0' and demorou = '0') then
+										Eprox <= Inicial;
+									else 
+										Eprox <= Respondeu;
+									end if;
+			when Afobado => if ( finalizaRodada = '1' and sinalAtraso = '0' and demorou = '0') then
+										Eprox <= Inicial;
+									else 
+										Eprox <= Afobado;
+									end if;
+		end case;
+	end process;
+	with Eatual select 
+		estado <= "0000" when Inicial,
+					 "0001" when Atraso,
+					 "0010" when Aguarda,
+					 "0011" when Demorado,
+					 "0100" when Respondeu,
+					 "0101" when Afobado,
+					 "1111" when others;
+	with Eatual select
+		contaAtraso <= '1' when Atraso,
+							'0' when others;
+	with Eatual select
+		aguardando <= '1' when Aguarda,
+						  '0' when others;
+	with Eatual select
+		fimRodada <= '1' when Respondeu | Demorado | Afobado,
+						 '0' when others;
+	with Eatual select
+		erro <= '1' when Afobado,
+				  '0' when others;
+end Estados;
