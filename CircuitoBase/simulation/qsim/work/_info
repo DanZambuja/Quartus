@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/danzambuja/Quartus/Projetos/CircuitoBase/simulation/qsim
+vhierarquico
+Z1 !s110 1491458954
+!i10b 1
+!s100 XCzT7B2QY7AdcE5?ne:Kl3
+IoI2cl;Pfec8U:UYN6]zLF0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1491458953
+Z3 8CircuitoBase.vo
+Z4 FCircuitoBase.vo
+Z5 L0 32
+Z6 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z7 !s108 1491458954.000000
+Z8 !s107 CircuitoBase.vo|
+Z9 !s90 -work|work|CircuitoBase.vo|
+!i113 1
+Z10 o-work work
+vhierarquico_vlg_vec_tst
+R1
+!i10b 1
+!s100 F41JBoc^S4CWNC9R=fkLW2
+IC_S:JT`b]Qa?b7HPed:2G2
+R2
+R0
+w1491458944
+8hierarquico.vwf.vt
+Fhierarquico.vwf.vt
+Z11 L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 hierarquico.vwf.vt|
+!s90 -work|work|hierarquico.vwf.vt|
+!i113 1
+R10
+vmedidor
+Z12 !s110 1491457772
+!i10b 1
+!s100 KPVETC3RO`]=3JL>TzAK11
+INY9NHgAe3nlFMmVkXRE_X2
+R2
+R0
+w1491457771
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1491457772.000000
+R8
+R9
+!i113 1
+R10
+vmedidor_vlg_vec_tst
+R12
+!i10b 1
+!s100 [ORYB:HjC14m]H0^1Y6V_2
+I^zVRGZ7b>^<j0WdG>KTUg1
+R2
+R0
+w1491457762
+8Medidor.vwf.vt
+FMedidor.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R13
+!s107 Medidor.vwf.vt|
+!s90 -work|work|Medidor.vwf.vt|
+!i113 1
+R10
