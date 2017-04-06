@@ -24,7 +24,7 @@ component BoxRodada is
 end component;
 
 component mux4to1 is 
-	port (SEL : in std_logic_vector(3 downto 0);
+	port (SEL : in std_logic_vector(1 downto 0);
 	      A, B, C, D: in std_logic_vector(15 downto 0);
 	      X : out std_logic_vector(15 downto 0));
 end component;

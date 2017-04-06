@@ -1,13 +1,13 @@
-Fitter Status : Successful - Thu Apr  6 11:39:09 2017
+Fitter Status : Successful - Thu Apr  6 11:49:27 2017
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : CircuitoBase
 Top-level Entity Name : CircuitoBase
 Family : Cyclone V
 Device : 5CGXFC7C7F23C8
 Timing Models : Final
-Logic utilization (in ALMs) : 201 / 56,480 ( < 1 % )
-Total registers : 305
-Total pins : 57 / 268 ( 21 % )
+Logic utilization (in ALMs) : 204 / 56,480 ( < 1 % )
+Total registers : 307
+Total pins : 55 / 268 ( 21 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 7,024,640 ( 0 % )
 Total RAM Blocks : 0 / 686 ( 0 % )

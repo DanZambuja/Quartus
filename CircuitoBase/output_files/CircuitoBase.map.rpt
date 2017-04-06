@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CircuitoBase
-Thu Apr  6 11:36:27 2017
+Thu Apr  6 11:46:55 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -82,14 +82,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Apr  6 11:36:27 2017       ;
+; Analysis & Synthesis Status     ; Successful - Thu Apr  6 11:46:55 2017       ;
 ; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                   ; CircuitoBase                                ;
 ; Top-level Entity Name           ; CircuitoBase                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 285                                         ;
-; Total pins                      ; 57                                          ;
+; Total pins                      ; 55                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -233,25 +233,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 199         ;
+; Estimate of Logic utilization (ALMs needed) ; 207         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 300         ;
+; Combinational ALUT usage for logic          ; 316         ;
 ;     -- 7 input functions                    ; 0           ;
 ;     -- 6 input functions                    ; 72          ;
 ;     -- 5 input functions                    ; 57          ;
 ;     -- 4 input functions                    ; 74          ;
-;     -- <=3 input functions                  ; 97          ;
+;     -- <=3 input functions                  ; 113         ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 285         ;
 ;                                             ;             ;
-; I/O pins                                    ; 57          ;
+; I/O pins                                    ; 55          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
 ; Maximum fan-out                             ; 285         ;
-; Total fan-out                               ; 2256        ;
-; Average fan-out                             ; 3.23        ;
+; Total fan-out                               ; 2318        ;
+; Average fan-out                             ; 3.26        ;
 +---------------------------------------------+-------------+
 
 
@@ -260,7 +260,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                        ; Library Name ;
 +----------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
-; |CircuitoBase                                      ; 300 (0)           ; 285 (0)      ; 0                 ; 0          ; 57   ; 0            ; |CircuitoBase                                                                                                              ; work         ;
+; |CircuitoBase                                      ; 316 (0)           ; 285 (0)      ; 0                 ; 0          ; 55   ; 0            ; |CircuitoBase                                                                                                              ; work         ;
 ;    |BoxRodada:INTERFACE|                           ; 300 (7)           ; 285 (0)      ; 0                 ; 0          ; 0    ; 0            ; |CircuitoBase|BoxRodada:INTERFACE                                                                                          ; work         ;
 ;       |Atrasador:D|                                ; 205 (8)           ; 172 (0)      ; 0                 ; 0          ; 0    ; 0            ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D                                                                              ; work         ;
 ;          |Four_Digit_BCD_Counter:ContadordoAtraso| ; 26 (2)            ; 16 (0)       ; 0                 ; 0          ; 0    ; 0            ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso                                      ; work         ;
@@ -307,6 +307,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |controle:C1|                          ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|controle:C1                                               ; work         ;
 ;          |reg16bits_en2:R1|                        ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|reg16bits_en2:R1                                                     ; work         ;
 ;       |reg16bits_en2:R|                            ; 10 (10)           ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |CircuitoBase|BoxRodada:INTERFACE|reg16bits_en2:R                                                                          ; work         ;
+;    |mux4to1:MultiplexadorFinal|                    ; 16 (16)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |CircuitoBase|mux4to1:MultiplexadorFinal                                                                                   ; work         ;
 +----------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -418,36 +419,36 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_1|Qout[0]~reg0                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|reg16bits_en2:R|IQ[4]                                                                                 ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|reg16bits_en2:R|IQ[5]                                                                                 ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|reg16bits_en:Registrador|IQ[1]                                                            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|reg16bits_en2:R1|IQ[3]                                                            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|reg16bits_en2:R1|IQ[14]                                                           ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_1|Qout[2]~reg0                   ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_1|Qout[2]~reg0       ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_1|Qout[3]~reg0 ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_1|Qout[2]~reg0                        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_1|Qout[3]~reg0                                         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_2|Qout[1]~reg0                                         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_3|Qout[2]~reg0                                         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_4|Qout[1]~reg0                                         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_1|Qout[3]~reg0                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|reg16bits_en2:R|IQ[0]                                                                                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|reg16bits_en2:R|IQ[13]                                                                                ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|reg16bits_en:Registrador|IQ[4]                                                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|reg16bits_en2:R1|IQ[15]                                                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|reg16bits_en2:R1|IQ[6]                                                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_1|Qout[0]~reg0                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_1|Qout[1]~reg0       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_1|Qout[0]~reg0 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_1|Qout[0]~reg0                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_1|Qout[2]~reg0                                         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_2|Qout[3]~reg0                                         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_3|Qout[0]~reg0                                         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_4|Qout[0]~reg0                                         ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_2|Qout[3]~reg0                        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_3|Qout[1]~reg0                        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_4|Qout[3]~reg0                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_3|Qout[2]~reg0                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_4|Qout[0]~reg0                        ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_4|Qout[0]~reg0       ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_2|Qout[3]~reg0       ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_3|Qout[0]~reg0       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_2|Qout[2]~reg0       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_3|Qout[3]~reg0       ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_2|Qout[3]~reg0 ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_3|Qout[0]~reg0 ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_4|Qout[2]~reg0 ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_2|Qout[0]~reg0                                ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_3|Qout[0]~reg0                                ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_2|Qout[1]~reg0                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_3|Qout[3]~reg0 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_4|Qout[0]~reg0 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_2|Qout[3]~reg0                                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_3|Qout[3]~reg0                                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_2|Qout[0]~reg0                   ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_3|Qout[3]~reg0                   ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_4|Qout[3]~reg0                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_4|Qout[0]~reg0                   ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_4|Qout[3]~reg0                                ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|bitToBCD:Converte|binary[8]                                                               ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|bitToBCD:Converte|binary[2]                                                               ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CircuitoBase|BoxRodada:INTERFACE|controleRodada:C|Eprox                                                                                ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CircuitoBase|BoxRodada:INTERFACE|controleRodada:C|Eprox                                                                                ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|bitToBCD:Converte|bcds_next                                                               ;
@@ -824,16 +825,16 @@ Encoding Type:  One-Hot
 ;     ENA CLR SLD       ; 14                          ;
 ;     ENA SCLR          ; 24                          ;
 ;     plain             ; 48                          ;
-; arriav_lcell_comb     ; 306                         ;
-;     normal            ; 306                         ;
-;         0 data inputs ; 2                           ;
+; arriav_lcell_comb     ; 321                         ;
+;     normal            ; 321                         ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 5                           ;
 ;         2 data inputs ; 37                          ;
-;         3 data inputs ; 59                          ;
+;         3 data inputs ; 75                          ;
 ;         4 data inputs ; 74                          ;
 ;         5 data inputs ; 57                          ;
 ;         6 data inputs ; 72                          ;
-; boundary_port         ; 57                          ;
+; boundary_port         ; 55                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
 ; Average LUT depth     ; 1.89                        ;
@@ -855,7 +856,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Thu Apr  6 11:35:56 2017
+    Info: Processing started: Thu Apr  6 11:46:31 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CircuitoBase -c CircuitoBase
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file VHDL/reg16bits_en2.vhd
@@ -947,9 +948,6 @@ Warning (10492): VHDL Process Statement warning at controlador.vhd(24): signal "
 Info (12128): Elaborating entity "reg16bits_en2" for hierarchy "BoxRodada:INTERFACE|hierarquico:Medicao|reg16bits_en2:R1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/hierarquico.vhd Line: 53
 Info (12128): Elaborating entity "hex7seg_en" for hierarchy "BoxRodada:INTERFACE|hierarquico:Medicao|hex7seg_en:D1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/hierarquico.vhd Line: 54
 Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:MultiplexadorFinal" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 38
-Warning (10620): VHDL warning at mux4to1.vhd(15): comparison between unequal length operands always returns FALSE File: /home/danzambuja/Quartus/Projetos/Jogo_Reflexo/mux4to1.vhd Line: 15
-Warning (10620): VHDL warning at mux4to1.vhd(17): comparison between unequal length operands always returns FALSE File: /home/danzambuja/Quartus/Projetos/Jogo_Reflexo/mux4to1.vhd Line: 17
-Warning (10620): VHDL warning at mux4to1.vhd(19): comparison between unequal length operands always returns FALSE File: /home/danzambuja/Quartus/Projetos/Jogo_Reflexo/mux4to1.vhd Line: 19
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
     Warning (13310): Register "BoxRodada:INTERFACE|Atrasador:D|LFSR:PSEUDORANDOM|count[13]" is converted into an equivalent circuit using register "BoxRodada:INTERFACE|Atrasador:D|LFSR:PSEUDORANDOM|count[13]~_emulated" and latch "BoxRodada:INTERFACE|Atrasador:D|LFSR:PSEUDORANDOM|count[13]~1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
@@ -972,39 +970,18 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "contaAtraso" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 8
     Warning (13410): Pin "estadoRodada[3]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 9
     Warning (13410): Pin "estadoAtrasador[3]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 9
-    Warning (13410): Pin "saida[0]" is stuck at VCC File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
-    Warning (13410): Pin "saida[1]" is stuck at VCC File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
-    Warning (13410): Pin "saida[2]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
-    Warning (13410): Pin "saida[3]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
-    Warning (13410): Pin "saida[4]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
-    Warning (13410): Pin "saida[5]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
-    Warning (13410): Pin "saida[6]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
-    Warning (13410): Pin "saida[7]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
-    Warning (13410): Pin "saida[8]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
-    Warning (13410): Pin "saida[9]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
-    Warning (13410): Pin "saida[10]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
-    Warning (13410): Pin "saida[11]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
-    Warning (13410): Pin "saida[12]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
-    Warning (13410): Pin "saida[13]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
-    Warning (13410): Pin "saida[14]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
-    Warning (13410): Pin "saida[15]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 10
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "selectDisplay[0]" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 7
-    Warning (15610): No output dependent on input pin "selectDisplay[1]" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 7
-    Warning (15610): No output dependent on input pin "selectDisplay[2]" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 7
-    Warning (15610): No output dependent on input pin "selectDisplay[3]" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 7
-Info (21057): Implemented 479 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
+Info (21057): Implemented 493 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
     Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 422 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
-    Info: Peak virtual memory: 1252 megabytes
-    Info: Processing ended: Thu Apr  6 11:36:27 2017
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:40
+    Info (21061): Implemented 438 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 1250 megabytes
+    Info: Processing ended: Thu Apr  6 11:46:55 2017
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:31
 
 
