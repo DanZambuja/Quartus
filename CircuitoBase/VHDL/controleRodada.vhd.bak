@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity controleRodada is 
+entity Interface is 
 
 	port (clock, reset, finalizaRodada, rodada, sinalAtraso, demorou, resposta : in std_logic;
 			contaAtraso , aguardando, fimRodada, erro : out std_logic;

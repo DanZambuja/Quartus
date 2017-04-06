@@ -12,7 +12,7 @@ end BoxRodada;
 
 architecture arch of BoxRodada is 
 
-component Interface is 
+component ControleRodada is 
 
 	port (clock, reset, finalizaRodada, rodada, sinalAtraso, demorou, resposta : in std_logic;
 			contaAtraso , aguardando, fimRodada, erro : out std_logic;

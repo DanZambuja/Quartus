@@ -1,16 +1,16 @@
 library ieee;
     use ieee.std_logic_1164.all;
 
-entity LFSR is
+entity LSFR is
   port (
     cout   :out std_logic_vector (15 downto 0);-- Output of the counter
     enable :in  std_logic;
     clk    :in  std_logic;                    -- Input rlock
     reset  :in  std_logic;                    -- Input reset
 	 seed	  :in  std_logic_vector (15 downto 0));
-end LFSR;
+end LSFR;
 
-architecture rtl of LFSR is
+architecture rtl of LSFR is
     signal count           :std_logic_vector (15 downto 0);
     signal linear_feedback :std_logic;
 	 signal conta, podeContar : std_logic;
