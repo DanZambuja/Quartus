@@ -1,0 +1,89 @@
+Archive Project report for SomadorBCD
+Fri Jan 27 17:57:20 2017
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Fri Jan 27 17:57:20 2017 ;
+; Revision Name          ; SomadorBCD                            ;
+; Top-level Entity Name  ; SomadorBCD                            ;
+; Family                 ; Cyclone V                             ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Custom' contains:
+    Info: Programming output files
+    Info: Automatically detected source files
+    Info: Project source and settings files
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory /home/danzambuja/Quartus/Projetos/Experimento3/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive '/home/danzambuja/Quartus/Projetos/Experimento3/SomadorBCD.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'SomadorBCD.archive.rpt'
+Info (23030): Evaluation of Tcl script /home/danzambuja/Quartus/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 1211 megabytes
+    Info: Processing ended: Fri Jan 27 17:57:20 2017
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------------------------------+
+; Files Archived                                                   ;
++------------------------------------------------------------------+
+; File Name                                                        ;
++------------------------------------------------------------------+
+; /home/danzambuja/Quartus/quartus/linux64/assignment_defaults.qdf ;
+; DetectorCodigoInvalido.vhd                                       ;
+; output_files/SomadorBCD.jdi                                      ;
+; output_files/SomadorBCD.sld                                      ;
+; output_files/SomadorBCD.sof                                      ;
+; Somador4bits_comportamental.vhd                                  ;
+; SomadorBCD.qpf                                                   ;
+; SomadorBCD.qsf                                                   ;
+; SomadorBCD.vhd                                                   ;
+; SomadorBCDPosterior.vhd                                          ;
+; Waveform.vwf                                                     ;
+; Waveform2.vwf                                                    ;
+; Waveform3.vwf                                                    ;
++------------------------------------------------------------------+
+
+

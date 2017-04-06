@@ -1,0 +1,68 @@
+|medidor
+CLOCK => controle:C1.clock
+CLOCK => V74x163:D2.CLK
+RESET => controle:C1.reset
+liga => controle:C1.liga
+sinal => controle:C1.sinal
+Q[0] <= V74x163:D2.Q[0]
+Q[1] <= V74x163:D2.Q[1]
+Q[2] <= V74x163:D2.Q[2]
+Q[3] <= V74x163:D2.Q[3]
+RCO <= V74x163:D2.RCO
+pronto <= controle:C1.pronto
+estado[0] <= controle:C1.estado[0]
+estado[1] <= controle:C1.estado[1]
+estado[2] <= controle:C1.estado[2]
+estado[3] <= controle:C1.estado[3]
+Depura[0] <= V74x163:D2.Q[0]
+Depura[1] <= V74x163:D2.Q[1]
+Depura[2] <= V74x163:D2.Q[2]
+Depura[3] <= V74x163:D2.Q[3]
+
+
+|medidor|controle:C1
+CLOCK => Ereg~1.DATAIN
+RESET => Ereg~3.DATAIN
+liga => Selector1.IN3
+liga => Selector2.IN3
+liga => Selector0.IN1
+sinal => Eprox.CONTA.DATAA
+sinal => Selector1.IN1
+sinal => Selector2.IN1
+sinal => Eprox.EPRONTO.DATAB
+resetc <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+enablec <= enablec.DB_MAX_OUTPUT_PORT_TYPE
+pronto <= pronto.DB_MAX_OUTPUT_PORT_TYPE
+estado[0] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+estado[1] <= estado.DB_MAX_OUTPUT_PORT_TYPE
+estado[2] <= estado.DB_MAX_OUTPUT_PORT_TYPE
+estado[3] <= <GND>
+
+
+|medidor|V74x163:D2
+CLK => IQ[0].CLK
+CLK => IQ[1].CLK
+CLK => IQ[2].CLK
+CLK => IQ[3].CLK
+CLR_L => IQ.OUTPUTSELECT
+CLR_L => IQ.OUTPUTSELECT
+CLR_L => IQ.OUTPUTSELECT
+CLR_L => IQ.OUTPUTSELECT
+LD_L => IQ.OUTPUTSELECT
+LD_L => IQ.OUTPUTSELECT
+LD_L => IQ.OUTPUTSELECT
+LD_L => IQ.OUTPUTSELECT
+ENP => process_0.IN0
+ENT => process_0.IN1
+ENT => process_0.IN1
+D[0] => IQ.DATAB
+D[1] => IQ.DATAB
+D[2] => IQ.DATAB
+D[3] => IQ.DATAB
+Q[0] <= IQ[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= IQ[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= IQ[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= IQ[3].DB_MAX_OUTPUT_PORT_TYPE
+RCO <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+

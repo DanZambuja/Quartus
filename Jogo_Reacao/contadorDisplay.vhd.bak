@@ -1,0 +1,19 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity contadorDisplay is
+
+	port (contaDisplay: in std_logic;
+			selecionaDisplay : out std_logic);
+
+end contadorDisplay;
+
+architecture contador of contadorDisplay is
+begin
+
+
+
+
+
+
+end contador;

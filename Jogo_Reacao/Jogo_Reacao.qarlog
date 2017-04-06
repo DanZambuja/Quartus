@@ -1,0 +1,29 @@
+Quartus Prime Archive log --	/home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.qarlog
+
+Archive:	/home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.qar
+Date:		Mon Mar 20 11:00:27 2017
+Quartus Prime		15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.qpf
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.qsf
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/LFSR.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/Tentativa.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/Waveform.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/atrasador.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/comparador.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/contador.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/contadorDisplay.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/estadosJogo.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/hex7seg_en.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/muxDisplay.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reacao/tempoAtual.vhd
+/home/danzambuja/Quartus/quartus/linux64/assignment_defaults.qdf
+	======= Total: 18 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

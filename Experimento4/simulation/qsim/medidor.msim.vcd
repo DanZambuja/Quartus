@@ -1,0 +1,310 @@
+$comment
+	File created using the following command:
+		vcd file medidor.msim.vcd -direction
+$end
+$date
+	Fri Feb  3 03:08:35 2017
+$end
+$version
+	ModelSim Version 10.4b
+$end
+$timescale
+	1ps
+$end
+
+$scope module medidor_vlg_vec_tst $end
+$var reg 1 ! CLOCK $end
+$var reg 1 " liga $end
+$var reg 1 # RESET $end
+$var reg 1 $ sinal $end
+$var wire 1 % Depura [3] $end
+$var wire 1 & Depura [2] $end
+$var wire 1 ' Depura [1] $end
+$var wire 1 ( Depura [0] $end
+$var wire 1 ) estado [3] $end
+$var wire 1 * estado [2] $end
+$var wire 1 + estado [1] $end
+$var wire 1 , estado [0] $end
+$var wire 1 - pronto $end
+$var wire 1 . Q [3] $end
+$var wire 1 / Q [2] $end
+$var wire 1 0 Q [1] $end
+$var wire 1 1 Q [0] $end
+$var wire 1 2 RCO $end
+
+$scope module i1 $end
+$var wire 1 3 gnd $end
+$var wire 1 4 vcc $end
+$var wire 1 5 unknown $end
+$var tri1 1 6 devclrn $end
+$var tri1 1 7 devpor $end
+$var tri1 1 8 devoe $end
+$var wire 1 9 ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 : CLOCK~input_o $end
+$var wire 1 ; CLOCK~inputCLKENA0_outclk $end
+$var wire 1 < liga~input_o $end
+$var wire 1 = sinal~input_o $end
+$var wire 1 > C1|Eprox.CONTA~0_combout $end
+$var wire 1 ? RESET~input_o $end
+$var wire 1 @ C1|Ereg.CONTA~q $end
+$var wire 1 A C1|Eprox.EPRONTO~0_combout $end
+$var wire 1 B C1|Ereg.EPRONTO~q $end
+$var wire 1 C C1|Ereg.LIMPA~DUPLICATE_q $end
+$var wire 1 D C1|Selector0~0_combout $end
+$var wire 1 E C1|Ereg.INICIAL~q $end
+$var wire 1 F C1|Ereg.LIMPA~q $end
+$var wire 1 G C1|WideOr4~combout $end
+$var wire 1 H D2|IQ~0_combout $end
+$var wire 1 I D2|IQ[0]~DUPLICATE_q $end
+$var wire 1 J D2|IQ~1_combout $end
+$var wire 1 K D2|IQ~2_combout $end
+$var wire 1 L D2|IQ~3_combout $end
+$var wire 1 M D2|RCO~combout $end
+$var wire 1 N C1|Selector2~0_combout $end
+$var wire 1 O C1|Ereg.ESPERA~q $end
+$var wire 1 P C1|estado [3] $end
+$var wire 1 Q C1|estado [2] $end
+$var wire 1 R C1|estado [1] $end
+$var wire 1 S C1|estado [0] $end
+$var wire 1 T D2|IQ [3] $end
+$var wire 1 U D2|IQ [2] $end
+$var wire 1 V D2|IQ [1] $end
+$var wire 1 W D2|IQ [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+0#
+1$
+0(
+0'
+0&
+0%
+0,
+0+
+0*
+0)
+0-
+01
+00
+0/
+0.
+02
+03
+14
+x5
+16
+17
+18
+09
+0:
+0;
+1<
+1=
+0>
+0?
+0@
+0A
+0B
+0C
+1D
+0E
+0F
+1G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+zS
+0R
+0Q
+zP
+0W
+0V
+0U
+0T
+$end
+#50000
+1!
+1:
+1;
+1E
+0G
+1H
+1>
+1,
+#100000
+0!
+0:
+0;
+#150000
+1!
+1:
+1;
+1@
+1G
+1R
+1+
+0,
+#200000
+0!
+0:
+0;
+#250000
+1!
+1:
+1;
+1W
+1I
+11
+1(
+1J
+0H
+#300000
+0!
+0:
+0;
+#350000
+1!
+1:
+1;
+0W
+1V
+0I
+01
+0(
+10
+1'
+1H
+#380000
+0$
+0=
+1A
+0>
+#400000
+0!
+0:
+0;
+#450000
+1!
+1:
+1;
+1W
+0@
+1I
+1B
+1-
+11
+1(
+0G
+0A
+1K
+0J
+0H
+1,
+#500000
+0!
+0:
+0;
+#550000
+1!
+1:
+1;
+1F
+1C
+0B
+0-
+1G
+1Q
+1N
+0K
+0R
+0+
+1*
+0,
+#580000
+1$
+1=
+#600000
+0!
+0:
+0;
+#650000
+1!
+1:
+1;
+1O
+0W
+0F
+0C
+0V
+0I
+01
+0(
+00
+0'
+0G
+0N
+1H
+1>
+1,
+#700000
+0!
+0:
+0;
+#740000
+0"
+0<
+#750000
+1!
+1:
+1;
+0O
+1@
+1G
+1R
+0Q
+0*
+1+
+0,
+#800000
+0!
+0:
+0;
+#850000
+1!
+1:
+1;
+1W
+1I
+11
+1(
+1J
+0H
+#880000
+1"
+1<
+#900000
+0!
+0:
+0;
+#950000
+1!
+1:
+1;
+0W
+1V
+0I
+01
+0(
+10
+1'
+1H
+#1000000

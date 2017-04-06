@@ -1,0 +1,64 @@
+|SomadorBCD
+A[0] => Somador4bits_comportamental:s1.A[0]
+A[1] => Somador4bits_comportamental:s1.A[1]
+A[2] => Somador4bits_comportamental:s1.A[2]
+A[3] => Somador4bits_comportamental:s1.A[3]
+B[0] => Somador4bits_comportamental:s1.B[0]
+B[1] => Somador4bits_comportamental:s1.B[1]
+B[2] => Somador4bits_comportamental:s1.B[2]
+B[3] => Somador4bits_comportamental:s1.B[3]
+vem_um => Somador4bits_comportamental:s1.Cin
+vai_um <= s_vai_um.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= Somador4bits_comportamental:s2.S[0]
+S[1] <= Somador4bits_comportamental:s2.S[1]
+S[2] <= Somador4bits_comportamental:s2.S[2]
+S[3] <= Somador4bits_comportamental:s2.S[3]
+s_cout1 <= Somador4bits_comportamental:s1.Cout
+s_soma1[0] <= Somador4bits_comportamental:s1.S[0]
+s_soma1[1] <= Somador4bits_comportamental:s1.S[1]
+s_soma1[2] <= Somador4bits_comportamental:s1.S[2]
+s_soma1[3] <= Somador4bits_comportamental:s1.S[3]
+
+
+|SomadorBCD|Somador4bits_comportamental:s1
+A[0] => _.DATAD
+A[1] => _.DATAD
+A[2] => _.DATAD
+A[3] => _.DATAD
+B[0] => _.DATAC
+B[1] => _.DATAC
+B[2] => _.DATAC
+B[3] => _.DATAC
+Cin => _.DATAB
+S[0] <= _.SUM_OUT
+S[1] <= _.SUM_OUT
+S[2] <= _.SUM_OUT
+S[3] <= _.SUM_OUT
+Cout <= _.SUM_OUT
+
+
+|SomadorBCD|DetectorCodigoInvalido:d1
+D[0] => ~NO_FANOUT~
+D[1] => O.IN0
+D[2] => O.IN1
+D[3] => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SomadorBCD|Somador4bits_comportamental:s2
+A[0] => _.DATAD
+A[1] => _.DATAD
+A[2] => _.DATAD
+A[3] => _.DATAD
+B[0] => _.DATAC
+B[1] => _.DATAC
+B[2] => _.DATAC
+B[3] => _.DATAC
+Cin => _.DATAB
+S[0] <= _.SUM_OUT
+S[1] <= _.SUM_OUT
+S[2] <= _.SUM_OUT
+S[3] <= _.SUM_OUT
+Cout <= _.SUM_OUT
+
+

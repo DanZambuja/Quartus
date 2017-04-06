@@ -1,0 +1,285 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "saida[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[1]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[2]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[3]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[4]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[5]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[6]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[7]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[8]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[9]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[10]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[11]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[12]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[13]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[14]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[15]",
+					"strict" : false
+				},
+				{
+					"name" : "fim",
+					"strict" : false
+				},
+				{
+					"name" : "sig_resetr",
+					"strict" : false
+				},
+				{
+					"name" : "sig_enabler",
+					"strict" : false
+				},
+				{
+					"name" : "sig_liga",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[12]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[13]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[14]",
+					"strict" : false
+				},
+				{
+					"name" : "sig_medida[15]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[1]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[2]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[3]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[4]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[5]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[6]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[7]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[8]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[9]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[10]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[11]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[12]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[13]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[14]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[15]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[16]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[17]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[18]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[19]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[20]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[21]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[22]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[23]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[24]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[25]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[26]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay[27]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "iniciar",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "zerar",
+					"strict" : false
+				},
+				{
+					"name" : "pulso",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

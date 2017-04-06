@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/danzambuja/Quartus/Projetos/Experimento5/simulation/qsim
+vExperimento5
+Z1 !s110 1488808694
+!i10b 1
+!s100 B4HOY;_S6dFO@nOGADSK<3
+I8k6aZY8nGLQNKU^03;9>U1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1488808693
+Z3 8Experimento5.vo
+Z4 FExperimento5.vo
+Z5 L0 32
+Z6 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z7 !s108 1488808694.000000
+Z8 !s107 Experimento5.vo|
+Z9 !s90 -work|work|Experimento5.vo|
+!i113 1
+Z10 o-work work
+n@experimento5
+vExperimento5_vlg_vec_tst
+R1
+!i10b 1
+!s100 Zl=EH2GFRR<:BOKZhn0N@3
+I^E5NaI7gYzHLzFOQ3LSE]1
+R2
+R0
+w1488808685
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+Z11 L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R10
+n@experimento5_vlg_vec_tst
+vV74x162
+Z12 !s110 1488556869
+!i10b 1
+!s100 >oPB<==mTUP;Yj9Dz;6HK0
+I5SJUAMnfb2[6AjOG>_[iX3
+R2
+R0
+w1488556866
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1488556869.000000
+R8
+R9
+!i113 1
+R10
+n@v74x162
+vV74x162_vlg_vec_tst
+R12
+!i10b 1
+!s100 kh5XgW5GOAQ8]noIFG^P]0
+In>9:nV2dT6Td3K3Az2[I?0
+R2
+R0
+w1488556857
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R13
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+n@v74x162_vlg_vec_tst

@@ -1,0 +1,30 @@
+Quartus Prime Archive log --	/home/danzambuja/Quartus/Projetos/Experimento5/Experimento5.qarlog
+
+Archive:	/home/danzambuja/Quartus/Projetos/Experimento5/Experimento5.qar
+Date:		Fri Mar  3 14:04:35 2017
+Quartus Prime		15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/danzambuja/Quartus/Projetos/Experimento5/Experimento5.qpf
+/home/danzambuja/Quartus/Projetos/Experimento5/Experimento5.qsf
+/home/danzambuja/Quartus/Projetos/Experimento5/Experimento5.vhd
+/home/danzambuja/Quartus/Projetos/Experimento5/SingleBCD_Counter_Test.vwf
+/home/danzambuja/Quartus/Projetos/Experimento5/V74x162.vhd
+/home/danzambuja/Quartus/Projetos/Experimento5/V74x162_16bits.vhd
+/home/danzambuja/Quartus/Projetos/Experimento5/Waveform.vwf
+/home/danzambuja/Quartus/Projetos/Experimento5/Waveform1.vwf
+/home/danzambuja/Quartus/Projetos/Experimento5/controlador.vhd
+/home/danzambuja/Quartus/Projetos/Experimento5/controle.vhd
+/home/danzambuja/Quartus/Projetos/Experimento5/medidor.vhd
+/home/danzambuja/Quartus/Projetos/Experimento5/reg16bits_en.vhd
+/home/danzambuja/Quartus/quartus/linux64/assignment_defaults.qdf
+	======= Total: 13 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Wed Mar  8 10:10:59 2017
+Source archive file:	/home/danzambuja/Quartus/Projetos/Experimento5/Experimento5.qar
+Archive was extracted into	/home/danzambuja/Quartus/Projetos/Experimento5/
+		 - successfully.

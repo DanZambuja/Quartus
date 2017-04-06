@@ -1,0 +1,104 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "02/22/2017 07:03:43"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          hierarquico
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module hierarquico_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clock;
+reg iniciar;
+reg pulso;
+reg reset;
+reg zerar;
+// wires                                               
+wire fim;
+wire [7:0] s_m;
+wire [7:0] saida;
+wire [6:0] saidaDisplay1;
+wire [6:0] saidaDisplay2;
+
+// assign statements (if any)                          
+hierarquico i1 (
+// port map - connection between master ports and signals/registers   
+	.clock(clock),
+	.fim(fim),
+	.iniciar(iniciar),
+	.pulso(pulso),
+	.reset(reset),
+	.s_m(s_m),
+	.saida(saida),
+	.saidaDisplay1(saidaDisplay1),
+	.saidaDisplay2(saidaDisplay2),
+	.zerar(zerar)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// clock
+initial
+begin
+	repeat(33)
+	begin
+		clock = 1'b0;
+		clock = #15000 1'b1;
+		# 15000;
+	end
+	clock = 1'b0;
+end 
+
+// iniciar
+initial
+begin
+	iniciar = 1'b1;
+	iniciar = #880000 1'b0;
+end 
+
+// pulso
+initial
+begin
+	pulso = 1'b1;
+	pulso = #670000 1'b0;
+	pulso = #60000 1'b1;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b1;
+	reset = #20000 1'b0;
+end 
+
+// zerar
+initial
+begin
+	zerar = 1'b0;
+end 
+endmodule
+

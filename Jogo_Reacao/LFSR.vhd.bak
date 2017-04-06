@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity LFSR is
+	port (clock, reset: in std_logic;
+			entrada : in std_logic_vector(15 downto 0);
+			saida : out std_logic_vector(15 downto 0));
+end LFSR;
+
+architecture pseudoRandom of LFSR is
+
+
+begin
+
+
+
+end pseudoRandom;

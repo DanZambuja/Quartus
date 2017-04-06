@@ -1,0 +1,9 @@
+
+State Machine - |medidor|controle:C1|Ereg
+Name Ereg.EPRONTO Ereg.ESPERA Ereg.LIMPA Ereg.CONTA Ereg.LIGADO Ereg.INICIAL 
+Ereg.INICIAL 0 0 0 0 0 0 
+Ereg.LIGADO 0 0 0 0 1 1 
+Ereg.CONTA 0 0 0 1 0 1 
+Ereg.LIMPA 0 0 1 0 0 1 
+Ereg.ESPERA 0 1 0 0 0 1 
+Ereg.EPRONTO 1 0 0 0 0 1 

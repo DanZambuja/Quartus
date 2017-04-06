@@ -1,0 +1,16 @@
+Quartus Prime Archive log --	/home/danzambuja/Quartus/Projetos/reg4bits_en/reg4bits_en.qarlog
+
+Archive:	/home/danzambuja/Quartus/Projetos/reg4bits_en/reg4bits_en.qar
+Date:		Fri Feb  3 03:43:18 2017
+Quartus Prime		15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/danzambuja/Quartus/Projetos/reg4bits_en/Waveform.vwf
+/home/danzambuja/Quartus/Projetos/reg4bits_en/reg4bits_en.qpf
+/home/danzambuja/Quartus/Projetos/reg4bits_en/reg4bits_en.qsf
+/home/danzambuja/Quartus/Projetos/reg4bits_en/reg4bits_en.vhd
+/home/danzambuja/Quartus/quartus/linux64/assignment_defaults.qdf
+	======= Total: 5 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

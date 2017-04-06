@@ -1,0 +1,8 @@
+
+State Machine - |ComponenteAssociado|umFSM:U1|Ereg
+Name Ereg.ESPERA Ereg.LIMPA Ereg.CONTA Ereg.LIGADO Ereg.INICIAL 
+Ereg.INICIAL 0 0 0 0 0 
+Ereg.LIGADO 0 0 0 1 1 
+Ereg.CONTA 0 0 1 0 1 
+Ereg.LIMPA 0 1 0 0 1 
+Ereg.ESPERA 1 0 0 0 1 

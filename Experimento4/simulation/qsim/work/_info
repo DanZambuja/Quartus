@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/danzambuja/Quartus/Projetos/Experimento4/simulation/qsim
+vmedidor
+Z1 !s110 1486098515
+!i10b 1
+!s100 nM;ieQ2Kj>C]:nV9IWBaG3
+IC?K5Z93lLJ95][@QkEoB[1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1486098514
+8medidor.vo
+Fmedidor.vo
+L0 32
+Z3 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z4 !s108 1486098515.000000
+!s107 medidor.vo|
+!s90 -work|work|medidor.vo|
+!i113 1
+Z5 o-work work
+vmedidor_vlg_vec_tst
+R1
+!i10b 1
+!s100 mN<A4VIF`J<U9lnYnZ1eQ0
+IRHoG2i1zE`zX]Mna<3Z9N2
+R2
+R0
+w1486098506
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5

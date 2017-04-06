@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/danzambuja/Quartus/Projetos/hierarquico/simulation/qsim
+vhierarquico
+Z1 !s110 1490511255
+!i10b 1
+!s100 ^:ElhNHa5SE]hYT[Ei2>H2
+I_TS9E4E`]G>Rac=hzWQ@l2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1490511253
+8hierarquico.vo
+Fhierarquico.vo
+L0 32
+Z3 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z4 !s108 1490511255.000000
+!s107 hierarquico.vo|
+!s90 -work|work|hierarquico.vo|
+!i113 1
+Z5 o-work work
+vhierarquico_vlg_vec_tst
+R1
+!i10b 1
+!s100 942O>:Jg;CFmWLUFclf=j3
+Ii6<6VlmV<W`fOV8i`YU;^2
+R2
+R0
+w1490511245
+8hierarquico.vwf.vt
+Fhierarquico.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 hierarquico.vwf.vt|
+!s90 -work|work|hierarquico.vwf.vt|
+!i113 1
+R5

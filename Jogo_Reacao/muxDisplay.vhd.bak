@@ -1,0 +1,18 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity muxDisplay is 
+	
+	port (s_saida1, s_saida2, s_recorde : in std_logic_vector(15 downto 0);
+			selecionaDisplay: in std_logic;
+			s_saida: out std_logic_vector(15 downto 0));
+end muxDisplay;
+
+architecture multiplex of muxDisplay is 
+
+begin
+
+
+
+
+end multiplex;

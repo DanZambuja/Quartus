@@ -1,0 +1,38 @@
+library IEEE; -- Bibilioteca principal, contem os "packets" de std_logic 1164 e arith.
+use IEEE.std_logic_1164.all; -- Traz informações sobre os tipos de variaveis definidas por usuarios, que
+-- sao utilizadas no programa ( linha 11 por exemplo, em que RCO é definida como STD_LOGIC ).
+use IEEE.std_logic_arith.all; -- Traz informações sobre operações aritmeticas definidas por usuarios, que
+-- sao utilizadas no programa ( linha 21 por exemplo, o operador '+' ).
+
+entity V74x163 is -- Define a entidade, o black box a ser desenvolvido no programa
+     port ( CLK, CLR_L, LD_L, ENP, ENT: in STD_LOGIC; -- Define as portas de entrada dessa entidade,
+-- definindo as entradas de 1 bit.
+    D: in UNSIGNED (3 downto 0); -- Define o barramento de entrada do contador, com o MSB sendo o
+-- da esquerda devido a enumeracao (3 downto 0).
+    Q: out UNSIGNED (3 downto 0); -- O mesmo que a linha acima, mas define a saida.
+    RCO: out STD_LOGIC ); -- Define mais uma saida do contador, a porta RCO.
+end V74x163; -- Fecha a definicao da entidade.
+
+architecture V74x163 of V74x163 is -- Define a arquitetura (comportamento) da entidade definida
+signal IQ: UNSIGNED (3 downto 0); -- Define um sinal interno (intermediario) de mesmo tipo que as entradas e saidas
+begin -- Comeca a arquitetura. Grupo de processos, funcoes, eventos e sinais que irao interagir
+-- de forma a traduzir o comportamento da entidade.
+process (CLK, ENT, IQ) -- Processo sequencial definindo os sinais envolvidos nesse processo
+    begin -- Comeca o processo sequencial definido anteriormente.
+        if (CLK'event and CLK='1') then -- Define um laco condicional ativado na borda de subida do clock
+            if CLR_L='0' then IQ <= (others => '0'); -- Realiza a acao do clear, zerando IQ quando o CLR_L (ativo baixo)
+-- esta em nivel logico baixo.
+            elsif LD_L='0' then IQ <= D; -- Realiza a acao do load, passando os valores do barramento de entrada para IQ
+-- quando o LD_L (ativo baixo) esta em nivel logico baixo. Caso a operacao de clear nao esteja sendo realizada.
+            elsif (ENT and ENP)='1' then IQ <= IQ + 1; -- Define a operacao de contagem quando ambos enables estao ativados.
+-- Ou seja, define alem da operacao de contagem, a funcao dos enables. Caso ambas as operacoes de clear e load nao estejam
+-- sendo realizadas.
+            end if; -- Fecha o laco condicional ativado pelas operacoes definidas anteriormente.
+        end if; -- Fecha o laco condicional ativado pela borda de clock, assim definindo um ciclo de operacao do clock.
+        if (IQ=15) and (ENT='1') then RCO <= '1'; -- Define quando RCO e ativado (no fim da contagem) e associa o sinal
+-- ENT a essa operacao, diferenciando este sinal de ENP.
+        else RCO <= '0'; -- Retorna o valor de RCO ao original, quando ja nao ha carry a ser sinalizado.
+        end if; -- Fecha o laco condicional definido pelo fim da contagem.
+        Q <= IQ; -- Transmite o sinal final interno ao barramento de saida.
+    end process; -- Conclui o processo sequencial.
+end V74x163; -- Conclui a arquitetura da entidade, finalizando a definicao de seu comportamento.

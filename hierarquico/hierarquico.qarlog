@@ -1,0 +1,27 @@
+Quartus Prime Archive log --	/home/danzambuja/Quartus/Projetos/hierarquico/hierarquico.qarlog
+
+Archive:	/home/danzambuja/Quartus/Projetos/hierarquico/hierarquico.qar
+Date:		Fri Feb  3 11:16:47 2017
+Quartus Prime		15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/danzambuja/Quartus/Projetos/hierarquico/V74x163.vhd
+/home/danzambuja/Quartus/Projetos/hierarquico/Waveform.vwf
+/home/danzambuja/Quartus/Projetos/hierarquico/controlador.vhd
+/home/danzambuja/Quartus/Projetos/hierarquico/controle.vhd
+/home/danzambuja/Quartus/Projetos/hierarquico/hierarquico.qpf
+/home/danzambuja/Quartus/Projetos/hierarquico/hierarquico.qsf
+/home/danzambuja/Quartus/Projetos/hierarquico/hierarquico.vhd
+/home/danzambuja/Quartus/Projetos/hierarquico/medidor.vhd
+/home/danzambuja/Quartus/Projetos/hierarquico/reg4bits_en.vhd
+/home/danzambuja/Quartus/quartus/linux64/assignment_defaults.qdf
+	======= Total: 10 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Mon Feb  6 08:37:27 2017
+Source archive file:	/home/danzambuja/Quartus/Projetos/hierarquico/hierarquico.qar
+Archive was extracted into	/home/danzambuja/Quartus/Projetos/hierarquico/hierarquico_restored/
+		 - successfully.

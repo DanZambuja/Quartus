@@ -1,0 +1,17 @@
+Quartus Prime Archive log --	/home/danzambuja/Quartus/Projetos/Experimento4/medidor.qarlog
+
+Archive:	/home/danzambuja/Quartus/Projetos/Experimento4/medidor.qar
+Date:		Fri Feb  3 01:08:58 2017
+Quartus Prime		15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/danzambuja/Quartus/Projetos/Experimento4/V74x163.vhd
+/home/danzambuja/Quartus/Projetos/Experimento4/controle.vhd
+/home/danzambuja/Quartus/Projetos/Experimento4/medidor.qpf
+/home/danzambuja/Quartus/Projetos/Experimento4/medidor.qsf
+/home/danzambuja/Quartus/Projetos/Experimento4/medidor.vhd
+/home/danzambuja/Quartus/quartus/linux64/assignment_defaults.qdf
+	======= Total: 6 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

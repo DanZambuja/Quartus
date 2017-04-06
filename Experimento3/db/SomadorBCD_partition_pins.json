@@ -1,0 +1,85 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "vai_um",
+					"strict" : false
+				},
+				{
+					"name" : "S[0]",
+					"strict" : false
+				},
+				{
+					"name" : "S[1]",
+					"strict" : false
+				},
+				{
+					"name" : "S[2]",
+					"strict" : false
+				},
+				{
+					"name" : "S[3]",
+					"strict" : false
+				},
+				{
+					"name" : "s_cout1",
+					"strict" : false
+				},
+				{
+					"name" : "s_soma1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "s_soma1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "s_soma1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "s_soma1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vem_um",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "A[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

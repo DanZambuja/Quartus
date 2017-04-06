@@ -1,0 +1,36 @@
+Quartus Prime Archive log --	/home/danzambuja/Quartus/Projetos/Experimento3/SomadorBCD.qarlog
+
+Archive:	/home/danzambuja/Quartus/Projetos/Experimento3/SomadorBCD.qar
+Date:		Fri Jan 27 17:57:20 2017
+Quartus Prime		15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/danzambuja/Quartus/Projetos/Experimento3/DetectorCodigoInvalido.vhd
+/home/danzambuja/Quartus/Projetos/Experimento3/Somador4bits_comportamental.vhd
+/home/danzambuja/Quartus/Projetos/Experimento3/SomadorBCD.qpf
+/home/danzambuja/Quartus/Projetos/Experimento3/SomadorBCD.qsf
+/home/danzambuja/Quartus/Projetos/Experimento3/SomadorBCD.vhd
+/home/danzambuja/Quartus/Projetos/Experimento3/SomadorBCDPosterior.vhd
+/home/danzambuja/Quartus/Projetos/Experimento3/Waveform.vwf
+/home/danzambuja/Quartus/Projetos/Experimento3/Waveform2.vwf
+/home/danzambuja/Quartus/Projetos/Experimento3/Waveform3.vwf
+/home/danzambuja/Quartus/Projetos/Experimento3/output_files/SomadorBCD.jdi
+/home/danzambuja/Quartus/Projetos/Experimento3/output_files/SomadorBCD.sld
+/home/danzambuja/Quartus/Projetos/Experimento3/output_files/SomadorBCD.sof
+/home/danzambuja/Quartus/quartus/linux64/assignment_defaults.qdf
+	======= Total: 13 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Wed Feb  1 11:55:40 2017
+Source archive file:	/home/danzambuja/Quartus/Projetos/Experimento3/SomadorBCD.qar
+Archive was extracted into	/home/danzambuja/Quartus/Projetos/Experimento3/SomadorBCD_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Mon Feb  6 11:26:45 2017
+Source archive file:	/home/danzambuja/Quartus/Projetos/Experimento3/SomadorBCD.qar
+Archive was extracted into	/home/danzambuja/Quartus/Projetos/Experimento3/SomadorBCD_restored/
+		 - successfully.

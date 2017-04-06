@@ -1,0 +1,11 @@
+library IEEE;
+use IEEE.std_logic_1164.all
+use IEEE.std_logic_arith.all
+
+entity hierarquico is 
+	port (clock, reset, iniciar, zerar, pulso : in STD_LOGIC;
+	      saida : out STD_LOGIC_VECTOR(15 downto 0);
+			fim : out STD_LOGIC);
+end hierarquico;
+
+architecture hierarquica of hierarquico is

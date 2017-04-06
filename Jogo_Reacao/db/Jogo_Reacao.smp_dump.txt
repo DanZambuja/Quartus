@@ -1,0 +1,14 @@
+
+State Machine - |Jogo_Reacao|Tentativa:Tent|estadosJogo:E|Ereg
+Name Ereg.Fim Ereg.Errado Ereg.Aguarda Ereg.E_Atraso 
+Ereg.E_Atraso 0 0 0 0 
+Ereg.Aguarda 0 0 1 1 
+Ereg.Errado 0 1 0 1 
+Ereg.Fim 1 0 0 1 
+
+State Machine - |Jogo_Reacao|maquinaEstados:Controle|Ereg
+Name Ereg.Jogador2 Ereg.Intervalo Ereg.Jogador1 Ereg.Inicial 
+Ereg.Inicial 0 0 0 0 
+Ereg.Jogador1 0 0 1 1 
+Ereg.Intervalo 0 1 0 1 
+Ereg.Jogador2 1 0 0 1 

@@ -1,0 +1,77 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Q[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Q[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Q[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RCO",
+					"strict" : false
+				},
+				{
+					"name" : "pronto",
+					"strict" : false
+				},
+				{
+					"name" : "estado[0]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[1]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Depura[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Depura[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Depura[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Depura[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK",
+					"strict" : false
+				},
+				{
+					"name" : "sinal",
+					"strict" : false
+				},
+				{
+					"name" : "RESET",
+					"strict" : false
+				},
+				{
+					"name" : "liga",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

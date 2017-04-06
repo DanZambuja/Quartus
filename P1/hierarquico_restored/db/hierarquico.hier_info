@@ -1,0 +1,384 @@
+|hierarquico
+clock => medidor:A1.CLOCK
+clock => controlador:C1.clock
+clock => reg4bits_en:R1.CLOCK
+clock => reg4bits_en:R2.CLOCK
+reset => medidor:A1.RESET
+reset => controlador:C1.reset
+iniciar => controlador:C1.iniciar
+zerar => controlador:C1.zerar
+pulso => medidor:A1.sinal
+medida[0] << reg4bits_en:R1.Q[0]
+medida[1] << reg4bits_en:R1.Q[1]
+medida[2] << reg4bits_en:R1.Q[2]
+medida[3] << reg4bits_en:R1.Q[3]
+fim << controlador:C1.fim
+s_medida[0] << medidor:A1.Q[0]
+s_medida[1] << medidor:A1.Q[1]
+s_medida[2] << medidor:A1.Q[2]
+s_medida[3] << medidor:A1.Q[3]
+Sliga << controlador:C1.liga
+Senable_r1 << controlador:C1.enable_r1
+Senable_r2 << controlador:C1.enable_r2
+Sreset_r1 << controlador:C1.reset_r1
+Sreset_r2 << controlador:C1.reset_r2
+saidaDisplay1[0] << hex7seg_en:Ds_medida.a
+saidaDisplay1[1] << hex7seg_en:Ds_medida.b
+saidaDisplay1[2] << hex7seg_en:Ds_medida.c
+saidaDisplay1[3] << hex7seg_en:Ds_medida.d
+saidaDisplay1[4] << hex7seg_en:Ds_medida.e
+saidaDisplay1[5] << hex7seg_en:Ds_medida.f
+saidaDisplay1[6] << hex7seg_en:Ds_medida.g
+saidaDisplay2[0] << hex7seg_en:Dmedida.a
+saidaDisplay2[1] << hex7seg_en:Dmedida.b
+saidaDisplay2[2] << hex7seg_en:Dmedida.c
+saidaDisplay2[3] << hex7seg_en:Dmedida.d
+saidaDisplay2[4] << hex7seg_en:Dmedida.e
+saidaDisplay2[5] << hex7seg_en:Dmedida.f
+saidaDisplay2[6] << hex7seg_en:Dmedida.g
+saidaDisplay3[0] << hex7seg_en:Dsoma.a
+saidaDisplay3[1] << hex7seg_en:Dsoma.b
+saidaDisplay3[2] << hex7seg_en:Dsoma.c
+saidaDisplay3[3] << hex7seg_en:Dsoma.d
+saidaDisplay3[4] << hex7seg_en:Dsoma.e
+saidaDisplay3[5] << hex7seg_en:Dsoma.f
+saidaDisplay3[6] << hex7seg_en:Dsoma.g
+soma[0] << reg4bits_en:R2.Q[0]
+soma[1] << reg4bits_en:R2.Q[1]
+soma[2] << reg4bits_en:R2.Q[2]
+soma[3] << reg4bits_en:R2.Q[3]
+s_pronto << medidor:A1.pronto
+s_somador[0] << SomadorBCD:S1.S[0]
+s_somador[1] << SomadorBCD:S1.S[1]
+s_somador[2] << SomadorBCD:S1.S[2]
+s_somador[3] << SomadorBCD:S1.S[3]
+
+
+|hierarquico|medidor:A1
+CLOCK => controle:C1.clock
+CLOCK => V74x163:D2.CLK
+RESET => controle:C1.reset
+liga => controle:C1.liga
+sinal => controle:C1.sinal
+Q[0] <= V74x163:D2.Q[0]
+Q[1] <= V74x163:D2.Q[1]
+Q[2] <= V74x163:D2.Q[2]
+Q[3] <= V74x163:D2.Q[3]
+RCO <= V74x163:D2.RCO
+pronto <= controle:C1.pronto
+
+
+|hierarquico|medidor:A1|controle:C1
+CLOCK => Ereg~1.DATAIN
+RESET => Ereg~3.DATAIN
+liga => Selector1.IN3
+liga => Selector2.IN3
+liga => Selector0.IN1
+sinal => Eprox.CONTA.DATAA
+sinal => Selector1.IN1
+sinal => Selector2.IN1
+sinal => Eprox.EPRONTO.DATAB
+resetc <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+enablec <= enablec.DB_MAX_OUTPUT_PORT_TYPE
+pronto <= pronto.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hierarquico|medidor:A1|V74x163:D2
+CLK => IQ[0].CLK
+CLK => IQ[1].CLK
+CLK => IQ[2].CLK
+CLK => IQ[3].CLK
+CLR_L => IQ.OUTPUTSELECT
+CLR_L => IQ.OUTPUTSELECT
+CLR_L => IQ.OUTPUTSELECT
+CLR_L => IQ.OUTPUTSELECT
+LD_L => IQ.OUTPUTSELECT
+LD_L => IQ.OUTPUTSELECT
+LD_L => IQ.OUTPUTSELECT
+LD_L => IQ.OUTPUTSELECT
+ENP => process_0.IN0
+ENT => process_0.IN1
+ENT => process_0.IN1
+D[0] => IQ.DATAB
+D[1] => IQ.DATAB
+D[2] => IQ.DATAB
+D[3] => IQ.DATAB
+Q[0] <= IQ[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= IQ[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= IQ[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= IQ[3].DB_MAX_OUTPUT_PORT_TYPE
+RCO <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hierarquico|controlador:C1
+clock => Ereg~1.DATAIN
+reset => Ereg~3.DATAIN
+zerar => process_1.IN0
+zerar => process_1.IN0
+iniciar => Selector3.IN3
+iniciar => process_1.IN1
+iniciar => process_1.IN1
+iniciar => Selector0.IN1
+pronto => Eprox.registra.DATAB
+pronto => Selector2.IN2
+liga <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+enable_r1 <= enable_r1.DB_MAX_OUTPUT_PORT_TYPE
+enable_r2 <= enable_r2.DB_MAX_OUTPUT_PORT_TYPE
+reset_r1 <= reset_r1.DB_MAX_OUTPUT_PORT_TYPE
+reset_r2 <= reset_r2.DB_MAX_OUTPUT_PORT_TYPE
+fim <= fim.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hierarquico|reg4bits_en:R1
+CLOCK => Q[0]~reg0.CLK
+CLOCK => Q[1]~reg0.CLK
+CLOCK => Q[2]~reg0.CLK
+CLOCK => Q[3]~reg0.CLK
+CLOCK => IQ[0].CLK
+CLOCK => IQ[1].CLK
+CLOCK => IQ[2].CLK
+CLOCK => IQ[3].CLK
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+ENABLE => IQ.OUTPUTSELECT
+ENABLE => IQ.OUTPUTSELECT
+ENABLE => IQ.OUTPUTSELECT
+ENABLE => IQ.OUTPUTSELECT
+D[0] => IQ.DATAB
+D[1] => IQ.DATAB
+D[2] => IQ.DATAB
+D[3] => IQ.DATAB
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hierarquico|reg4bits_en:R2
+CLOCK => Q[0]~reg0.CLK
+CLOCK => Q[1]~reg0.CLK
+CLOCK => Q[2]~reg0.CLK
+CLOCK => Q[3]~reg0.CLK
+CLOCK => IQ[0].CLK
+CLOCK => IQ[1].CLK
+CLOCK => IQ[2].CLK
+CLOCK => IQ[3].CLK
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+ENABLE => IQ.OUTPUTSELECT
+ENABLE => IQ.OUTPUTSELECT
+ENABLE => IQ.OUTPUTSELECT
+ENABLE => IQ.OUTPUTSELECT
+D[0] => IQ.DATAB
+D[1] => IQ.DATAB
+D[2] => IQ.DATAB
+D[3] => IQ.DATAB
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hierarquico|SomadorBCD:S1
+A[0] => Somador4bits_comportamental:s1.A[0]
+A[1] => Somador4bits_comportamental:s1.A[1]
+A[2] => Somador4bits_comportamental:s1.A[2]
+A[3] => Somador4bits_comportamental:s1.A[3]
+B[0] => Somador4bits_comportamental:s1.B[0]
+B[1] => Somador4bits_comportamental:s1.B[1]
+B[2] => Somador4bits_comportamental:s1.B[2]
+B[3] => Somador4bits_comportamental:s1.B[3]
+vem_um => Somador4bits_comportamental:s1.Cin
+vai_um <= s_vai_um.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= Somador4bits_comportamental:s2.S[0]
+S[1] <= Somador4bits_comportamental:s2.S[1]
+S[2] <= Somador4bits_comportamental:s2.S[2]
+S[3] <= Somador4bits_comportamental:s2.S[3]
+s_cout1 <= Somador4bits_comportamental:s1.Cout
+s_soma1[0] <= Somador4bits_comportamental:s1.S[0]
+s_soma1[1] <= Somador4bits_comportamental:s1.S[1]
+s_soma1[2] <= Somador4bits_comportamental:s1.S[2]
+s_soma1[3] <= Somador4bits_comportamental:s1.S[3]
+
+
+|hierarquico|SomadorBCD:S1|Somador4bits_comportamental:s1
+A[0] => _.DATAD
+A[1] => _.DATAD
+A[2] => _.DATAD
+A[3] => _.DATAD
+B[0] => _.DATAC
+B[1] => _.DATAC
+B[2] => _.DATAC
+B[3] => _.DATAC
+Cin => _.DATAB
+S[0] <= _.SUM_OUT
+S[1] <= _.SUM_OUT
+S[2] <= _.SUM_OUT
+S[3] <= _.SUM_OUT
+Cout <= _.SUM_OUT
+
+
+|hierarquico|SomadorBCD:S1|DetectorCodigoInvalido:d1
+D[0] => ~NO_FANOUT~
+D[1] => O.IN0
+D[2] => O.IN1
+D[3] => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hierarquico|SomadorBCD:S1|Somador4bits_comportamental:s2
+A[0] => _.DATAD
+A[1] => _.DATAD
+A[2] => _.DATAD
+A[3] => _.DATAD
+B[0] => _.DATAC
+B[1] => _.DATAC
+B[2] => _.DATAC
+B[3] => _.DATAC
+Cin => _.DATAB
+S[0] <= _.SUM_OUT
+S[1] <= _.SUM_OUT
+S[2] <= _.SUM_OUT
+S[3] <= _.SUM_OUT
+Cout <= _.SUM_OUT
+
+
+|hierarquico|hex7seg_en:Dmedida
+x3 => Mux0.IN16
+x3 => Mux1.IN16
+x3 => Mux2.IN16
+x3 => Mux3.IN16
+x3 => Mux4.IN16
+x3 => Mux5.IN16
+x3 => Mux6.IN16
+x2 => Mux0.IN17
+x2 => Mux1.IN17
+x2 => Mux2.IN17
+x2 => Mux3.IN17
+x2 => Mux4.IN17
+x2 => Mux5.IN17
+x2 => Mux6.IN17
+x1 => Mux0.IN18
+x1 => Mux1.IN18
+x1 => Mux2.IN18
+x1 => Mux3.IN18
+x1 => Mux4.IN18
+x1 => Mux5.IN18
+x1 => Mux6.IN18
+x0 => Mux0.IN19
+x0 => Mux1.IN19
+x0 => Mux2.IN19
+x0 => Mux3.IN19
+x0 => Mux4.IN19
+x0 => Mux5.IN19
+x0 => Mux6.IN19
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+a <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+b <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+c <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+d <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+e <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+f <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+g <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hierarquico|hex7seg_en:Ds_medida
+x3 => Mux0.IN16
+x3 => Mux1.IN16
+x3 => Mux2.IN16
+x3 => Mux3.IN16
+x3 => Mux4.IN16
+x3 => Mux5.IN16
+x3 => Mux6.IN16
+x2 => Mux0.IN17
+x2 => Mux1.IN17
+x2 => Mux2.IN17
+x2 => Mux3.IN17
+x2 => Mux4.IN17
+x2 => Mux5.IN17
+x2 => Mux6.IN17
+x1 => Mux0.IN18
+x1 => Mux1.IN18
+x1 => Mux2.IN18
+x1 => Mux3.IN18
+x1 => Mux4.IN18
+x1 => Mux5.IN18
+x1 => Mux6.IN18
+x0 => Mux0.IN19
+x0 => Mux1.IN19
+x0 => Mux2.IN19
+x0 => Mux3.IN19
+x0 => Mux4.IN19
+x0 => Mux5.IN19
+x0 => Mux6.IN19
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+a <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+b <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+c <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+d <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+e <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+f <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+g <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hierarquico|hex7seg_en:Dsoma
+x3 => Mux0.IN16
+x3 => Mux1.IN16
+x3 => Mux2.IN16
+x3 => Mux3.IN16
+x3 => Mux4.IN16
+x3 => Mux5.IN16
+x3 => Mux6.IN16
+x2 => Mux0.IN17
+x2 => Mux1.IN17
+x2 => Mux2.IN17
+x2 => Mux3.IN17
+x2 => Mux4.IN17
+x2 => Mux5.IN17
+x2 => Mux6.IN17
+x1 => Mux0.IN18
+x1 => Mux1.IN18
+x1 => Mux2.IN18
+x1 => Mux3.IN18
+x1 => Mux4.IN18
+x1 => Mux5.IN18
+x1 => Mux6.IN18
+x0 => Mux0.IN19
+x0 => Mux1.IN19
+x0 => Mux2.IN19
+x0 => Mux3.IN19
+x0 => Mux4.IN19
+x0 => Mux5.IN19
+x0 => Mux6.IN19
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+a <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+b <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+c <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+d <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+e <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+f <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+g <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+
+

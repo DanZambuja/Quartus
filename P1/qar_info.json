@@ -1,0 +1,7 @@
+{
+	"common_dir" : "/home/danzambuja/Quartus/Projetos/hierarquico/",
+	"acds_version" : "Version 15.1.0",
+	"platform" : "linux",
+	"os" : "Ubuntu 16.10",
+	"qpf" : "hierarquico_restored/hierarquico.qpf"
+}

@@ -1,0 +1,91 @@
+Quartus Prime Archive log --	/home/danzambuja/Quartus/Projetos/Backup/JogoReflexo.qarlog
+
+Archive:	/home/danzambuja/Quartus/Projetos/Backup/JogoReflexo.qar
+Date:		Sun Apr  2 23:56:08 2017
+Quartus Prime		15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Atrasador.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/BoxRodada.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/BoxRodada.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/ContadorBCD.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/ContadorBCD16Bits.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/DetectorCodigoInvalido.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Four_Digit_BCD_Counter.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/IC_74163.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/JK_FF.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Jogada.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Jogada.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Jogo.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/JogoCompleto.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/JogoCompleto.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Jogo_Reflexo.qpf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Jogo_Reflexo.qsf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Jogo_Reflexo.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Jogo_Reflexo.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/LFSR.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/LSFR.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Organizador.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/RegistradoresEDisplay.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Rodada.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Somador4bits_comportamental.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/SomadorBCD.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/V74x163.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Waveforms/Atrasador.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Waveforms/Atrasador2.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Waveforms/ContadorBCD.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Waveforms/LFSR.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Waveforms/bitToBCD.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Waveforms/controleAtraso.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/assignment_defaults.qdf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/bitToBCD.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/comparador.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/comparador.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/compare.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/contaAtraso.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/contaDemora.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/contador.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/contador.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/contadorQuePara.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/contadorQueParavwf.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/controlador.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/controle.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/controleAtrasador.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/controleDisplay.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/controleJogada.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/controleJogo.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/controleJogo.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/controleOrganizador.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/controleRodada.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/controleRodada.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/controleRodada2.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/dadosJogada.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/dadosJogo.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/dadosMedidor.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/dadosRodada.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/deMux4.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/deMux_4.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/demux2to1.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/exibirDisplay.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/geraSeed.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/hierarquico.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/hierarquico.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/jogo_Reflexovwf.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/media.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/medidor.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/medidor.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/mux.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/mux4_.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/mux4to1.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/reg16bits_en.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/reg4bits_en.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/registradores.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/resetador.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/seErrou.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/somadorBCD16_bits.vhd
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/somadorBCD16_bits.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/vreg16.vhd
+	======= Total: 80 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

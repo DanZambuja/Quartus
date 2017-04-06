@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity maquinaEstados is 
+
+	port ();
+
+end maquinaEstados;
+
+architecture Estados of maquinaEstados is 
+
+
+
+
+
+
+end Estados;

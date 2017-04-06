@@ -1,0 +1,7 @@
+library IEEE;
+use IEE.std_logic_1164.all;
+
+entity atrasador is 
+	port ();
+
+end atrasador;

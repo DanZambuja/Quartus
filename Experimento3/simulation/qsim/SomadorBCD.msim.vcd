@@ -1,0 +1,180 @@
+$comment
+	File created using the following command:
+		vcd file SomadorBCD.msim.vcd -direction
+$end
+$date
+	Fri Jan 27 17:52:49 2017
+$end
+$version
+	ModelSim Version 10.4b
+$end
+$timescale
+	1ps
+$end
+
+$scope module SomadorBCD_vlg_vec_tst $end
+$var reg 4 ! A [3:0] $end
+$var reg 4 " B [3:0] $end
+$var reg 1 # vem_um $end
+$var wire 1 $ S [3] $end
+$var wire 1 % S [2] $end
+$var wire 1 & S [1] $end
+$var wire 1 ' S [0] $end
+$var wire 1 ( s_cout1 $end
+$var wire 1 ) s_soma1 [3] $end
+$var wire 1 * s_soma1 [2] $end
+$var wire 1 + s_soma1 [1] $end
+$var wire 1 , s_soma1 [0] $end
+$var wire 1 - vai_um $end
+
+$scope module i1 $end
+$var wire 1 . gnd $end
+$var wire 1 / vcc $end
+$var wire 1 0 unknown $end
+$var tri1 1 1 devclrn $end
+$var tri1 1 2 devpor $end
+$var tri1 1 3 devoe $end
+$var wire 1 4 ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 5 B[3]~input_o $end
+$var wire 1 6 A[3]~input_o $end
+$var wire 1 7 A[2]~input_o $end
+$var wire 1 8 B[2]~input_o $end
+$var wire 1 9 A[1]~input_o $end
+$var wire 1 : B[1]~input_o $end
+$var wire 1 ; vem_um~input_o $end
+$var wire 1 < A[0]~input_o $end
+$var wire 1 = B[0]~input_o $end
+$var wire 1 > s1|_~13 $end
+$var wire 1 ? s1|_~14 $end
+$var wire 1 @ s1|_~7 $end
+$var wire 1 A s1|_~8 $end
+$var wire 1 B s1|_~10 $end
+$var wire 1 C s1|_~11 $end
+$var wire 1 D s1|_~4 $end
+$var wire 1 E s1|_~5 $end
+$var wire 1 F s1|Cout~sumout $end
+$var wire 1 G s_vai_um~0_combout $end
+$var wire 1 H s2|_~1 $end
+$var wire 1 I s2|_~2 $end
+$var wire 1 J s2|_~4 $end
+$var wire 1 K s2|_~5 $end
+$var wire 1 L s2|S [3] $end
+$var wire 1 M s2|S [2] $end
+$var wire 1 N s2|S [1] $end
+$var wire 1 O s2|S [0] $end
+$var wire 1 P s1|S [3] $end
+$var wire 1 Q s1|S [2] $end
+$var wire 1 R s1|S [1] $end
+$var wire 1 S s1|S [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+b0 "
+0#
+0'
+0&
+0%
+0$
+0(
+0,
+0+
+0*
+0)
+0-
+0.
+1/
+x0
+11
+12
+13
+04
+05
+06
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+zO
+0N
+0M
+0L
+0S
+0R
+0Q
+0P
+$end
+#40000
+b100 !
+b101 !
+b100 "
+b101 "
+1=
+18
+1<
+17
+1C
+1?
+1P
+1R
+1+
+1)
+1I
+1M
+1G
+1L
+1$
+1-
+1%
+1J
+0M
+0%
+0L
+0$
+#120000
+b1 !
+b0 !
+b1 "
+b0 "
+0=
+08
+0<
+07
+0C
+0?
+0P
+0R
+0+
+0)
+0J
+0I
+1M
+0G
+1L
+1$
+0-
+1%
+0L
+0M
+0%
+0$
+#1000000

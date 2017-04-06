@@ -1,0 +1,13 @@
+library IEEE:
+use IEEE.std_logic_1164.all;
+
+entity deMuxSaida is
+	port ();
+end deMuxSaida;
+
+architecture deMux of deMuxSaida is
+
+begin
+
+
+end deMux;

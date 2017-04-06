@@ -1,0 +1,309 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'maquinaEstados:Controle|Ereg.Jogador1'
+Slack : -14.244
+TNS   : -287.200
+
+Type  : Slow 1100mV 85C Model Setup 'inicia'
+Slack : -11.012
+TNS   : -30.958
+
+Type  : Slow 1100mV 85C Model Setup 'clock'
+Slack : -7.514
+TNS   : -318.761
+
+Type  : Slow 1100mV 85C Model Setup 'resposta'
+Slack : -7.208
+TNS   : -110.113
+
+Type  : Slow 1100mV 85C Model Setup 'contaDisplay'
+Slack : -0.379
+TNS   : -1.464
+
+Type  : Slow 1100mV 85C Model Hold 'clock'
+Slack : -2.340
+TNS   : -6.798
+
+Type  : Slow 1100mV 85C Model Hold 'contaDisplay'
+Slack : 0.547
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'resposta'
+Slack : 1.113
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'inicia'
+Slack : 1.303
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'maquinaEstados:Controle|Ereg.Jogador1'
+Slack : 2.910
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'clock'
+Slack : -6.322
+TNS   : -226.582
+
+Type  : Slow 1100mV 85C Model Recovery 'contaDisplay'
+Slack : -1.674
+TNS   : -6.678
+
+Type  : Slow 1100mV 85C Model Removal 'clock'
+Slack : 0.838
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'contaDisplay'
+Slack : 0.858
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'resposta'
+Slack : -1.075
+TNS   : -12.694
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
+Slack : -0.724
+TNS   : -87.566
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'contaDisplay'
+Slack : -0.724
+TNS   : -4.427
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'inicia'
+Slack : -0.003
+TNS   : -0.003
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'maquinaEstados:Controle|Ereg.Jogador1'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'maquinaEstados:Controle|Ereg.Jogador1'
+Slack : -14.216
+TNS   : -286.583
+
+Type  : Slow 1100mV 0C Model Setup 'inicia'
+Slack : -11.073
+TNS   : -31.260
+
+Type  : Slow 1100mV 0C Model Setup 'clock'
+Slack : -7.513
+TNS   : -317.140
+
+Type  : Slow 1100mV 0C Model Setup 'resposta'
+Slack : -6.790
+TNS   : -111.704
+
+Type  : Slow 1100mV 0C Model Setup 'contaDisplay'
+Slack : -0.466
+TNS   : -1.817
+
+Type  : Slow 1100mV 0C Model Hold 'clock'
+Slack : -2.512
+TNS   : -7.337
+
+Type  : Slow 1100mV 0C Model Hold 'contaDisplay'
+Slack : 0.523
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'resposta'
+Slack : 0.830
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'inicia'
+Slack : 1.252
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'maquinaEstados:Controle|Ereg.Jogador1'
+Slack : 2.806
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'clock'
+Slack : -6.151
+TNS   : -217.258
+
+Type  : Slow 1100mV 0C Model Recovery 'contaDisplay'
+Slack : -1.458
+TNS   : -5.810
+
+Type  : Slow 1100mV 0C Model Removal 'clock'
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'contaDisplay'
+Slack : 0.502
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'resposta'
+Slack : -1.205
+TNS   : -13.807
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
+Slack : -0.724
+TNS   : -90.023
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'contaDisplay'
+Slack : -0.724
+TNS   : -4.462
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'inicia'
+Slack : -0.129
+TNS   : -0.230
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'maquinaEstados:Controle|Ereg.Jogador1'
+Slack : 0.134
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'maquinaEstados:Controle|Ereg.Jogador1'
+Slack : -6.881
+TNS   : -128.048
+
+Type  : Fast 1100mV 85C Model Setup 'inicia'
+Slack : -5.077
+TNS   : -11.746
+
+Type  : Fast 1100mV 85C Model Setup 'clock'
+Slack : -4.002
+TNS   : -124.434
+
+Type  : Fast 1100mV 85C Model Setup 'resposta'
+Slack : -3.177
+TNS   : -35.765
+
+Type  : Fast 1100mV 85C Model Setup 'contaDisplay'
+Slack : 0.410
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clock'
+Slack : -0.718
+TNS   : -1.954
+
+Type  : Fast 1100mV 85C Model Hold 'contaDisplay'
+Slack : 0.189
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'resposta'
+Slack : 0.279
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'inicia'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'maquinaEstados:Controle|Ereg.Jogador1'
+Slack : 1.179
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'clock'
+Slack : -2.754
+TNS   : -100.455
+
+Type  : Fast 1100mV 85C Model Recovery 'contaDisplay'
+Slack : -1.040
+TNS   : -4.155
+
+Type  : Fast 1100mV 85C Model Removal 'contaDisplay'
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'clock'
+Slack : 0.373
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'resposta'
+Slack : -0.605
+TNS   : -9.428
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'inicia'
+Slack : -0.287
+TNS   : -2.836
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
+Slack : -0.089
+TNS   : -6.701
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'contaDisplay'
+Slack : -0.083
+TNS   : -0.328
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'maquinaEstados:Controle|Ereg.Jogador1'
+Slack : 0.205
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'maquinaEstados:Controle|Ereg.Jogador1'
+Slack : -6.136
+TNS   : -116.449
+
+Type  : Fast 1100mV 0C Model Setup 'inicia'
+Slack : -4.416
+TNS   : -9.965
+
+Type  : Fast 1100mV 0C Model Setup 'clock'
+Slack : -3.450
+TNS   : -107.625
+
+Type  : Fast 1100mV 0C Model Setup 'resposta'
+Slack : -2.491
+TNS   : -31.240
+
+Type  : Fast 1100mV 0C Model Setup 'contaDisplay'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clock'
+Slack : -0.735
+TNS   : -2.111
+
+Type  : Fast 1100mV 0C Model Hold 'contaDisplay'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'resposta'
+Slack : 0.290
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'inicia'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'maquinaEstados:Controle|Ereg.Jogador1'
+Slack : 1.178
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'clock'
+Slack : -2.306
+TNS   : -84.517
+
+Type  : Fast 1100mV 0C Model Recovery 'contaDisplay'
+Slack : -0.865
+TNS   : -3.456
+
+Type  : Fast 1100mV 0C Model Removal 'contaDisplay'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'clock'
+Slack : 0.259
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'resposta'
+Slack : -0.565
+TNS   : -8.942
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'inicia'
+Slack : -0.258
+TNS   : -2.600
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
+Slack : -0.088
+TNS   : -6.701
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'contaDisplay'
+Slack : -0.084
+TNS   : -0.332
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'maquinaEstados:Controle|Ereg.Jogador1'
+Slack : 0.250
+TNS   : 0.000
+
+------------------------------------------------------------

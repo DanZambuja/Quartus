@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/danzambuja/Quartus/Projetos/Jogo_Reacao/simulation/qsim
+vinterface_leds_botoes
+Z1 !s110 1489166239
+!i10b 1
+!s100 VOc_dMbl=fZ0PR=c8;d=V2
+Idl[VYLf];l@3=X4LO9D_P2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1489166237
+Z3 8Jogo_Reacao.vo
+Z4 FJogo_Reacao.vo
+Z5 L0 32
+Z6 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z7 !s108 1489166239.000000
+Z8 !s107 Jogo_Reacao.vo|
+Z9 !s90 -work|work|Jogo_Reacao.vo|
+!i113 1
+Z10 o-work work
+vinterface_leds_botoes_vlg_vec_tst
+R1
+!i10b 1
+!s100 6<1;;m5a7C]<Z3z:B5gc12
+I]z04WKzZW=9^IQedJ:TS62
+R2
+R0
+w1489166229
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+Z11 L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+vJogo_Reacao
+!s110 1490021131
+!i10b 1
+!s100 YE>im<3`F<9G:AA5e7ZoN0
+ID2=OdB25Ihi=oPBO3BnPA0
+R2
+R0
+w1490021130
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1490021131.000000
+R8
+R9
+!i113 1
+R10
+n@jogo_@reacao
+vJogo_Reacao_vlg_vec_tst
+!s110 1490021132
+!i10b 1
+!s100 F^O6Nk@@OR_`dT:jPgSS=2
+IPJNK4Hf3Bc;D1lEkn5^5<3
+R2
+R0
+w1490021122
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+!s108 1490021132.000000
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R10
+n@jogo_@reacao_vlg_vec_tst

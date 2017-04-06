@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "saida[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[1]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[2]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[3]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[4]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[5]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[6]",
+					"strict" : false
+				},
+				{
+					"name" : "saida[7]",
+					"strict" : false
+				},
+				{
+					"name" : "fim",
+					"strict" : false
+				},
+				{
+					"name" : "s_m[0]",
+					"strict" : false
+				},
+				{
+					"name" : "s_m[1]",
+					"strict" : false
+				},
+				{
+					"name" : "s_m[2]",
+					"strict" : false
+				},
+				{
+					"name" : "s_m[3]",
+					"strict" : false
+				},
+				{
+					"name" : "s_m[4]",
+					"strict" : false
+				},
+				{
+					"name" : "s_m[5]",
+					"strict" : false
+				},
+				{
+					"name" : "s_m[6]",
+					"strict" : false
+				},
+				{
+					"name" : "s_m[7]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDisplay2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "iniciar",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "zerar",
+					"strict" : false
+				},
+				{
+					"name" : "pulso",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

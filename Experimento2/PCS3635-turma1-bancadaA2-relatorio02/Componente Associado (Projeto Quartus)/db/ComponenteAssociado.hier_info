@@ -1,0 +1,71 @@
+|ComponenteAssociado
+liga => umFSM:U1.liga
+sinal => umFSM:U1.sinal
+RESET => umFSM:U1.RESET
+CLOCK => umFSM:U1.CLOCK
+CLOCK => V74x163:U2.CLK
+CLOCK => CLOCKout.DATAIN
+RCO <= V74x163:U2.RCO
+ResetcOUT <= umFSM:U1.resetc
+EnablecOUT <= umFSM:U1.enablec
+Q[0] <= V74x163:U2.Q[0]
+Q[1] <= V74x163:U2.Q[1]
+Q[2] <= V74x163:U2.Q[2]
+Q[3] <= V74x163:U2.Q[3]
+ESTADO[0] <= umFSM:U1.ESTADO[0]
+ESTADO[1] <= umFSM:U1.ESTADO[1]
+ESTADO[2] <= umFSM:U1.ESTADO[2]
+ESTADO[3] <= umFSM:U1.ESTADO[3]
+CLOCKout <= CLOCK.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ComponenteAssociado|umFSM:U1
+CLOCK => Ereg~1.DATAIN
+RESET => Ereg~3.DATAIN
+liga => Selector1.IN3
+liga => Selector3.IN3
+liga => Selector6.IN1
+liga => Selector6.IN2
+liga => Selector0.IN1
+sinal => Eprox.CONTA.DATAA
+sinal => Selector6.IN3
+sinal => Selector6.IN4
+sinal => Selector6.IN0
+sinal => Selector1.IN2
+sinal => Eprox.LIMPA.DATAB
+sinal => Selector3.IN2
+enablec <= enablec.DB_MAX_OUTPUT_PORT_TYPE
+resetc <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+estado[0] <= estado[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+estado[1] <= estado[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+estado[2] <= estado[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+estado[3] <= <GND>
+
+
+|ComponenteAssociado|V74x163:U2
+CLK => IQ[0].CLK
+CLK => IQ[1].CLK
+CLK => IQ[2].CLK
+CLK => IQ[3].CLK
+CLR_L => IQ.OUTPUTSELECT
+CLR_L => IQ.OUTPUTSELECT
+CLR_L => IQ.OUTPUTSELECT
+CLR_L => IQ.OUTPUTSELECT
+LD_L => IQ.OUTPUTSELECT
+LD_L => IQ.OUTPUTSELECT
+LD_L => IQ.OUTPUTSELECT
+LD_L => IQ.OUTPUTSELECT
+ENP => process_0.IN0
+ENT => process_0.IN1
+ENT => process_0.IN1
+D[0] => IQ.DATAB
+D[1] => IQ.DATAB
+D[2] => IQ.DATAB
+D[3] => IQ.DATAB
+Q[0] <= IQ[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= IQ[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= IQ[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= IQ[3].DB_MAX_OUTPUT_PORT_TYPE
+RCO <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+

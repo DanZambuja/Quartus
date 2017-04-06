@@ -1,0 +1,679 @@
+Analysis & Synthesis report for Jogo_Reacao
+Mon Mar 20 11:38:44 2017
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Jogo_Reacao|Tentativa:Tent|estadosJogo:E|Ereg
+  9. State Machine - |Jogo_Reacao|maquinaEstados:Controle|Ereg
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Port Connectivity Checks: "hex7seg_en:DisplayGanhador"
+ 17. Port Connectivity Checks: "hex7seg_en:DisplayPonto1"
+ 18. Port Connectivity Checks: "hex7seg_en:DisplayPonto2"
+ 19. Port Connectivity Checks: "hex7seg_en:DisplayPonto3"
+ 20. Port Connectivity Checks: "hex7seg_en:DisplayPonto4"
+ 21. Port Connectivity Checks: "Tentativa:Tent|estadosJogo:E"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Mar 20 11:38:44 2017       ;
+; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Revision Name                   ; Jogo_Reacao                                 ;
+; Top-level Entity Name           ; Jogo_Reacao                                 ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 66                                          ;
+; Total pins                      ; 46                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; Jogo_Reacao        ; Jogo_Reacao        ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------+---------+
+; Jogo_Reacao.vhd                  ; yes             ; User VHDL File        ; /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd     ;         ;
+; maquinaEstados.vhd               ; yes             ; User VHDL File        ; /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd  ;         ;
+; Tentativa.vhd                    ; yes             ; User VHDL File        ; /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Tentativa.vhd       ;         ;
+; contadorDisplay.vhd              ; yes             ; User VHDL File        ; /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contadorDisplay.vhd ;         ;
+; muxDisplay.vhd                   ; yes             ; User VHDL File        ; /home/danzambuja/Quartus/Projetos/Jogo_Reacao/muxDisplay.vhd      ;         ;
+; comparador.vhd                   ; yes             ; User VHDL File        ; /home/danzambuja/Quartus/Projetos/Jogo_Reacao/comparador.vhd      ;         ;
+; estadosJogo.vhd                  ; yes             ; User VHDL File        ; /home/danzambuja/Quartus/Projetos/Jogo_Reacao/estadosJogo.vhd     ;         ;
+; deMuxSaida.vhd                   ; yes             ; User VHDL File        ; /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd      ;         ;
+; tempoAtual.vhd                   ; yes             ; User VHDL File        ; /home/danzambuja/Quartus/Projetos/Jogo_Reacao/tempoAtual.vhd      ;         ;
+; contador.vhd                     ; yes             ; User VHDL File        ; /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contador.vhd        ;         ;
+; LFSR.vhd                         ; yes             ; User VHDL File        ; /home/danzambuja/Quartus/Projetos/Jogo_Reacao/LFSR.vhd            ;         ;
+; contaResposta.vhd                ; yes             ; User VHDL File        ; /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd   ;         ;
+; hex7seg_en.vhd                   ; yes             ; Auto-Found VHDL File  ; /home/danzambuja/Quartus/Projetos/Jogo_Reacao/hex7seg_en.vhd      ;         ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 184         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 325         ;
+;     -- 7 input functions                    ; 4           ;
+;     -- 6 input functions                    ; 37          ;
+;     -- 5 input functions                    ; 42          ;
+;     -- 4 input functions                    ; 90          ;
+;     -- <=3 input functions                  ; 152         ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 66          ;
+;                                             ;             ;
+; I/O pins                                    ; 46          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 64          ;
+; Total fan-out                               ; 1464        ;
+; Average fan-out                             ; 3.03        ;
++---------------------------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                   ;
++--------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------+--------------+
+; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Library Name ;
++--------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------+--------------+
+; |Jogo_Reacao                   ; 325 (0)           ; 66 (0)       ; 0                 ; 0          ; 46   ; 0            ; |Jogo_Reacao                                ; work         ;
+;    |LFSR:Random|               ; 125 (125)         ; 24 (24)      ; 0                 ; 0          ; 0    ; 0            ; |Jogo_Reacao|LFSR:Random                    ; work         ;
+;    |Tentativa:Tent|            ; 144 (0)           ; 36 (0)       ; 0                 ; 0          ; 0    ; 0            ; |Jogo_Reacao|Tentativa:Tent                 ; work         ;
+;       |contaResposta:R|        ; 79 (79)           ; 16 (16)      ; 0                 ; 0          ; 0    ; 0            ; |Jogo_Reacao|Tentativa:Tent|contaResposta:R ; work         ;
+;       |contador:C|             ; 24 (24)           ; 16 (16)      ; 0                 ; 0          ; 0    ; 0            ; |Jogo_Reacao|Tentativa:Tent|contador:C      ; work         ;
+;       |deMuxSaida:D|           ; 32 (32)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Jogo_Reacao|Tentativa:Tent|deMuxSaida:D    ; work         ;
+;       |estadosJogo:E|          ; 9 (9)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |Jogo_Reacao|Tentativa:Tent|estadosJogo:E   ; work         ;
+;    |contadorDisplay:ContDispl| ; 0 (0)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |Jogo_Reacao|contadorDisplay:ContDispl      ; work         ;
+;    |hex7seg_en:DisplayPonto1|  ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Jogo_Reacao|hex7seg_en:DisplayPonto1       ; work         ;
+;    |hex7seg_en:DisplayPonto2|  ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Jogo_Reacao|hex7seg_en:DisplayPonto2       ; work         ;
+;    |hex7seg_en:DisplayPonto3|  ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Jogo_Reacao|hex7seg_en:DisplayPonto3       ; work         ;
+;    |hex7seg_en:DisplayPonto4|  ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Jogo_Reacao|hex7seg_en:DisplayPonto4       ; work         ;
+;    |maquinaEstados:Controle|   ; 10 (10)           ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |Jogo_Reacao|maquinaEstados:Controle        ; work         ;
+;    |muxDisplay:muxD|           ; 18 (18)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Jogo_Reacao|muxDisplay:muxD                ; work         ;
++--------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------+
+; State Machine - |Jogo_Reacao|Tentativa:Tent|estadosJogo:E|Ereg        ;
++---------------+----------+-------------+--------------+---------------+
+; Name          ; Ereg.Fim ; Ereg.Errado ; Ereg.Aguarda ; Ereg.E_Atraso ;
++---------------+----------+-------------+--------------+---------------+
+; Ereg.E_Atraso ; 0        ; 0           ; 0            ; 0             ;
+; Ereg.Aguarda  ; 0        ; 0           ; 1            ; 1             ;
+; Ereg.Errado   ; 0        ; 1           ; 0            ; 1             ;
+; Ereg.Fim      ; 1        ; 0           ; 0            ; 1             ;
++---------------+----------+-------------+--------------+---------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------+
+; State Machine - |Jogo_Reacao|maquinaEstados:Controle|Ereg                      ;
++----------------+---------------+----------------+---------------+--------------+
+; Name           ; Ereg.Jogador2 ; Ereg.Intervalo ; Ereg.Jogador1 ; Ereg.Inicial ;
++----------------+---------------+----------------+---------------+--------------+
+; Ereg.Inicial   ; 0             ; 0              ; 0             ; 0            ;
+; Ereg.Jogador1  ; 0             ; 0              ; 1             ; 1            ;
+; Ereg.Intervalo ; 0             ; 1              ; 0             ; 1            ;
+; Ereg.Jogador2  ; 1             ; 0              ; 0             ; 1            ;
++----------------+---------------+----------------+---------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                   ;
++-----------------------------------------------------+----------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                    ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------------------------+------------------------+
+; Tentativa:Tent|deMuxSaida:D|saida1[0]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[0]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida1[1]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[1]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida1[2]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[2]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida1[3]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[3]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida1[4]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[4]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida1[5]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[5]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida1[6]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[6]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida1[7]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[7]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida1[8]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[8]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida1[9]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[9]               ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida1[10]              ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[10]              ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida1[11]              ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[11]              ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida1[12]              ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[12]              ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida1[13]              ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[13]              ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida1[14]              ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[14]              ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida1[15]              ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; Tentativa:Tent|deMuxSaida:D|saida2[15]              ; maquinaEstados:Controle|Ereg.Jogador1  ; yes                    ;
+; maquinaEstados:Controle|estado[0]                   ; maquinaEstados:Controle|Selector6      ; yes                    ;
+; maquinaEstados:Controle|estado[1]                   ; maquinaEstados:Controle|Selector6      ; yes                    ;
+; Tentativa:Tent|estadosJogo:E|Eprox.Errado_121       ; Tentativa:Tent|estadosJogo:E|Selector0 ; yes                    ;
+; Tentativa:Tent|estadosJogo:E|Eprox.Aguarda_135      ; Tentativa:Tent|estadosJogo:E|Selector0 ; yes                    ;
+; Tentativa:Tent|contador:C|sinal                     ; maquinaEstados:Controle|WideNor0       ; yes                    ;
+; maquinaEstados:Controle|Eprox.Jogador1_142          ; maquinaEstados:Controle|Selector6      ; yes                    ;
+; maquinaEstados:Controle|Eprox.Jogador2_118          ; maquinaEstados:Controle|Selector6      ; yes                    ;
+; Tentativa:Tent|estadosJogo:E|Eprox.Fim_107          ; Tentativa:Tent|estadosJogo:E|Selector0 ; yes                    ;
+; maquinaEstados:Controle|Eprox.Intervalo_130         ; maquinaEstados:Controle|Selector6      ; yes                    ;
+; maquinaEstados:Controle|Eprox.Inicial_154           ; maquinaEstados:Controle|Selector6      ; yes                    ;
+; Number of user-specified and inferred latches = 42  ;                                        ;                        ;
++-----------------------------------------------------+----------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++----------------------------------------+----------------------------------------------+
+; Register name                          ; Reason for Removal                           ;
++----------------------------------------+----------------------------------------------+
+; LFSR:Random|k[4..30]                   ; Stuck at GND due to stuck port data_in       ;
+; LFSR:Random|k[31]                      ; Lost fanout                                  ;
+; tempoAtual:T|s_tempo[15]               ; Merged with Tentativa:Tent|contador:C|IQ[15] ;
+; tempoAtual:T|s_tempo[14]               ; Merged with Tentativa:Tent|contador:C|IQ[14] ;
+; tempoAtual:T|s_tempo[13]               ; Merged with Tentativa:Tent|contador:C|IQ[13] ;
+; tempoAtual:T|s_tempo[12]               ; Merged with Tentativa:Tent|contador:C|IQ[12] ;
+; tempoAtual:T|s_tempo[11]               ; Merged with Tentativa:Tent|contador:C|IQ[11] ;
+; tempoAtual:T|s_tempo[10]               ; Merged with Tentativa:Tent|contador:C|IQ[10] ;
+; tempoAtual:T|s_tempo[9]                ; Merged with Tentativa:Tent|contador:C|IQ[9]  ;
+; tempoAtual:T|s_tempo[8]                ; Merged with Tentativa:Tent|contador:C|IQ[8]  ;
+; tempoAtual:T|s_tempo[7]                ; Merged with Tentativa:Tent|contador:C|IQ[7]  ;
+; tempoAtual:T|s_tempo[6]                ; Merged with Tentativa:Tent|contador:C|IQ[6]  ;
+; tempoAtual:T|s_tempo[5]                ; Merged with Tentativa:Tent|contador:C|IQ[5]  ;
+; tempoAtual:T|s_tempo[4]                ; Merged with Tentativa:Tent|contador:C|IQ[4]  ;
+; tempoAtual:T|s_tempo[3]                ; Merged with Tentativa:Tent|contador:C|IQ[3]  ;
+; tempoAtual:T|s_tempo[2]                ; Merged with Tentativa:Tent|contador:C|IQ[2]  ;
+; tempoAtual:T|s_tempo[1]                ; Merged with Tentativa:Tent|contador:C|IQ[1]  ;
+; tempoAtual:T|s_tempo[0]                ; Merged with Tentativa:Tent|contador:C|IQ[0]  ;
+; Total Number of Removed Registers = 44 ;                                              ;
++----------------------------------------+----------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                           ;
++------------------+---------------------------+----------------------------------------+
+; Register name    ; Reason for Removal        ; Registers Removed due to This Register ;
++------------------+---------------------------+----------------------------------------+
+; LFSR:Random|k[4] ; Stuck at GND              ; LFSR:Random|k[31]                      ;
+;                  ; due to stuck port data_in ;                                        ;
++------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 66    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 42    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; LFSR:Random|k[0]                       ; 44      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Jogo_Reacao|LFSR:Random|Mux1           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Jogo_Reacao|LFSR:Random|Mux1           ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Jogo_Reacao|muxDisplay:muxD|s_saida[9] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "hex7seg_en:DisplayGanhador" ;
++--------+-------+----------+----------------------------+
+; Port   ; Type  ; Severity ; Details                    ;
++--------+-------+----------+----------------------------+
+; enable ; Input ; Info     ; Stuck at VCC               ;
++--------+-------+----------+----------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "hex7seg_en:DisplayPonto1" ;
++--------+-------+----------+--------------------------+
+; Port   ; Type  ; Severity ; Details                  ;
++--------+-------+----------+--------------------------+
+; enable ; Input ; Info     ; Stuck at VCC             ;
++--------+-------+----------+--------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "hex7seg_en:DisplayPonto2" ;
++--------+-------+----------+--------------------------+
+; Port   ; Type  ; Severity ; Details                  ;
++--------+-------+----------+--------------------------+
+; enable ; Input ; Info     ; Stuck at VCC             ;
++--------+-------+----------+--------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "hex7seg_en:DisplayPonto3" ;
++--------+-------+----------+--------------------------+
+; Port   ; Type  ; Severity ; Details                  ;
++--------+-------+----------+--------------------------+
+; enable ; Input ; Info     ; Stuck at VCC             ;
++--------+-------+----------+--------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "hex7seg_en:DisplayPonto4" ;
++--------+-------+----------+--------------------------+
+; Port   ; Type  ; Severity ; Details                  ;
++--------+-------+----------+--------------------------+
+; enable ; Input ; Info     ; Stuck at VCC             ;
++--------+-------+----------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Tentativa:Tent|estadosJogo:E"                                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; atraso ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 66                          ;
+;     CLR               ; 42                          ;
+;     plain             ; 24                          ;
+; arriav_lcell_comb     ; 333                         ;
+;     arith             ; 30                          ;
+;         1 data inputs ; 28                          ;
+;         2 data inputs ; 2                           ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 299                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 28                          ;
+;         3 data inputs ; 91                          ;
+;         4 data inputs ; 90                          ;
+;         5 data inputs ; 42                          ;
+;         6 data inputs ; 37                          ;
+; boundary_port         ; 46                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.86                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+    Info: Processing started: Mon Mar 20 11:38:03 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Jogo_Reacao -c Jogo_Reacao
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Warning (12019): Can't analyze file -- file interface_leds_botoes.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file Jogo_Reacao.vhd
+    Info (12022): Found design unit 1: Jogo_Reacao-hierarquica File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 13
+    Info (12023): Found entity 1: Jogo_Reacao File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 4
+Warning (12019): Can't analyze file -- file Organizador.vhd is missing
+Warning (12019): Can't analyze file -- file Jogo.vhd is missing
+Warning (12019): Can't analyze file -- file ControleJogo.vhd is missing
+Warning (12019): Can't analyze file -- file DadosJogo.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file maquinaEstados.vhd
+    Info (12022): Found design unit 1: maquinaEstados-Estados File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 12
+    Info (12023): Found entity 1: maquinaEstados File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file Tentativa.vhd
+    Info (12022): Found design unit 1: Tentativa-hierarquico File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Tentativa.vhd Line: 12
+    Info (12023): Found entity 1: Tentativa File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Tentativa.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file contadorDisplay.vhd
+    Info (12022): Found design unit 1: contadorDisplay-contador File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contadorDisplay.vhd Line: 10
+    Info (12023): Found entity 1: contadorDisplay File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contadorDisplay.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file muxDisplay.vhd
+    Info (12022): Found design unit 1: muxDisplay-multiplex File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/muxDisplay.vhd Line: 11
+    Info (12023): Found entity 1: muxDisplay File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/muxDisplay.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file comparador.vhd
+    Info (12022): Found design unit 1: comparador-comparador File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/comparador.vhd Line: 12
+    Info (12023): Found entity 1: comparador File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/comparador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file estadosJogo.vhd
+    Info (12022): Found design unit 1: estadosJogo-Estados File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/estadosJogo.vhd Line: 11
+    Info (12023): Found entity 1: estadosJogo File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/estadosJogo.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file deMuxSaida.vhd
+    Info (12022): Found design unit 1: deMuxSaida-deMux File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 10
+    Info (12023): Found entity 1: deMuxSaida File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tempoAtual.vhd
+    Info (12022): Found design unit 1: tempoAtual-temporal File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/tempoAtual.vhd Line: 10
+    Info (12023): Found entity 1: tempoAtual File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/tempoAtual.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file contador.vhd
+    Info (12022): Found design unit 1: contador-conta File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contador.vhd Line: 11
+    Info (12023): Found entity 1: contador File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file atrasador.vhd
+    Info (12022): Found design unit 1: atrasador-atraso File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/atrasador.vhd Line: 12
+    Info (12023): Found entity 1: atrasador File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/atrasador.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file LFSR.vhd
+    Info (12022): Found design unit 1: LFSR-pseudoRandom File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/LFSR.vhd Line: 11
+    Info (12023): Found entity 1: LFSR File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/LFSR.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file contaResposta.vhd
+    Info (12022): Found design unit 1: contaResposta-contagem File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 10
+    Info (12023): Found entity 1: contaResposta File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 5
+Info (12127): Elaborating entity "Jogo_Reacao" for the top level hierarchy
+Info (12128): Elaborating entity "maquinaEstados" for hierarchy "maquinaEstados:Controle" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 83
+Warning (10492): VHDL Process Statement warning at maquinaEstados.vhd(25): signal "Ereg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 25
+Warning (10631): VHDL Process Statement warning at maquinaEstados.vhd(23): inferring latch(es) for signal or variable "Eprox", which holds its previous value in one or more paths through the process File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 23
+Warning (10631): VHDL Process Statement warning at maquinaEstados.vhd(23): inferring latch(es) for signal or variable "estado", which holds its previous value in one or more paths through the process File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 23
+Info (10041): Inferred latch for "estado[0]" at maquinaEstados.vhd(23) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 23
+Info (10041): Inferred latch for "estado[1]" at maquinaEstados.vhd(23) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 23
+Info (10041): Inferred latch for "Eprox.Jogador2" at maquinaEstados.vhd(23) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 23
+Info (10041): Inferred latch for "Eprox.Intervalo" at maquinaEstados.vhd(23) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 23
+Info (10041): Inferred latch for "Eprox.Jogador1" at maquinaEstados.vhd(23) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 23
+Info (10041): Inferred latch for "Eprox.Inicial" at maquinaEstados.vhd(23) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 23
+Info (12128): Elaborating entity "Tentativa" for hierarchy "Tentativa:Tent" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 85
+Warning (10541): VHDL Signal Declaration warning at Tentativa.vhd(7): used implicit default value for signal "estimulo" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Tentativa.vhd Line: 7
+Warning (10036): Verilog HDL or VHDL warning at Tentativa.vhd(39): object "s_atraso" assigned a value but never read File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Tentativa.vhd Line: 39
+Info (12128): Elaborating entity "contador" for hierarchy "Tentativa:Tent|contador:C" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Tentativa.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at contador.vhd(20): signal "IQ" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contador.vhd Line: 20
+Warning (10492): VHDL Process Statement warning at contador.vhd(20): signal "atraso" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contador.vhd Line: 20
+Warning (10631): VHDL Process Statement warning at contador.vhd(14): inferring latch(es) for signal or variable "sinal", which holds its previous value in one or more paths through the process File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contador.vhd Line: 14
+Info (10041): Inferred latch for "sinal" at contador.vhd(14) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contador.vhd Line: 14
+Info (12128): Elaborating entity "estadosJogo" for hierarchy "Tentativa:Tent|estadosJogo:E" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Tentativa.vhd Line: 44
+Warning (10631): VHDL Process Statement warning at estadosJogo.vhd(21): inferring latch(es) for signal or variable "Eprox", which holds its previous value in one or more paths through the process File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/estadosJogo.vhd Line: 21
+Info (10041): Inferred latch for "Eprox.Fim" at estadosJogo.vhd(21) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/estadosJogo.vhd Line: 21
+Info (10041): Inferred latch for "Eprox.Errado" at estadosJogo.vhd(21) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/estadosJogo.vhd Line: 21
+Info (10041): Inferred latch for "Eprox.Aguarda" at estadosJogo.vhd(21) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/estadosJogo.vhd Line: 21
+Info (10041): Inferred latch for "Eprox.E_Atraso" at estadosJogo.vhd(21) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/estadosJogo.vhd Line: 21
+Info (12128): Elaborating entity "contaResposta" for hierarchy "Tentativa:Tent|contaResposta:R" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Tentativa.vhd Line: 45
+Info (12128): Elaborating entity "deMuxSaida" for hierarchy "Tentativa:Tent|deMuxSaida:D" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Tentativa.vhd Line: 46
+Warning (10492): VHDL Process Statement warning at deMuxSaida.vhd(15): signal "entrada" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at deMuxSaida.vhd(16): signal "entrada" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 16
+Warning (10631): VHDL Process Statement warning at deMuxSaida.vhd(13): inferring latch(es) for signal or variable "saida1", which holds its previous value in one or more paths through the process File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Warning (10631): VHDL Process Statement warning at deMuxSaida.vhd(13): inferring latch(es) for signal or variable "saida2", which holds its previous value in one or more paths through the process File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[0]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[1]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[2]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[3]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[4]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[5]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[6]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[7]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[8]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[9]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[10]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[11]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[12]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[13]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[14]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida2[15]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[0]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[1]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[2]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[3]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[4]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[5]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[6]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[7]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[8]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[9]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[10]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[11]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[12]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[13]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[14]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (10041): Inferred latch for "saida1[15]" at deMuxSaida.vhd(13) File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/deMuxSaida.vhd Line: 13
+Info (12128): Elaborating entity "tempoAtual" for hierarchy "tempoAtual:T" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 87
+Info (12128): Elaborating entity "LFSR" for hierarchy "LFSR:Random" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 89
+Info (12128): Elaborating entity "comparador" for hierarchy "comparador:C" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 91
+Info (12128): Elaborating entity "contadorDisplay" for hierarchy "contadorDisplay:ContDispl" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at contadorDisplay.vhd(15): signal "liga" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contadorDisplay.vhd Line: 15
+Info (12128): Elaborating entity "muxDisplay" for hierarchy "muxDisplay:muxD" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 95
+Warning (10492): VHDL Process Statement warning at muxDisplay.vhd(15): signal "s_saida1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/muxDisplay.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at muxDisplay.vhd(16): signal "s_saida2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/muxDisplay.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at muxDisplay.vhd(17): signal "s_recorde" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/muxDisplay.vhd Line: 17
+Warning (12125): Using design file hex7seg_en.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: hex7seg_en-hex7seg_en File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/hex7seg_en.vhd Line: 12
+    Info (12023): Found entity 1: hex7seg_en File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/hex7seg_en.vhd Line: 4
+Info (12128): Elaborating entity "hex7seg_en" for hierarchy "hex7seg_en:DisplayPonto4" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 98
+Warning (13012): Latch maquinaEstados:Controle|estado[0] has unsafe behavior File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal maquinaEstados:Controle|Ereg.Jogador1 File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 14
+Warning (13012): Latch maquinaEstados:Controle|estado[1] has unsafe behavior File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal maquinaEstados:Controle|Ereg.Intervalo File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 14
+Warning (13012): Latch Tentativa:Tent|estadosJogo:E|Eprox.Errado_121 has unsafe behavior File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/estadosJogo.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Tentativa:Tent|contador:C|sinal File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contador.vhd Line: 8
+Warning (13012): Latch Tentativa:Tent|estadosJogo:E|Eprox.Aguarda_135 has unsafe behavior File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/estadosJogo.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Tentativa:Tent|contador:C|sinal File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contador.vhd Line: 8
+Warning (13012): Latch maquinaEstados:Controle|Eprox.Jogador1_142 has unsafe behavior File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal maquinaEstados:Controle|Ereg.Inicial File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 14
+Warning (13012): Latch maquinaEstados:Controle|Eprox.Jogador2_118 has unsafe behavior File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal maquinaEstados:Controle|Ereg.Intervalo File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 14
+Warning (13012): Latch Tentativa:Tent|estadosJogo:E|Eprox.Fim_107 has unsafe behavior File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/estadosJogo.vhd Line: 21
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Tentativa:Tent|estadosJogo:E|Ereg.E_Atraso File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/estadosJogo.vhd Line: 13
+Warning (13012): Latch maquinaEstados:Controle|Eprox.Intervalo_130 has unsafe behavior File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal maquinaEstados:Controle|Ereg.Jogador1 File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 14
+Warning (13012): Latch maquinaEstados:Controle|Eprox.Inicial_154 has unsafe behavior File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal maquinaEstados:Controle|Ereg.Jogador2 File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/maquinaEstados.vhd Line: 14
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[0]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[0]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[0]~1" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[1]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[1]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[1]~5" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[2]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[2]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[2]~9" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[3]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[3]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[3]~13" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[4]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[4]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[4]~17" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[5]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[5]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[5]~21" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[6]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[6]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[6]~25" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[7]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[7]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[7]~29" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[8]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[8]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[8]~33" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[9]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[9]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[9]~37" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[10]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[10]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[10]~41" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[11]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[11]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[11]~45" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[12]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[12]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[12]~49" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[13]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[13]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[13]~53" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[14]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[14]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[14]~57" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+    Warning (13310): Register "Tentativa:Tent|contaResposta:R|IQ[15]" is converted into an equivalent circuit using register "Tentativa:Tent|contaResposta:R|IQ[15]~_emulated" and latch "Tentativa:Tent|contaResposta:R|IQ[15]~61" File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/contaResposta.vhd Line: 16
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "estimulo" is stuck at GND File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 6
+    Warning (13410): Pin "saidaGanhador[0]" is stuck at VCC File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 8
+    Warning (13410): Pin "saidaGanhador[1]" is stuck at VCC File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 8
+    Warning (13410): Pin "saidaGanhador[2]" is stuck at VCC File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 8
+    Warning (13410): Pin "saidaGanhador[3]" is stuck at VCC File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 8
+    Warning (13410): Pin "saidaGanhador[4]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 8
+    Warning (13410): Pin "saidaGanhador[5]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 8
+    Warning (13410): Pin "saidaGanhador[6]" is stuck at VCC File: /home/danzambuja/Quartus/Projetos/Jogo_Reacao/Jogo_Reacao.vhd Line: 8
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 381 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 41 output pins
+    Info (21061): Implemented 335 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 68 warnings
+    Info: Peak virtual memory: 1250 megabytes
+    Info: Processing ended: Mon Mar 20 11:38:44 2017
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:00:53
+
+
