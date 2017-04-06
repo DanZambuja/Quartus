@@ -81,6 +81,7 @@ begin
 		fimRodada <= '1' when Respondeu | Demorado | Afobado,
 						 '0' when others;
 	with Eatual select
-		erro <= '1' when Afobado,
-				  '0' when others;
+		erro <= '1' when Afobado | Demorado,
+				  '0' when others; 
+		
 end Estados;

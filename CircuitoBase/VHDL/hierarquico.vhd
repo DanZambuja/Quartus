@@ -27,7 +27,7 @@ component controlador is
         liga, enabler, resetr, fim: out STD_LOGIC); 
 end component;
 
-component reg16bits_en is -- Define a entidade que representa o registrador
+component reg16bits_en2 is -- Define a entidade que representa o registrador
     port (CLOCK, CLR, ENABLE: in STD_LOGIC; -- Define as portas de entrada como STD_LOGIC
           D: in STD_LOGIC_VECTOR (15 downto 0); -- Define o barramento de entrada como um STD_LOGIC_VECTOR de 4 bits
           Q: out STD_LOGIC_VECTOR (15 downto 0)); -- Define o barramento de saída como STD_ULOGIC_VECTOR de 4 bits.
@@ -50,7 +50,7 @@ begin
 
 	M1: medidor port map(clock, reset, s_liga, pulso, s_medida, open, s_pronto, open);
 	C1: controlador port map(clock, reset, zerar, iniciar, s_pronto, s_liga, s_enabler, s_resetr, fim);
-	R1: reg16bits_en port map(clock, s_resetr, s_enabler, s_medida, s_saida);
+	R1: reg16bits_en2 port map(clock, s_resetr, s_enabler, s_medida, s_saida);
 	D1: hex7seg_en port map(s_saida(3), s_saida(2), s_saida(1), s_saida(0), '1', saidaDisplay(27), saidaDisplay(26), saidaDisplay(25), saidaDisplay(24), saidaDisplay(23), saidaDisplay(22), saidaDisplay(21));
 	D2: hex7seg_en port map(s_saida(7), s_saida(6), s_saida(5), s_saida(4), '1', saidaDisplay(20), saidaDisplay(19), saidaDisplay(18), saidaDisplay(17), saidaDisplay(16), saidaDisplay(15), saidaDisplay(14));
 	D3: hex7seg_en port map(s_saida(11), s_saida(10), s_saida(9), s_saida(8), '1', saidaDisplay(13), saidaDisplay(12), saidaDisplay(11), saidaDisplay(10), saidaDisplay(9), saidaDisplay(8), saidaDisplay(7));

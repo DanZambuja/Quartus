@@ -15,7 +15,7 @@ process(CLOCK, CLR, ENABLE, IQ) -- Define os sinais que serao utilizados no proc
 begin -- Inicia o processo descrito anteriormente.
     if (CLOCK'event and CLOCK='1') then -- Verifica se houve borda de subida do clock.
         if (CLR = '1') then IQ <= (others=>'0'); -- Se CLR for 1, o vetor IQ recebe 0.
-        elsif (ENABLE = '1') then IQ <= D; -- Se ENABLE for 1, o vetor IQ recebe os sinais do barramento de entrada.
+        elsif (CLR = '0' and ENABLE = '1') then IQ <= D; -- Se ENABLE for 1, o vetor IQ recebe os sinais do barramento de entrada.
         end if; -- Fecha o laço condicional aberto na linha 16.
         if (CLR = '1' or ENABLE = '1') then Q <= IQ; -- Caso CLR ou ENABLE forem 1 na saída, Q recebe
 -- O valor do barramento intermediario.

@@ -100,11 +100,11 @@ sinalAtraso <= s_sinalAtraso;
 	
 	PSEUDORANDOM: LFSR port map(s_tempoCiclado1, s_ciclando, clock, reset or s_resetaContadores, s_tempoUsado);
 	
-	ciclagensLFSR: comparador port map(clock, reset or s_resetaContadores, s_ciclando, "0000000001010000", s_ciclou);
+	ciclagensLFSR: comparador port map(clock, reset or s_resetaContadores, s_ciclando, "0000"&s_tempoUsado(11 downto 0), s_ciclou);
 	
 	Registrador: reg16bits_en port map(clock, reset or s_resetaContadores, s_registra, s_tempoAtraso, s_tempoUsado);
 	
-	geraSeed: Four_Digit_BCD_Counter port map(clock, reset_L and not(s_resetaContadores), s_inicio, s_Q1, s_Q2, s_Q3, s_Q4);
+	geraSeed: Four_Digit_BCD_Counter port map(clock, reset_L, '1', s_Q1, s_Q2, s_Q3, s_Q4);
 	
 	
 	

@@ -1,4 +1,141 @@
-|Atrasador
+|CircuitoBase
+clock => BoxRodada:INTERFACE.clock
+reset => BoxRodada:INTERFACE.reset
+finalizaRodada => BoxRodada:INTERFACE.finalizaRodada
+rodada => BoxRodada:INTERFACE.rodada
+resposta => BoxRodada:INTERFACE.resposta
+selectDisplay[0] => mux4to1:MultiplexadorFinal.SEL[0]
+selectDisplay[1] => mux4to1:MultiplexadorFinal.SEL[1]
+selectDisplay[2] => mux4to1:MultiplexadorFinal.SEL[2]
+selectDisplay[3] => mux4to1:MultiplexadorFinal.SEL[3]
+contaAtraso << BoxRodada:INTERFACE.contaAtraso
+aguardando << BoxRodada:INTERFACE.aguardando
+fimRodada << BoxRodada:INTERFACE.fimRodada
+erro << BoxRodada:INTERFACE.erro
+demora << BoxRodada:INTERFACE.demora
+MostraSinalAtraso << BoxRodada:INTERFACE.MostraSinalAtraso
+MostraContaAtraso << BoxRodada:INTERFACE.MostraContaAtraso
+fimHierarquico << BoxRodada:INTERFACE.fimHierarquico
+estadoRodada[0] << BoxRodada:INTERFACE.estadoRodada[0]
+estadoRodada[1] << BoxRodada:INTERFACE.estadoRodada[1]
+estadoRodada[2] << BoxRodada:INTERFACE.estadoRodada[2]
+estadoRodada[3] << BoxRodada:INTERFACE.estadoRodada[3]
+estadoAtrasador[0] << BoxRodada:INTERFACE.estadoAtrasador[0]
+estadoAtrasador[1] << BoxRodada:INTERFACE.estadoAtrasador[1]
+estadoAtrasador[2] << BoxRodada:INTERFACE.estadoAtrasador[2]
+estadoAtrasador[3] << BoxRodada:INTERFACE.estadoAtrasador[3]
+pulso[0] << BoxRodada:INTERFACE.pulso[0]
+pulso[1] << BoxRodada:INTERFACE.pulso[1]
+pulso[2] << BoxRodada:INTERFACE.pulso[2]
+pulso[3] << BoxRodada:INTERFACE.pulso[3]
+pulso[4] << BoxRodada:INTERFACE.pulso[4]
+pulso[5] << BoxRodada:INTERFACE.pulso[5]
+pulso[6] << BoxRodada:INTERFACE.pulso[6]
+pulso[7] << BoxRodada:INTERFACE.pulso[7]
+pulso[8] << BoxRodada:INTERFACE.pulso[8]
+pulso[9] << BoxRodada:INTERFACE.pulso[9]
+pulso[10] << BoxRodada:INTERFACE.pulso[10]
+pulso[11] << BoxRodada:INTERFACE.pulso[11]
+pulso[12] << BoxRodada:INTERFACE.pulso[12]
+pulso[13] << BoxRodada:INTERFACE.pulso[13]
+pulso[14] << BoxRodada:INTERFACE.pulso[14]
+pulso[15] << BoxRodada:INTERFACE.pulso[15]
+saida[0] << mux4to1:MultiplexadorFinal.X[0]
+saida[1] << mux4to1:MultiplexadorFinal.X[1]
+saida[2] << mux4to1:MultiplexadorFinal.X[2]
+saida[3] << mux4to1:MultiplexadorFinal.X[3]
+saida[4] << mux4to1:MultiplexadorFinal.X[4]
+saida[5] << mux4to1:MultiplexadorFinal.X[5]
+saida[6] << mux4to1:MultiplexadorFinal.X[6]
+saida[7] << mux4to1:MultiplexadorFinal.X[7]
+saida[8] << mux4to1:MultiplexadorFinal.X[8]
+saida[9] << mux4to1:MultiplexadorFinal.X[9]
+saida[10] << mux4to1:MultiplexadorFinal.X[10]
+saida[11] << mux4to1:MultiplexadorFinal.X[11]
+saida[12] << mux4to1:MultiplexadorFinal.X[12]
+saida[13] << mux4to1:MultiplexadorFinal.X[13]
+saida[14] << mux4to1:MultiplexadorFinal.X[14]
+saida[15] << mux4to1:MultiplexadorFinal.X[15]
+
+
+|CircuitoBase|BoxRodada:INTERFACE
+clock => controleRodada:C.clock
+clock => Atrasador:D.clock
+clock => Four_Digit_BCD_Counter:ContaDemora.Clk
+clock => hierarquico:Medicao.clock
+clock => reg16bits_en2:R.CLOCK
+reset => comb.IN1
+reset => controleRodada:C.reset
+reset => hierarquico:Medicao.reset
+reset => comb.IN1
+finalizaRodada => controleRodada:C.finalizaRodada
+rodada => controleRodada:C.rodada
+rodada => hierarquico:Medicao.iniciar
+resposta => controleRodada:C.resposta
+contaAtraso <= comb.DB_MAX_OUTPUT_PORT_TYPE
+aguardando <= controleRodada:C.aguardando
+fimRodada <= controleRodada:C.fimRodada
+erro <= controleRodada:C.erro
+demora <= s_demorou.DB_MAX_OUTPUT_PORT_TYPE
+MostraSinalAtraso <= Atrasador:D.sinalAtraso
+MostraContaAtraso <= controleRodada:C.contaAtraso
+fimHierarquico <= hierarquico:Medicao.fim
+estadoRodada[0] <= controleRodada:C.estado[0]
+estadoRodada[1] <= controleRodada:C.estado[1]
+estadoRodada[2] <= controleRodada:C.estado[2]
+estadoRodada[3] <= controleRodada:C.estado[3]
+estadoAtrasador[0] <= Atrasador:D.estado[0]
+estadoAtrasador[1] <= Atrasador:D.estado[1]
+estadoAtrasador[2] <= Atrasador:D.estado[2]
+estadoAtrasador[3] <= Atrasador:D.estado[3]
+pulso[0] <= reg16bits_en2:R.Q[0]
+pulso[1] <= reg16bits_en2:R.Q[1]
+pulso[2] <= reg16bits_en2:R.Q[2]
+pulso[3] <= reg16bits_en2:R.Q[3]
+pulso[4] <= reg16bits_en2:R.Q[4]
+pulso[5] <= reg16bits_en2:R.Q[5]
+pulso[6] <= reg16bits_en2:R.Q[6]
+pulso[7] <= reg16bits_en2:R.Q[7]
+pulso[8] <= reg16bits_en2:R.Q[8]
+pulso[9] <= reg16bits_en2:R.Q[9]
+pulso[10] <= reg16bits_en2:R.Q[10]
+pulso[11] <= reg16bits_en2:R.Q[11]
+pulso[12] <= reg16bits_en2:R.Q[12]
+pulso[13] <= reg16bits_en2:R.Q[13]
+pulso[14] <= reg16bits_en2:R.Q[14]
+pulso[15] <= reg16bits_en2:R.Q[15]
+
+
+|CircuitoBase|BoxRodada:INTERFACE|controleRodada:C
+clock => Eatual~1.DATAIN
+reset => Eatual~3.DATAIN
+finalizaRodada => process_1.IN0
+rodada => Selector1.IN3
+rodada => Selector0.IN1
+sinalAtraso => process_1.IN0
+sinalAtraso => process_1.IN1
+sinalAtraso => process_1.IN0
+sinalAtraso => process_1.IN0
+demorou => process_1.IN1
+demorou => process_1.IN1
+demorou => process_1.IN1
+demorou => process_1.IN1
+resposta => process_1.IN1
+resposta => process_1.IN1
+resposta => process_1.IN1
+resposta => process_1.IN1
+resposta => process_1.IN1
+contaAtraso <= contaAtraso.DB_MAX_OUTPUT_PORT_TYPE
+aguardando <= aguardando.DB_MAX_OUTPUT_PORT_TYPE
+fimRodada <= WideNor1.DB_MAX_OUTPUT_PORT_TYPE
+erro <= WideNor2.DB_MAX_OUTPUT_PORT_TYPE
+estado[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+estado[1] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+estado[2] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+estado[3] <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D
 clock => controleAtrasador:C.clock
 clock => Four_Digit_BCD_Counter:ContadordoAtraso.Clk
 clock => bitToBCD:Converte.clk
@@ -13,7 +150,7 @@ reset => comb.IN1
 reset => comb.IN1
 reset => comb.IN1
 reset => controleAtrasador:C.reset
-reset => comb.IN1
+reset => Four_Digit_BCD_Counter:geraSeed.CLR_L
 reset => comb.IN1
 contaAtraso => controleAtrasador:C.contaAtraso
 sinalAtraso <= s_sinalAtraso.DB_MAX_OUTPUT_PORT_TYPE
@@ -110,7 +247,7 @@ tempoContadorAtraso[14] <= tempoContadorAtraso[14].DB_MAX_OUTPUT_PORT_TYPE
 tempoContadorAtraso[15] <= tempoContadorAtraso[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|controleAtrasador:C
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|controleAtrasador:C
 clock => Eatual~1.DATAIN
 reset => Eatual~3.DATAIN
 contaAtraso => Eprox.RegistraSeed1.DATAB
@@ -133,7 +270,7 @@ estado[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
 estado[3] <= WideNor1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|Four_Digit_BCD_Counter:ContadordoAtraso
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso
 Clk => IC_74163:IC_1.ClK
 Clk => IC_74163:IC_2.ClK
 Clk => IC_74163:IC_3.ClK
@@ -164,7 +301,7 @@ Q4[2] <> IC_74163:IC_4.Qout[2]
 Q4[3] <> IC_74163:IC_4.Qout[3]
 
 
-|Atrasador|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_1
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_1
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -191,7 +328,7 @@ Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
 
 
-|Atrasador|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_2
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_2
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -218,7 +355,7 @@ Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
 
 
-|Atrasador|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_3
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_3
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -245,7 +382,7 @@ Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
 
 
-|Atrasador|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_4
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_4
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -272,7 +409,7 @@ Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
 
 
-|Atrasador|compare:C1
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|compare:C1
 A[0] => Equal0.IN3
 A[0] => LessThan0.IN4
 A[0] => LessThan1.IN4
@@ -302,7 +439,7 @@ AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|compare:C2
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|compare:C2
 A[0] => Equal0.IN3
 A[0] => LessThan0.IN4
 A[0] => LessThan1.IN4
@@ -332,7 +469,7 @@ AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|compare:C3
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|compare:C3
 A[0] => Equal0.IN3
 A[0] => LessThan0.IN4
 A[0] => LessThan1.IN4
@@ -362,7 +499,7 @@ AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|compare:C4
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|compare:C4
 A[0] => Equal0.IN3
 A[0] => LessThan0.IN4
 A[0] => LessThan1.IN4
@@ -392,7 +529,7 @@ AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|bitToBCD:Converte
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|bitToBCD:Converte
 clk => shift_counter[0].CLK
 clk => shift_counter[1].CLK
 clk => shift_counter[2].CLK
@@ -527,7 +664,7 @@ bcd3[2] <= bcds_out_reg[14].DB_MAX_OUTPUT_PORT_TYPE
 bcd3[3] <= bcds_out_reg[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|comparador:ContadordeConversao
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao
 clock => Four_Digit_BCD_Counter:Contador.Clk
 reset => Four_Digit_BCD_Counter:Contador.CLR_L
 enable => Four_Digit_BCD_Counter:Contador.enable
@@ -550,7 +687,7 @@ A[15] => compare:C4.A[3]
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador
 Clk => IC_74163:IC_1.ClK
 Clk => IC_74163:IC_2.ClK
 Clk => IC_74163:IC_3.ClK
@@ -581,7 +718,7 @@ Q4[2] <> IC_74163:IC_4.Qout[2]
 Q4[3] <> IC_74163:IC_4.Qout[3]
 
 
-|Atrasador|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_1
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_1
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -608,7 +745,7 @@ Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
 
 
-|Atrasador|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_2
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_2
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -635,7 +772,7 @@ Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
 
 
-|Atrasador|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_3
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_3
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -662,7 +799,7 @@ Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
 
 
-|Atrasador|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_4
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_4
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -689,7 +826,7 @@ Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
 
 
-|Atrasador|comparador:ContadordeConversao|compare:C1
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|compare:C1
 A[0] => Equal0.IN3
 A[0] => LessThan0.IN4
 A[0] => LessThan1.IN4
@@ -719,7 +856,7 @@ AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|comparador:ContadordeConversao|compare:C2
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|compare:C2
 A[0] => Equal0.IN3
 A[0] => LessThan0.IN4
 A[0] => LessThan1.IN4
@@ -749,7 +886,7 @@ AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|comparador:ContadordeConversao|compare:C3
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|compare:C3
 A[0] => Equal0.IN3
 A[0] => LessThan0.IN4
 A[0] => LessThan1.IN4
@@ -779,7 +916,7 @@ AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|comparador:ContadordeConversao|compare:C4
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ContadordeConversao|compare:C4
 A[0] => Equal0.IN3
 A[0] => LessThan0.IN4
 A[0] => LessThan1.IN4
@@ -809,7 +946,7 @@ AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|LFSR:PSEUDORANDOM
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|LFSR:PSEUDORANDOM
 cout[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
 cout[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
 cout[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -892,7 +1029,7 @@ seed[14] => count[14].ADATA
 seed[15] => count[15].ADATA
 
 
-|Atrasador|comparador:ciclagensLFSR
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR
 clock => Four_Digit_BCD_Counter:Contador.Clk
 reset => Four_Digit_BCD_Counter:Contador.CLR_L
 enable => Four_Digit_BCD_Counter:Contador.enable
@@ -915,7 +1052,7 @@ A[15] => compare:C4.A[3]
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador
 Clk => IC_74163:IC_1.ClK
 Clk => IC_74163:IC_2.ClK
 Clk => IC_74163:IC_3.ClK
@@ -946,7 +1083,7 @@ Q4[2] <> IC_74163:IC_4.Qout[2]
 Q4[3] <> IC_74163:IC_4.Qout[3]
 
 
-|Atrasador|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_1
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_1
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -973,7 +1110,7 @@ Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
 
 
-|Atrasador|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_2
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_2
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -1000,7 +1137,7 @@ Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
 
 
-|Atrasador|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_3
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_3
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -1027,7 +1164,7 @@ Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
 
 
-|Atrasador|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_4
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_4
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -1054,7 +1191,7 @@ Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
 
 
-|Atrasador|comparador:ciclagensLFSR|compare:C1
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|compare:C1
 A[0] => Equal0.IN3
 A[0] => LessThan0.IN4
 A[0] => LessThan1.IN4
@@ -1084,7 +1221,7 @@ AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|comparador:ciclagensLFSR|compare:C2
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|compare:C2
 A[0] => Equal0.IN3
 A[0] => LessThan0.IN4
 A[0] => LessThan1.IN4
@@ -1114,7 +1251,7 @@ AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|comparador:ciclagensLFSR|compare:C3
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|compare:C3
 A[0] => Equal0.IN3
 A[0] => LessThan0.IN4
 A[0] => LessThan1.IN4
@@ -1144,7 +1281,7 @@ AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|comparador:ciclagensLFSR|compare:C4
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|comparador:ciclagensLFSR|compare:C4
 A[0] => Equal0.IN3
 A[0] => LessThan0.IN4
 A[0] => LessThan1.IN4
@@ -1174,7 +1311,7 @@ AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|reg16bits_en:Registrador
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|reg16bits_en:Registrador
 CLOCK => Q[0]~reg0.CLK
 CLOCK => Q[1]~reg0.CLK
 CLOCK => Q[2]~reg0.CLK
@@ -1224,22 +1361,8 @@ CLR => IQ.OUTPUTSELECT
 CLR => IQ.OUTPUTSELECT
 CLR => IQ.OUTPUTSELECT
 CLR => process_0.IN0
-ENABLE => IQ.OUTPUTSELECT
-ENABLE => IQ.OUTPUTSELECT
-ENABLE => IQ.OUTPUTSELECT
-ENABLE => IQ.OUTPUTSELECT
-ENABLE => IQ.OUTPUTSELECT
-ENABLE => IQ.OUTPUTSELECT
-ENABLE => IQ.OUTPUTSELECT
-ENABLE => IQ.OUTPUTSELECT
-ENABLE => IQ.OUTPUTSELECT
-ENABLE => IQ.OUTPUTSELECT
-ENABLE => IQ.OUTPUTSELECT
-ENABLE => IQ.OUTPUTSELECT
-ENABLE => IQ.OUTPUTSELECT
-ENABLE => IQ.OUTPUTSELECT
-ENABLE => IQ.OUTPUTSELECT
-ENABLE => IQ.OUTPUTSELECT
+CLR => process_0.IN0
+ENABLE => process_0.IN1
 ENABLE => process_0.IN1
 D[0] => IQ.DATAB
 D[1] => IQ.DATAB
@@ -1275,7 +1398,7 @@ Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Atrasador|Four_Digit_BCD_Counter:geraSeed
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:geraSeed
 Clk => IC_74163:IC_1.ClK
 Clk => IC_74163:IC_2.ClK
 Clk => IC_74163:IC_3.ClK
@@ -1306,7 +1429,7 @@ Q4[2] <> IC_74163:IC_4.Qout[2]
 Q4[3] <> IC_74163:IC_4.Qout[3]
 
 
-|Atrasador|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_1
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_1
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -1333,7 +1456,7 @@ Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
 
 
-|Atrasador|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_2
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_2
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -1360,7 +1483,7 @@ Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
 
 
-|Atrasador|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_3
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_3
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -1387,7 +1510,7 @@ Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
 
 
-|Atrasador|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_4
+|CircuitoBase|BoxRodada:INTERFACE|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_4
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
 LdN => Qout.OUTPUTSELECT
@@ -1412,5 +1535,1105 @@ Qout[0] <> Qout[0]~reg0
 Qout[1] <> Qout[1]~reg0
 Qout[2] <> Qout[2]~reg0
 Qout[3] <> Qout[3]~reg0
+
+
+|CircuitoBase|BoxRodada:INTERFACE|Four_Digit_BCD_Counter:ContaDemora
+Clk => IC_74163:IC_1.ClK
+Clk => IC_74163:IC_2.ClK
+Clk => IC_74163:IC_3.ClK
+Clk => IC_74163:IC_4.ClK
+CLR_L => IC_74163:IC_1.LdN
+CLR_L => IC_74163:IC_2.LdN
+CLR_L => IC_74163:IC_3.LdN
+CLR_L => IC_74163:IC_4.LdN
+enable => IC_74163:IC_1.P
+enable => IC_74163:IC_2.P
+enable => IC_74163:IC_3.P
+enable => IC_74163:IC_4.P
+Q1[0] <> IC_74163:IC_1.Qout[0]
+Q1[1] <> IC_74163:IC_1.Qout[1]
+Q1[2] <> IC_74163:IC_1.Qout[2]
+Q1[3] <> IC_74163:IC_1.Qout[3]
+Q2[0] <> IC_74163:IC_2.Qout[0]
+Q2[1] <> IC_74163:IC_2.Qout[1]
+Q2[2] <> IC_74163:IC_2.Qout[2]
+Q2[3] <> IC_74163:IC_2.Qout[3]
+Q3[0] <> IC_74163:IC_3.Qout[0]
+Q3[1] <> IC_74163:IC_3.Qout[1]
+Q3[2] <> IC_74163:IC_3.Qout[2]
+Q3[3] <> IC_74163:IC_3.Qout[3]
+Q4[0] <> IC_74163:IC_4.Qout[0]
+Q4[1] <> IC_74163:IC_4.Qout[1]
+Q4[2] <> IC_74163:IC_4.Qout[2]
+Q4[3] <> IC_74163:IC_4.Qout[3]
+
+
+|CircuitoBase|BoxRodada:INTERFACE|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_1
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+P => process_0.IN0
+T => Cout.IN1
+T => process_0.IN1
+ClK => Qout[0]~reg0.CLK
+ClK => Qout[1]~reg0.CLK
+ClK => Qout[2]~reg0.CLK
+ClK => Qout[3]~reg0.CLK
+D[0] => Qout.DATAB
+D[1] => Qout.DATAB
+D[2] => Qout.DATAB
+D[3] => Qout.DATAB
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Qout[0] <> Qout[0]~reg0
+Qout[1] <> Qout[1]~reg0
+Qout[2] <> Qout[2]~reg0
+Qout[3] <> Qout[3]~reg0
+
+
+|CircuitoBase|BoxRodada:INTERFACE|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_2
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+P => process_0.IN0
+T => Cout.IN1
+T => process_0.IN1
+ClK => Qout[0]~reg0.CLK
+ClK => Qout[1]~reg0.CLK
+ClK => Qout[2]~reg0.CLK
+ClK => Qout[3]~reg0.CLK
+D[0] => Qout.DATAB
+D[1] => Qout.DATAB
+D[2] => Qout.DATAB
+D[3] => Qout.DATAB
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Qout[0] <> Qout[0]~reg0
+Qout[1] <> Qout[1]~reg0
+Qout[2] <> Qout[2]~reg0
+Qout[3] <> Qout[3]~reg0
+
+
+|CircuitoBase|BoxRodada:INTERFACE|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_3
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+P => process_0.IN0
+T => Cout.IN1
+T => process_0.IN1
+ClK => Qout[0]~reg0.CLK
+ClK => Qout[1]~reg0.CLK
+ClK => Qout[2]~reg0.CLK
+ClK => Qout[3]~reg0.CLK
+D[0] => Qout.DATAB
+D[1] => Qout.DATAB
+D[2] => Qout.DATAB
+D[3] => Qout.DATAB
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Qout[0] <> Qout[0]~reg0
+Qout[1] <> Qout[1]~reg0
+Qout[2] <> Qout[2]~reg0
+Qout[3] <> Qout[3]~reg0
+
+
+|CircuitoBase|BoxRodada:INTERFACE|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_4
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+P => process_0.IN0
+T => Cout.IN1
+T => process_0.IN1
+ClK => Qout[0]~reg0.CLK
+ClK => Qout[1]~reg0.CLK
+ClK => Qout[2]~reg0.CLK
+ClK => Qout[3]~reg0.CLK
+D[0] => Qout.DATAB
+D[1] => Qout.DATAB
+D[2] => Qout.DATAB
+D[3] => Qout.DATAB
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Qout[0] <> Qout[0]~reg0
+Qout[1] <> Qout[1]~reg0
+Qout[2] <> Qout[2]~reg0
+Qout[3] <> Qout[3]~reg0
+
+
+|CircuitoBase|BoxRodada:INTERFACE|compare:C1
+A[0] => Equal0.IN3
+A[0] => LessThan0.IN4
+A[0] => LessThan1.IN4
+A[1] => Equal0.IN2
+A[1] => LessThan0.IN3
+A[1] => LessThan1.IN3
+A[2] => Equal0.IN1
+A[2] => LessThan0.IN2
+A[2] => LessThan1.IN2
+A[3] => Equal0.IN0
+A[3] => LessThan0.IN1
+A[3] => LessThan1.IN1
+B[0] => Equal0.IN7
+B[0] => LessThan0.IN8
+B[0] => LessThan1.IN8
+B[1] => Equal0.IN6
+B[1] => LessThan0.IN7
+B[1] => LessThan1.IN7
+B[2] => Equal0.IN5
+B[2] => LessThan0.IN6
+B[2] => LessThan1.IN6
+B[3] => Equal0.IN4
+B[3] => LessThan0.IN5
+B[3] => LessThan1.IN5
+AeqB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|BoxRodada:INTERFACE|compare:C2
+A[0] => Equal0.IN3
+A[0] => LessThan0.IN4
+A[0] => LessThan1.IN4
+A[1] => Equal0.IN2
+A[1] => LessThan0.IN3
+A[1] => LessThan1.IN3
+A[2] => Equal0.IN1
+A[2] => LessThan0.IN2
+A[2] => LessThan1.IN2
+A[3] => Equal0.IN0
+A[3] => LessThan0.IN1
+A[3] => LessThan1.IN1
+B[0] => Equal0.IN7
+B[0] => LessThan0.IN8
+B[0] => LessThan1.IN8
+B[1] => Equal0.IN6
+B[1] => LessThan0.IN7
+B[1] => LessThan1.IN7
+B[2] => Equal0.IN5
+B[2] => LessThan0.IN6
+B[2] => LessThan1.IN6
+B[3] => Equal0.IN4
+B[3] => LessThan0.IN5
+B[3] => LessThan1.IN5
+AeqB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|BoxRodada:INTERFACE|compare:C3
+A[0] => Equal0.IN3
+A[0] => LessThan0.IN4
+A[0] => LessThan1.IN4
+A[1] => Equal0.IN2
+A[1] => LessThan0.IN3
+A[1] => LessThan1.IN3
+A[2] => Equal0.IN1
+A[2] => LessThan0.IN2
+A[2] => LessThan1.IN2
+A[3] => Equal0.IN0
+A[3] => LessThan0.IN1
+A[3] => LessThan1.IN1
+B[0] => Equal0.IN7
+B[0] => LessThan0.IN8
+B[0] => LessThan1.IN8
+B[1] => Equal0.IN6
+B[1] => LessThan0.IN7
+B[1] => LessThan1.IN7
+B[2] => Equal0.IN5
+B[2] => LessThan0.IN6
+B[2] => LessThan1.IN6
+B[3] => Equal0.IN4
+B[3] => LessThan0.IN5
+B[3] => LessThan1.IN5
+AeqB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|BoxRodada:INTERFACE|compare:C4
+A[0] => Equal0.IN3
+A[0] => LessThan0.IN4
+A[0] => LessThan1.IN4
+A[1] => Equal0.IN2
+A[1] => LessThan0.IN3
+A[1] => LessThan1.IN3
+A[2] => Equal0.IN1
+A[2] => LessThan0.IN2
+A[2] => LessThan1.IN2
+A[3] => Equal0.IN0
+A[3] => LessThan0.IN1
+A[3] => LessThan1.IN1
+B[0] => Equal0.IN7
+B[0] => LessThan0.IN8
+B[0] => LessThan1.IN8
+B[1] => Equal0.IN6
+B[1] => LessThan0.IN7
+B[1] => LessThan1.IN7
+B[2] => Equal0.IN5
+B[2] => LessThan0.IN6
+B[2] => LessThan1.IN6
+B[3] => Equal0.IN4
+B[3] => LessThan0.IN5
+B[3] => LessThan1.IN5
+AeqB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao
+clock => medidor:M1.CLOCK
+clock => controlador:C1.clock
+clock => reg16bits_en2:R1.CLOCK
+reset => medidor:M1.RESET
+reset => controlador:C1.reset
+iniciar => controlador:C1.iniciar
+zerar => controlador:C1.zerar
+pulso => medidor:M1.sinal
+saida[0] <= reg16bits_en2:R1.Q[0]
+saida[1] <= reg16bits_en2:R1.Q[1]
+saida[2] <= reg16bits_en2:R1.Q[2]
+saida[3] <= reg16bits_en2:R1.Q[3]
+saida[4] <= reg16bits_en2:R1.Q[4]
+saida[5] <= reg16bits_en2:R1.Q[5]
+saida[6] <= reg16bits_en2:R1.Q[6]
+saida[7] <= reg16bits_en2:R1.Q[7]
+saida[8] <= reg16bits_en2:R1.Q[8]
+saida[9] <= reg16bits_en2:R1.Q[9]
+saida[10] <= reg16bits_en2:R1.Q[10]
+saida[11] <= reg16bits_en2:R1.Q[11]
+saida[12] <= reg16bits_en2:R1.Q[12]
+saida[13] <= reg16bits_en2:R1.Q[13]
+saida[14] <= reg16bits_en2:R1.Q[14]
+saida[15] <= reg16bits_en2:R1.Q[15]
+fim <= controlador:C1.fim
+sig_resetr <= controlador:C1.resetr
+sig_enabler <= controlador:C1.enabler
+sig_liga <= controlador:C1.liga
+sig_medida[0] <= medidor:M1.Q[0]
+sig_medida[1] <= medidor:M1.Q[1]
+sig_medida[2] <= medidor:M1.Q[2]
+sig_medida[3] <= medidor:M1.Q[3]
+sig_medida[4] <= medidor:M1.Q[4]
+sig_medida[5] <= medidor:M1.Q[5]
+sig_medida[6] <= medidor:M1.Q[6]
+sig_medida[7] <= medidor:M1.Q[7]
+sig_medida[8] <= medidor:M1.Q[8]
+sig_medida[9] <= medidor:M1.Q[9]
+sig_medida[10] <= medidor:M1.Q[10]
+sig_medida[11] <= medidor:M1.Q[11]
+sig_medida[12] <= medidor:M1.Q[12]
+sig_medida[13] <= medidor:M1.Q[13]
+sig_medida[14] <= medidor:M1.Q[14]
+sig_medida[15] <= medidor:M1.Q[15]
+saidaDisplay[0] <= hex7seg_en:D4.g
+saidaDisplay[1] <= hex7seg_en:D4.f
+saidaDisplay[2] <= hex7seg_en:D4.e
+saidaDisplay[3] <= hex7seg_en:D4.d
+saidaDisplay[4] <= hex7seg_en:D4.c
+saidaDisplay[5] <= hex7seg_en:D4.b
+saidaDisplay[6] <= hex7seg_en:D4.a
+saidaDisplay[7] <= hex7seg_en:D3.g
+saidaDisplay[8] <= hex7seg_en:D3.f
+saidaDisplay[9] <= hex7seg_en:D3.e
+saidaDisplay[10] <= hex7seg_en:D3.d
+saidaDisplay[11] <= hex7seg_en:D3.c
+saidaDisplay[12] <= hex7seg_en:D3.b
+saidaDisplay[13] <= hex7seg_en:D3.a
+saidaDisplay[14] <= hex7seg_en:D2.g
+saidaDisplay[15] <= hex7seg_en:D2.f
+saidaDisplay[16] <= hex7seg_en:D2.e
+saidaDisplay[17] <= hex7seg_en:D2.d
+saidaDisplay[18] <= hex7seg_en:D2.c
+saidaDisplay[19] <= hex7seg_en:D2.b
+saidaDisplay[20] <= hex7seg_en:D2.a
+saidaDisplay[21] <= hex7seg_en:D1.g
+saidaDisplay[22] <= hex7seg_en:D1.f
+saidaDisplay[23] <= hex7seg_en:D1.e
+saidaDisplay[24] <= hex7seg_en:D1.d
+saidaDisplay[25] <= hex7seg_en:D1.c
+saidaDisplay[26] <= hex7seg_en:D1.b
+saidaDisplay[27] <= hex7seg_en:D1.a
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1
+CLOCK => controle:C1.clock
+CLOCK => Four_Digit_BCD_Counter:D1.Clk
+RESET => controle:C1.reset
+liga => controle:C1.liga
+sinal => controle:C1.sinal
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7].DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8].DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9].DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10].DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11].DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12].DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13].DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14].DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15].DB_MAX_OUTPUT_PORT_TYPE
+RCO <= RCO.DB_MAX_OUTPUT_PORT_TYPE
+pronto <= controle:C1.pronto
+estado[0] <= controle:C1.estado[0]
+estado[1] <= controle:C1.estado[1]
+estado[2] <= controle:C1.estado[2]
+estado[3] <= controle:C1.estado[3]
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|controle:C1
+CLOCK => Ereg~1.DATAIN
+RESET => Ereg~3.DATAIN
+liga => Selector1.IN3
+liga => Selector2.IN3
+liga => Selector0.IN1
+sinal => Eprox.CONTA.DATAA
+sinal => Selector1.IN1
+sinal => Selector2.IN1
+sinal => Eprox.EPRONTO.DATAB
+resetc <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+enablec <= enablec.DB_MAX_OUTPUT_PORT_TYPE
+pronto <= pronto.DB_MAX_OUTPUT_PORT_TYPE
+estado[0] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+estado[1] <= estado.DB_MAX_OUTPUT_PORT_TYPE
+estado[2] <= estado.DB_MAX_OUTPUT_PORT_TYPE
+estado[3] <= <GND>
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1
+Clk => IC_74163:IC_1.ClK
+Clk => IC_74163:IC_2.ClK
+Clk => IC_74163:IC_3.ClK
+Clk => IC_74163:IC_4.ClK
+CLR_L => IC_74163:IC_1.LdN
+CLR_L => IC_74163:IC_2.LdN
+CLR_L => IC_74163:IC_3.LdN
+CLR_L => IC_74163:IC_4.LdN
+enable => IC_74163:IC_1.P
+enable => IC_74163:IC_2.P
+enable => IC_74163:IC_3.P
+enable => IC_74163:IC_4.P
+Q1[0] <> IC_74163:IC_1.Qout[0]
+Q1[1] <> IC_74163:IC_1.Qout[1]
+Q1[2] <> IC_74163:IC_1.Qout[2]
+Q1[3] <> IC_74163:IC_1.Qout[3]
+Q2[0] <> IC_74163:IC_2.Qout[0]
+Q2[1] <> IC_74163:IC_2.Qout[1]
+Q2[2] <> IC_74163:IC_2.Qout[2]
+Q2[3] <> IC_74163:IC_2.Qout[3]
+Q3[0] <> IC_74163:IC_3.Qout[0]
+Q3[1] <> IC_74163:IC_3.Qout[1]
+Q3[2] <> IC_74163:IC_3.Qout[2]
+Q3[3] <> IC_74163:IC_3.Qout[3]
+Q4[0] <> IC_74163:IC_4.Qout[0]
+Q4[1] <> IC_74163:IC_4.Qout[1]
+Q4[2] <> IC_74163:IC_4.Qout[2]
+Q4[3] <> IC_74163:IC_4.Qout[3]
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_1
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+P => process_0.IN0
+T => Cout.IN1
+T => process_0.IN1
+ClK => Qout[0]~reg0.CLK
+ClK => Qout[1]~reg0.CLK
+ClK => Qout[2]~reg0.CLK
+ClK => Qout[3]~reg0.CLK
+D[0] => Qout.DATAB
+D[1] => Qout.DATAB
+D[2] => Qout.DATAB
+D[3] => Qout.DATAB
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Qout[0] <> Qout[0]~reg0
+Qout[1] <> Qout[1]~reg0
+Qout[2] <> Qout[2]~reg0
+Qout[3] <> Qout[3]~reg0
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_2
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+P => process_0.IN0
+T => Cout.IN1
+T => process_0.IN1
+ClK => Qout[0]~reg0.CLK
+ClK => Qout[1]~reg0.CLK
+ClK => Qout[2]~reg0.CLK
+ClK => Qout[3]~reg0.CLK
+D[0] => Qout.DATAB
+D[1] => Qout.DATAB
+D[2] => Qout.DATAB
+D[3] => Qout.DATAB
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Qout[0] <> Qout[0]~reg0
+Qout[1] <> Qout[1]~reg0
+Qout[2] <> Qout[2]~reg0
+Qout[3] <> Qout[3]~reg0
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_3
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+P => process_0.IN0
+T => Cout.IN1
+T => process_0.IN1
+ClK => Qout[0]~reg0.CLK
+ClK => Qout[1]~reg0.CLK
+ClK => Qout[2]~reg0.CLK
+ClK => Qout[3]~reg0.CLK
+D[0] => Qout.DATAB
+D[1] => Qout.DATAB
+D[2] => Qout.DATAB
+D[3] => Qout.DATAB
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Qout[0] <> Qout[0]~reg0
+Qout[1] <> Qout[1]~reg0
+Qout[2] <> Qout[2]~reg0
+Qout[3] <> Qout[3]~reg0
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_4
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+LdN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+ClrN => Qout.OUTPUTSELECT
+P => process_0.IN0
+T => Cout.IN1
+T => process_0.IN1
+ClK => Qout[0]~reg0.CLK
+ClK => Qout[1]~reg0.CLK
+ClK => Qout[2]~reg0.CLK
+ClK => Qout[3]~reg0.CLK
+D[0] => Qout.DATAB
+D[1] => Qout.DATAB
+D[2] => Qout.DATAB
+D[3] => Qout.DATAB
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Qout[0] <> Qout[0]~reg0
+Qout[1] <> Qout[1]~reg0
+Qout[2] <> Qout[2]~reg0
+Qout[3] <> Qout[3]~reg0
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|compare:geraRCO1
+A[0] => Equal0.IN3
+A[0] => LessThan0.IN4
+A[0] => LessThan1.IN4
+A[1] => Equal0.IN2
+A[1] => LessThan0.IN3
+A[1] => LessThan1.IN3
+A[2] => Equal0.IN1
+A[2] => LessThan0.IN2
+A[2] => LessThan1.IN2
+A[3] => Equal0.IN0
+A[3] => LessThan0.IN1
+A[3] => LessThan1.IN1
+B[0] => Equal0.IN7
+B[0] => LessThan0.IN8
+B[0] => LessThan1.IN8
+B[1] => Equal0.IN6
+B[1] => LessThan0.IN7
+B[1] => LessThan1.IN7
+B[2] => Equal0.IN5
+B[2] => LessThan0.IN6
+B[2] => LessThan1.IN6
+B[3] => Equal0.IN4
+B[3] => LessThan0.IN5
+B[3] => LessThan1.IN5
+AeqB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|compare:geraRCO2
+A[0] => Equal0.IN3
+A[0] => LessThan0.IN4
+A[0] => LessThan1.IN4
+A[1] => Equal0.IN2
+A[1] => LessThan0.IN3
+A[1] => LessThan1.IN3
+A[2] => Equal0.IN1
+A[2] => LessThan0.IN2
+A[2] => LessThan1.IN2
+A[3] => Equal0.IN0
+A[3] => LessThan0.IN1
+A[3] => LessThan1.IN1
+B[0] => Equal0.IN7
+B[0] => LessThan0.IN8
+B[0] => LessThan1.IN8
+B[1] => Equal0.IN6
+B[1] => LessThan0.IN7
+B[1] => LessThan1.IN7
+B[2] => Equal0.IN5
+B[2] => LessThan0.IN6
+B[2] => LessThan1.IN6
+B[3] => Equal0.IN4
+B[3] => LessThan0.IN5
+B[3] => LessThan1.IN5
+AeqB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|compare:geraRCO3
+A[0] => Equal0.IN3
+A[0] => LessThan0.IN4
+A[0] => LessThan1.IN4
+A[1] => Equal0.IN2
+A[1] => LessThan0.IN3
+A[1] => LessThan1.IN3
+A[2] => Equal0.IN1
+A[2] => LessThan0.IN2
+A[2] => LessThan1.IN2
+A[3] => Equal0.IN0
+A[3] => LessThan0.IN1
+A[3] => LessThan1.IN1
+B[0] => Equal0.IN7
+B[0] => LessThan0.IN8
+B[0] => LessThan1.IN8
+B[1] => Equal0.IN6
+B[1] => LessThan0.IN7
+B[1] => LessThan1.IN7
+B[2] => Equal0.IN5
+B[2] => LessThan0.IN6
+B[2] => LessThan1.IN6
+B[3] => Equal0.IN4
+B[3] => LessThan0.IN5
+B[3] => LessThan1.IN5
+AeqB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|medidor:M1|compare:geraRCO4
+A[0] => Equal0.IN3
+A[0] => LessThan0.IN4
+A[0] => LessThan1.IN4
+A[1] => Equal0.IN2
+A[1] => LessThan0.IN3
+A[1] => LessThan1.IN3
+A[2] => Equal0.IN1
+A[2] => LessThan0.IN2
+A[2] => LessThan1.IN2
+A[3] => Equal0.IN0
+A[3] => LessThan0.IN1
+A[3] => LessThan1.IN1
+B[0] => Equal0.IN7
+B[0] => LessThan0.IN8
+B[0] => LessThan1.IN8
+B[1] => Equal0.IN6
+B[1] => LessThan0.IN7
+B[1] => LessThan1.IN7
+B[2] => Equal0.IN5
+B[2] => LessThan0.IN6
+B[2] => LessThan1.IN6
+B[3] => Equal0.IN4
+B[3] => LessThan0.IN5
+B[3] => LessThan1.IN5
+AeqB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+AgtB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+AltB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|controlador:C1
+clock => Ereg~1.DATAIN
+reset => Ereg~3.DATAIN
+zerar => process_1.IN0
+zerar => process_1.IN0
+iniciar => Selector3.IN3
+iniciar => process_1.IN1
+iniciar => process_1.IN1
+iniciar => Selector0.IN1
+pronto => Eprox.registra.DATAB
+pronto => Selector2.IN2
+liga <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+enabler <= WideNor1.DB_MAX_OUTPUT_PORT_TYPE
+resetr <= resetr.DB_MAX_OUTPUT_PORT_TYPE
+fim <= fim.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|reg16bits_en2:R1
+CLOCK => Q[0]~reg0.CLK
+CLOCK => Q[1]~reg0.CLK
+CLOCK => Q[2]~reg0.CLK
+CLOCK => Q[3]~reg0.CLK
+CLOCK => Q[4]~reg0.CLK
+CLOCK => Q[5]~reg0.CLK
+CLOCK => Q[6]~reg0.CLK
+CLOCK => Q[7]~reg0.CLK
+CLOCK => Q[8]~reg0.CLK
+CLOCK => Q[9]~reg0.CLK
+CLOCK => Q[10]~reg0.CLK
+CLOCK => Q[11]~reg0.CLK
+CLOCK => Q[12]~reg0.CLK
+CLOCK => Q[13]~reg0.CLK
+CLOCK => Q[14]~reg0.CLK
+CLOCK => Q[15]~reg0.CLK
+CLOCK => IQ[0].CLK
+CLOCK => IQ[1].CLK
+CLOCK => IQ[2].CLK
+CLOCK => IQ[3].CLK
+CLOCK => IQ[4].CLK
+CLOCK => IQ[5].CLK
+CLOCK => IQ[6].CLK
+CLOCK => IQ[7].CLK
+CLOCK => IQ[8].CLK
+CLOCK => IQ[9].CLK
+CLOCK => IQ[10].CLK
+CLOCK => IQ[11].CLK
+CLOCK => IQ[12].CLK
+CLOCK => IQ[13].CLK
+CLOCK => IQ[14].CLK
+CLOCK => IQ[15].CLK
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => process_0.IN0
+CLR => process_0.IN0
+ENABLE => process_0.IN1
+ENABLE => process_0.IN1
+D[0] => IQ.DATAB
+D[1] => IQ.DATAB
+D[2] => IQ.DATAB
+D[3] => IQ.DATAB
+D[4] => IQ.DATAB
+D[5] => IQ.DATAB
+D[6] => IQ.DATAB
+D[7] => IQ.DATAB
+D[8] => IQ.DATAB
+D[9] => IQ.DATAB
+D[10] => IQ.DATAB
+D[11] => IQ.DATAB
+D[12] => IQ.DATAB
+D[13] => IQ.DATAB
+D[14] => IQ.DATAB
+D[15] => IQ.DATAB
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|hex7seg_en:D1
+x3 => Mux0.IN16
+x3 => Mux1.IN16
+x3 => Mux2.IN16
+x3 => Mux3.IN16
+x3 => Mux4.IN16
+x3 => Mux5.IN16
+x3 => Mux6.IN16
+x2 => Mux0.IN17
+x2 => Mux1.IN17
+x2 => Mux2.IN17
+x2 => Mux3.IN17
+x2 => Mux4.IN17
+x2 => Mux5.IN17
+x2 => Mux6.IN17
+x1 => Mux0.IN18
+x1 => Mux1.IN18
+x1 => Mux2.IN18
+x1 => Mux3.IN18
+x1 => Mux4.IN18
+x1 => Mux5.IN18
+x1 => Mux6.IN18
+x0 => Mux0.IN19
+x0 => Mux1.IN19
+x0 => Mux2.IN19
+x0 => Mux3.IN19
+x0 => Mux4.IN19
+x0 => Mux5.IN19
+x0 => Mux6.IN19
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+a <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+b <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+c <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+d <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+e <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+f <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+g <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|hex7seg_en:D2
+x3 => Mux0.IN16
+x3 => Mux1.IN16
+x3 => Mux2.IN16
+x3 => Mux3.IN16
+x3 => Mux4.IN16
+x3 => Mux5.IN16
+x3 => Mux6.IN16
+x2 => Mux0.IN17
+x2 => Mux1.IN17
+x2 => Mux2.IN17
+x2 => Mux3.IN17
+x2 => Mux4.IN17
+x2 => Mux5.IN17
+x2 => Mux6.IN17
+x1 => Mux0.IN18
+x1 => Mux1.IN18
+x1 => Mux2.IN18
+x1 => Mux3.IN18
+x1 => Mux4.IN18
+x1 => Mux5.IN18
+x1 => Mux6.IN18
+x0 => Mux0.IN19
+x0 => Mux1.IN19
+x0 => Mux2.IN19
+x0 => Mux3.IN19
+x0 => Mux4.IN19
+x0 => Mux5.IN19
+x0 => Mux6.IN19
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+a <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+b <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+c <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+d <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+e <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+f <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+g <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|hex7seg_en:D3
+x3 => Mux0.IN16
+x3 => Mux1.IN16
+x3 => Mux2.IN16
+x3 => Mux3.IN16
+x3 => Mux4.IN16
+x3 => Mux5.IN16
+x3 => Mux6.IN16
+x2 => Mux0.IN17
+x2 => Mux1.IN17
+x2 => Mux2.IN17
+x2 => Mux3.IN17
+x2 => Mux4.IN17
+x2 => Mux5.IN17
+x2 => Mux6.IN17
+x1 => Mux0.IN18
+x1 => Mux1.IN18
+x1 => Mux2.IN18
+x1 => Mux3.IN18
+x1 => Mux4.IN18
+x1 => Mux5.IN18
+x1 => Mux6.IN18
+x0 => Mux0.IN19
+x0 => Mux1.IN19
+x0 => Mux2.IN19
+x0 => Mux3.IN19
+x0 => Mux4.IN19
+x0 => Mux5.IN19
+x0 => Mux6.IN19
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+a <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+b <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+c <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+d <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+e <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+f <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+g <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|BoxRodada:INTERFACE|hierarquico:Medicao|hex7seg_en:D4
+x3 => Mux0.IN16
+x3 => Mux1.IN16
+x3 => Mux2.IN16
+x3 => Mux3.IN16
+x3 => Mux4.IN16
+x3 => Mux5.IN16
+x3 => Mux6.IN16
+x2 => Mux0.IN17
+x2 => Mux1.IN17
+x2 => Mux2.IN17
+x2 => Mux3.IN17
+x2 => Mux4.IN17
+x2 => Mux5.IN17
+x2 => Mux6.IN17
+x1 => Mux0.IN18
+x1 => Mux1.IN18
+x1 => Mux2.IN18
+x1 => Mux3.IN18
+x1 => Mux4.IN18
+x1 => Mux5.IN18
+x1 => Mux6.IN18
+x0 => Mux0.IN19
+x0 => Mux1.IN19
+x0 => Mux2.IN19
+x0 => Mux3.IN19
+x0 => Mux4.IN19
+x0 => Mux5.IN19
+x0 => Mux6.IN19
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+enable => a_to_g.OUTPUTSELECT
+a <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+b <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+c <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+d <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+e <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+f <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+g <= a_to_g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|BoxRodada:INTERFACE|reg16bits_en2:R
+CLOCK => Q[0]~reg0.CLK
+CLOCK => Q[1]~reg0.CLK
+CLOCK => Q[2]~reg0.CLK
+CLOCK => Q[3]~reg0.CLK
+CLOCK => Q[4]~reg0.CLK
+CLOCK => Q[5]~reg0.CLK
+CLOCK => Q[6]~reg0.CLK
+CLOCK => Q[7]~reg0.CLK
+CLOCK => Q[8]~reg0.CLK
+CLOCK => Q[9]~reg0.CLK
+CLOCK => Q[10]~reg0.CLK
+CLOCK => Q[11]~reg0.CLK
+CLOCK => Q[12]~reg0.CLK
+CLOCK => Q[13]~reg0.CLK
+CLOCK => Q[14]~reg0.CLK
+CLOCK => Q[15]~reg0.CLK
+CLOCK => IQ[0].CLK
+CLOCK => IQ[1].CLK
+CLOCK => IQ[2].CLK
+CLOCK => IQ[3].CLK
+CLOCK => IQ[4].CLK
+CLOCK => IQ[5].CLK
+CLOCK => IQ[6].CLK
+CLOCK => IQ[7].CLK
+CLOCK => IQ[8].CLK
+CLOCK => IQ[9].CLK
+CLOCK => IQ[10].CLK
+CLOCK => IQ[11].CLK
+CLOCK => IQ[12].CLK
+CLOCK => IQ[13].CLK
+CLOCK => IQ[14].CLK
+CLOCK => IQ[15].CLK
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => IQ.OUTPUTSELECT
+CLR => process_0.IN0
+CLR => process_0.IN0
+ENABLE => process_0.IN1
+ENABLE => process_0.IN1
+D[0] => IQ.DATAB
+D[1] => IQ.DATAB
+D[2] => IQ.DATAB
+D[3] => IQ.DATAB
+D[4] => IQ.DATAB
+D[5] => IQ.DATAB
+D[6] => IQ.DATAB
+D[7] => IQ.DATAB
+D[8] => IQ.DATAB
+D[9] => IQ.DATAB
+D[10] => IQ.DATAB
+D[11] => IQ.DATAB
+D[12] => IQ.DATAB
+D[13] => IQ.DATAB
+D[14] => IQ.DATAB
+D[15] => IQ.DATAB
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CircuitoBase|mux4to1:MultiplexadorFinal
+SEL[0] => ~NO_FANOUT~
+SEL[1] => ~NO_FANOUT~
+SEL[2] => ~NO_FANOUT~
+SEL[3] => ~NO_FANOUT~
+A[0] => ~NO_FANOUT~
+A[1] => ~NO_FANOUT~
+A[2] => ~NO_FANOUT~
+A[3] => ~NO_FANOUT~
+A[4] => ~NO_FANOUT~
+A[5] => ~NO_FANOUT~
+A[6] => ~NO_FANOUT~
+A[7] => ~NO_FANOUT~
+A[8] => ~NO_FANOUT~
+A[9] => ~NO_FANOUT~
+A[10] => ~NO_FANOUT~
+A[11] => ~NO_FANOUT~
+A[12] => ~NO_FANOUT~
+A[13] => ~NO_FANOUT~
+A[14] => ~NO_FANOUT~
+A[15] => ~NO_FANOUT~
+B[0] => ~NO_FANOUT~
+B[1] => ~NO_FANOUT~
+B[2] => ~NO_FANOUT~
+B[3] => ~NO_FANOUT~
+B[4] => ~NO_FANOUT~
+B[5] => ~NO_FANOUT~
+B[6] => ~NO_FANOUT~
+B[7] => ~NO_FANOUT~
+B[8] => ~NO_FANOUT~
+B[9] => ~NO_FANOUT~
+B[10] => ~NO_FANOUT~
+B[11] => ~NO_FANOUT~
+B[12] => ~NO_FANOUT~
+B[13] => ~NO_FANOUT~
+B[14] => ~NO_FANOUT~
+B[15] => ~NO_FANOUT~
+C[0] => ~NO_FANOUT~
+C[1] => ~NO_FANOUT~
+C[2] => ~NO_FANOUT~
+C[3] => ~NO_FANOUT~
+C[4] => ~NO_FANOUT~
+C[5] => ~NO_FANOUT~
+C[6] => ~NO_FANOUT~
+C[7] => ~NO_FANOUT~
+C[8] => ~NO_FANOUT~
+C[9] => ~NO_FANOUT~
+C[10] => ~NO_FANOUT~
+C[11] => ~NO_FANOUT~
+C[12] => ~NO_FANOUT~
+C[13] => ~NO_FANOUT~
+C[14] => ~NO_FANOUT~
+C[15] => ~NO_FANOUT~
+D[0] => X[0].DATAIN
+D[1] => X[1].DATAIN
+D[2] => X[2].DATAIN
+D[3] => X[3].DATAIN
+D[4] => X[4].DATAIN
+D[5] => X[5].DATAIN
+D[6] => X[6].DATAIN
+D[7] => X[7].DATAIN
+D[8] => X[8].DATAIN
+D[9] => X[9].DATAIN
+D[10] => X[10].DATAIN
+D[11] => X[11].DATAIN
+D[12] => X[12].DATAIN
+D[13] => X[13].DATAIN
+D[14] => X[14].DATAIN
+D[15] => X[15].DATAIN
+X[0] <= D[0].DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= D[1].DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= D[2].DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= D[3].DB_MAX_OUTPUT_PORT_TYPE
+X[4] <= D[4].DB_MAX_OUTPUT_PORT_TYPE
+X[5] <= D[5].DB_MAX_OUTPUT_PORT_TYPE
+X[6] <= D[6].DB_MAX_OUTPUT_PORT_TYPE
+X[7] <= D[7].DB_MAX_OUTPUT_PORT_TYPE
+X[8] <= D[8].DB_MAX_OUTPUT_PORT_TYPE
+X[9] <= D[9].DB_MAX_OUTPUT_PORT_TYPE
+X[10] <= D[10].DB_MAX_OUTPUT_PORT_TYPE
+X[11] <= D[11].DB_MAX_OUTPUT_PORT_TYPE
+X[12] <= D[12].DB_MAX_OUTPUT_PORT_TYPE
+X[13] <= D[13].DB_MAX_OUTPUT_PORT_TYPE
+X[14] <= D[14].DB_MAX_OUTPUT_PORT_TYPE
+X[15] <= D[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
