@@ -57,6 +57,8 @@ begin
 		
 		when Fim => Eprox <= Inicial;
 		
+		when others => Eprox <= Inicial;
+		
 	end case;
 	
 	end process;

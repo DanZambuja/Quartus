@@ -4,8 +4,10 @@ use IEEE.std_logic_1164.all;
 entity Atrasador is 
 
 	port (clock, reset, contaAtraso: in std_logic;
-			sinalAtraso: out std_logic;
-			estado: out std_logic_vector(3 downto 0));
+			sinalAtraso, depTT1, depTT2, depConta: out std_logic;
+			depT:out std_logic_vector(3 downto 0);
+			estado: out std_logic_vector(3 downto 0);
+			tempoAtraso, tempoUsado, tempoCicladobit, tempoCicladoBCD, tempoContadorAtraso: out std_logic_vector(15 downto 0));
 
 end Atrasador;
 
@@ -32,7 +34,7 @@ component comparador is
 		  
 end component;
 
-component LSFR is
+component LFSR is
   port (
     cout   :out std_logic_vector (15 downto 0);-- Output of the counter
     enable :in  std_logic;
@@ -81,7 +83,7 @@ sinalAtraso <= s_sinalAtraso;
 	
 	--ContadordeAtraso: comparador port map(clock, reset, s_conta, s_tempoCiclado2, s_sinalAtraso);
 	
-	ContadordoAtraso: Four_Digit_BCD_Counter port map(clock, not(reset) or not(s_resetaContadores), s_conta, s_X1, s_X2, s_X3, s_X4);
+	ContadordoAtraso: Four_Digit_BCD_Counter port map(clock, not(reset) and not(s_resetaContadores), s_conta, s_X1, s_X2, s_X3, s_X4);
 	
 	C1: compare port map(s_X1, s_tempoCiclado2(3 downto 0), T1, open, open);
 	C2: compare port map(s_X2, s_tempoCiclado2(7 downto 4), T2, open, open);
@@ -96,13 +98,13 @@ sinalAtraso <= s_sinalAtraso;
 	
 	ContadordeConversao: comparador port map(clock, reset or s_resetaContadores, s_convertendo, "0000000000100000", s_converteu);
 	
-	LFSR: LSFR port map(s_tempoCiclado1, s_ciclando, clock, reset or s_resetaContadores, s_tempoUsado);
+	PSEUDORANDOM: LFSR port map(s_tempoCiclado1, s_ciclando, clock, reset or s_resetaContadores, s_tempoUsado);
 	
-	VerificaDemora: comparador port map(clock, reset or s_resetaContadores, s_ciclando, "0000000001010000", s_ciclou);
+	ciclagensLFSR: comparador port map(clock, reset or s_resetaContadores, s_ciclando, "0000000001010000", s_ciclou);
 	
 	Registrador: reg16bits_en port map(clock, reset or s_resetaContadores, s_registra, s_tempoAtraso, s_tempoUsado);
 	
-	geraSeed: Four_Digit_BCD_Counter port map(clock, reset_L, s_inicio, s_Q1, s_Q2, s_Q3, s_Q4);
+	geraSeed: Four_Digit_BCD_Counter port map(clock, reset_L and not(s_resetaContadores), s_inicio, s_Q1, s_Q2, s_Q3, s_Q4);
 	
 	
 	
@@ -110,12 +112,17 @@ sinalAtraso <= s_sinalAtraso;
 --inicio <= s_inicio;
 --registra <= s_registra;
 --reseta <= s_resetaContadores;
---tempoCicladobit <= s_tempoCiclado1;
---tempoCicladoBCD <= s_tempoCiclado2;
---tempoAtraso <= s_tempoAtraso;
+depConta<= s_conta;
+depTT1<=TT1;
+depTT2<=TT2;
+depT<=T4&T3&T2&T1;
+tempoCicladobit <= s_tempoCiclado1;
+tempoCicladoBCD <= s_tempoCiclado2;
+tempoContadorAtraso<=s_X4&s_X3&s_X2&s_X1;
+tempoAtraso <= s_tempoAtraso;
 --ciclou <= s_ciclou;
 --ciclando <= s_ciclando;
---tempoUsado <= s_tempoUsado;
+tempoUsado <= s_tempoUsado;
 --convertendo<= s_convertendo;
 --converteu <= s_converteu;
 

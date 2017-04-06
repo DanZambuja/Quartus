@@ -21,17 +21,6 @@ component BoxRodada is
 			
 end component;
 
-component hierarquico is 
-	port (clock, reset, iniciar, zerar, pulso : in STD_LOGIC;
-	      saida : out STD_LOGIC_VECTOR(15 downto 0);
-			fim : out STD_LOGIC;
-			sig_resetr: out std_logic;
-			sig_enabler: out std_logic;
-			sig_liga: out std_logic;
-			sig_medida:out std_logic_Vector(15 downto 0);
-			saidaDisplay: out std_logic_vector(27 downto 0));
-end component;
-
 
 signal s_iniciar, s_contaAtraso, s_sinalAtraso, s_fimRodada, s_fim: std_logic;
 signal s_saidaMedidor: std_logic_vector(15 downto 0);
@@ -39,9 +28,7 @@ signal s_saidaMedidor: std_logic_vector(15 downto 0);
 begin
 
 
-	INTERFACE: BoxRodada port map(clock, reset, finalizaRodada, liga, resposta, s_contaAtraso ,s_iniciar, s_fimRodada, s_erro, s_demora, s_MostraSinalAtraso, s_MostraContaAtraso,s_estadoRodada, s_estadoAtrasador, s_pulsoRodada);
-	Medidor : hierarquico port map(clock, reset, liga, s_iniciar, open, s_iniciar and not(resposta), s_saidaMedidor, s_fim, open, open, open, open, open);
-	
+	INTERFACE: BoxRodada port map(clock, reset, finalizaRodada, liga, resposta, s_contaAtraso ,s_iniciar, s_fimRodada, s_erro, s_demora, s_MostraSinalAtraso, s_MostraContaAtraso,s_estadoRodada, s_estadoAtrasador, s_pulsoRodada);	
 	
 
 	

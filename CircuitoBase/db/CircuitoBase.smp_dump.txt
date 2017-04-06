@@ -1,20 +1,16 @@
 
-State Machine - |hierarquico|controlador:C1|Ereg
-Name Ereg.espera Ereg.esperasoma Ereg.soma Ereg.registra Ereg.medindo Ereg.iniciado Ereg.zera Ereg.parado 
-Ereg.parado 0 0 0 0 0 0 0 0 
-Ereg.zera 0 0 0 0 0 0 1 1 
-Ereg.iniciado 0 0 0 0 0 1 0 1 
-Ereg.medindo 0 0 0 0 1 0 0 1 
-Ereg.registra 0 0 0 1 0 0 0 1 
-Ereg.soma 0 0 1 0 0 0 0 1 
-Ereg.esperasoma 0 1 0 0 0 0 0 1 
-Ereg.espera 1 0 0 0 0 0 0 1 
+State Machine - |Atrasador|bitToBCD:Converte|state
+Name state.done state.shift state.start 
+state.start 0 0 0 
+state.shift 0 1 1 
+state.done 1 0 1 
 
-State Machine - |hierarquico|medidor:M1|controle:C1|Ereg
-Name Ereg.EPRONTO Ereg.ESPERA Ereg.LIMPA Ereg.CONTA Ereg.LIGADO Ereg.INICIAL 
-Ereg.INICIAL 0 0 0 0 0 0 
-Ereg.LIGADO 0 0 0 0 1 1 
-Ereg.CONTA 0 0 0 1 0 1 
-Ereg.LIMPA 0 0 1 0 0 1 
-Ereg.ESPERA 0 1 0 0 0 1 
-Ereg.EPRONTO 1 0 0 0 0 1 
+State Machine - |Atrasador|controleAtrasador:C|Eatual
+Name Eatual.Fim Eatual.Contando Eatual.Conversao Eatual.Cicla Eatual.RegistraSeed2 Eatual.RegistraSeed1 Eatual.Inicial 
+Eatual.Inicial 0 0 0 0 0 0 0 
+Eatual.RegistraSeed1 0 0 0 0 0 1 1 
+Eatual.RegistraSeed2 0 0 0 0 1 0 1 
+Eatual.Cicla 0 0 0 1 0 0 1 
+Eatual.Conversao 0 0 1 0 0 0 1 
+Eatual.Contando 0 1 0 0 0 0 1 
+Eatual.Fim 1 0 0 0 0 0 1 

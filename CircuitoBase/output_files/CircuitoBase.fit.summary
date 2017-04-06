@@ -1,13 +1,13 @@
-Fitter Status : Successful - Thu Apr  6 03:03:58 2017
+Fitter Status : Successful - Thu Apr  6 05:26:19 2017
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : CircuitoBase
-Top-level Entity Name : hierarquico
+Top-level Entity Name : Atrasador
 Family : Cyclone V
 Device : 5CGXFC7C7F23C8
 Timing Models : Final
-Logic utilization (in ALMs) : 39 / 56,480 ( < 1 % )
-Total registers : 76
-Total pins : 69 / 268 ( 26 % )
+Logic utilization (in ALMs) : 138 / 56,480 ( < 1 % )
+Total registers : 188
+Total pins : 95 / 268 ( 35 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 7,024,640 ( 0 % )
 Total RAM Blocks : 0 / 686 ( 0 % )

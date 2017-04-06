@@ -102,44 +102,44 @@ GND                          : AA3       : gnd    :                   :         
 GND                          : AA4       : gnd    :                   :         :           :                
 AS_DATA2, DATA2              : AA5       :        :                   :         : 3A        :                
 GND                          : AA6       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA7       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA8       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA9       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA10      :        :                   :         : 3B        :                
+estado[3]                    : AA7       : output : 2.5 V             :         : 3B        : N              
+sinalAtraso                  : AA8       : output : 2.5 V             :         : 3B        : N              
+tempoAtraso[3]               : AA9       : output : 2.5 V             :         : 3B        : N              
+tempoAtraso[13]              : AA10      : output : 2.5 V             :         : 3B        : N              
 GND                          : AA11      : gnd    :                   :         :           :                
-saidaDisplay[15]             : AA12      : output : 2.5 V             :         : 3B        : N              
-saidaDisplay[21]             : AA13      : output : 2.5 V             :         : 4A        : N              
-saida[9]                     : AA14      : output : 2.5 V             :         : 4A        : N              
-saida[7]                     : AA15      : output : 2.5 V             :         : 4A        : N              
+tempoUsado[5]                : AA12      : output : 2.5 V             :         : 3B        : N              
+tempoAtraso[6]               : AA13      : output : 2.5 V             :         : 4A        : N              
+tempoUsado[15]               : AA14      : output : 2.5 V             :         : 4A        : N              
+estado[2]                    : AA15      : output : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : AA16      : power  :                   : 2.5V    : 4A        :                
-saidaDisplay[3]              : AA17      : output : 2.5 V             :         : 4A        : N              
-saida[11]                    : AA18      : output : 2.5 V             :         : 4A        : N              
-reset                        : AA19      : input  : 2.5 V             :         : 4A        : N              
-saidaDisplay[5]              : AA20      : output : 2.5 V             :         : 4A        : N              
+tempoUsado[12]               : AA17      : output : 2.5 V             :         : 4A        : N              
+tempoCicladobit[14]          : AA18      : output : 2.5 V             :         : 4A        : N              
+tempoCicladoBCD[0]           : AA19      : output : 2.5 V             :         : 4A        : N              
+tempoCicladobit[8]           : AA20      : output : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : AA21      : power  :                   : 2.5V    : 4A        :                
-sig_medida[4]                : AA22      : output : 2.5 V             :         : 4A        : N              
+tempoCicladobit[10]          : AA22      : output : 2.5 V             :         : 4A        : N              
 GND                          : AB1       : gnd    :                   :         :           :                
 GND                          : AB2       : gnd    :                   :         :           :                
 AS_DATA1, DATA1              : AB3       :        :                   :         : 3A        :                
 AS_DATA0, ASDO, DATA0        : AB4       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB5       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB6       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB7       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB8       :        :                   :         : 3B        :                
+tempoAtraso[9]               : AB6       : output : 2.5 V             :         : 3B        : N              
+tempoAtraso[8]               : AB7       : output : 2.5 V             :         : 3B        : N              
+tempoCicladoBCD[3]           : AB8       : output : 2.5 V             :         : 3B        : N              
 GND                          : AB9       : gnd    :                   :         :           :                
-saidaDisplay[13]             : AB10      : output : 2.5 V             :         : 3B        : N              
-saidaDisplay[4]              : AB11      : output : 2.5 V             :         : 3B        : N              
-saidaDisplay[10]             : AB12      : output : 2.5 V             :         : 4A        : N              
-saida[1]                     : AB13      : output : 2.5 V             :         : 4A        : N              
+tempoUsado[14]               : AB10      : output : 2.5 V             :         : 3B        : N              
+tempoUsado[3]                : AB11      : output : 2.5 V             :         : 3B        : N              
+tempoCicladoBCD[6]           : AB12      : output : 2.5 V             :         : 4A        : N              
+tempoCicladobit[0]           : AB13      : output : 2.5 V             :         : 4A        : N              
 GND                          : AB14      : gnd    :                   :         :           :                
-saidaDisplay[16]             : AB15      : output : 2.5 V             :         : 4A        : N              
+tempoUsado[1]                : AB15      : output : 2.5 V             :         : 4A        : N              
 VREFB4AN0                    : AB16      : power  :                   :         : 4A        :                
-saidaDisplay[20]             : AB17      : output : 2.5 V             :         : 4A        : N              
-saidaDisplay[8]              : AB18      : output : 2.5 V             :         : 4A        : N              
+tempoAtraso[0]               : AB17      : output : 2.5 V             :         : 4A        : N              
+tempoAtraso[1]               : AB18      : output : 2.5 V             :         : 4A        : N              
 GND                          : AB19      : gnd    :                   :         :           :                
-saida[4]                     : AB20      : output : 2.5 V             :         : 4A        : N              
-saidaDisplay[14]             : AB21      : output : 2.5 V             :         : 4A        : N              
-sig_medida[12]               : AB22      : output : 2.5 V             :         : 4A        : N              
+tempoAtraso[5]               : AB20      : output : 2.5 V             :         : 4A        : N              
+tempoAtraso[2]               : AB21      : output : 2.5 V             :         : 4A        : N              
+tempoContadorAtraso[5]       : AB22      : output : 2.5 V             :         : 4A        : N              
 GND                          : B1        : gnd    :                   :         :           :                
 GND                          : B2        : gnd    :                   :         :           :                
 DNU                          : B3        :        :                   :         :           :                
@@ -367,8 +367,8 @@ GND                          : M4        : gnd    :                   :         
 TDO                          : M5        : output :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M6        :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M7        :        :                   :         : 3A        :                
-saidaDisplay[2]              : M8        : output : 2.5 V             :         : 3B        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : M9        :        :                   :         : 3B        :                
+tempoCicladobit[1]           : M8        : output : 2.5 V             :         : 3B        : N              
+tempoUsado[9]                : M9        : output : 2.5 V             :         : 3B        : N              
 GND                          : M10       : gnd    :                   :         :           :                
 VCC                          : M11       : power  :                   : 1.1V    :           :                
 GND                          : M12       : gnd    :                   :         :           :                
@@ -389,8 +389,8 @@ VCCE_GXBL                    : N4        : power  :                   : 1.1V    
 GND                          : N5        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N6        :        :                   :         : 3A        :                
 GND                          : N7        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N8        :        :                   :         : 3B        :                
-saidaDisplay[24]             : N9        : output : 2.5 V             :         : 3B        : N              
+tempoContadorAtraso[12]      : N8        : output : 2.5 V             :         : 3B        : N              
+tempoAtraso[12]              : N9        : output : 2.5 V             :         : 3B        : N              
 VCC                          : N10       : power  :                   : 1.1V    :           :                
 GND                          : N11       : gnd    :                   :         :           :                
 VCC                          : N12       : power  :                   : 1.1V    :           :                
@@ -412,20 +412,20 @@ TMS                          : P5        : input  :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : P6        :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P7        :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P8        :        :                   :         : 3B        :                
-saidaDisplay[9]              : P9        : output : 2.5 V             :         : 3B        : N              
+tempoCicladoBCD[4]           : P9        : output : 2.5 V             :         : 3B        : N              
 GND                          : P10       : gnd    :                   :         :           :                
 VCC                          : P11       : power  :                   : 1.1V    :           :                
-saidaDisplay[22]             : P12       : output : 2.5 V             :         : 3B        : N              
+tempoContadorAtraso[11]      : P12       : output : 2.5 V             :         : 3B        : N              
 VCC                          : P13       : power  :                   : 1.1V    :           :                
-sig_medida[3]                : P14       : output : 2.5 V             :         : 4A        : N              
+tempoCicladobit[4]           : P14       : output : 2.5 V             :         : 4A        : N              
 VCC                          : P15       : power  :                   : 1.1V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P16       :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P17       :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P18       :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P19       :        :                   :         : 5A        :                
+tempoContadorAtraso[13]      : P16       : output : 2.5 V             :         : 5A        : N              
+tempoContadorAtraso[8]       : P17       : output : 2.5 V             :         : 5A        : N              
+tempoAtraso[11]              : P18       : output : 2.5 V             :         : 5A        : N              
+tempoContadorAtraso[1]       : P19       : output : 2.5 V             :         : 5A        : N              
 VCCIO5A                      : P20       : power  :                   : 2.5V    : 5A        :                
 VCCPD5A                      : P21       : power  :                   : 2.5V    : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P22       :        :                   :         : 5A        :                
+tempoCicladobit[3]           : P22       : output : 2.5 V             :         : 5A        : N              
 GND                          : R1        :        :                   :         : B0L       :                
 GND                          : R2        :        :                   :         : B0L       :                
 GND                          : R3        : gnd    :                   :         :           :                
@@ -434,20 +434,20 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : R6        :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R7        :        :                   :         : 3A        :                
 VCCIO3B                      : R8        : power  :                   : 2.5V    : 3B        :                
-saidaDisplay[23]             : R9        : output : 2.5 V             :         : 3B        : N              
-saidaDisplay[1]              : R10       : output : 2.5 V             :         : 3B        : N              
-saida[15]                    : R11       : output : 2.5 V             :         : 3B        : N              
-saidaDisplay[7]              : R12       : output : 2.5 V             :         : 3B        : N              
+tempoAtraso[14]              : R9        : output : 2.5 V             :         : 3B        : N              
+tempoUsado[7]                : R10       : output : 2.5 V             :         : 3B        : N              
+tempoCicladoBCD[11]          : R11       : output : 2.5 V             :         : 3B        : N              
+depTT1                       : R12       : output : 2.5 V             :         : 3B        : N              
 GND                          : R13       : gnd    :                   :         :           :                
-pulso                        : R14       : input  : 2.5 V             :         : 4A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R15       :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R16       :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R17       :        :                   :         : 5A        :                
+tempoContadorAtraso[2]       : R14       : output : 2.5 V             :         : 4A        : N              
+tempoUsado[6]                : R15       : output : 2.5 V             :         : 5A        : N              
+tempoCicladobit[11]          : R16       : output : 2.5 V             :         : 5A        : N              
+tempoCicladoBCD[10]          : R17       : output : 2.5 V             :         : 5A        : N              
 VCCIO5A                      : R18       : power  :                   : 2.5V    : 5A        :                
 VCCPGM                       : R19       : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
 VREFB5AN0                    : R20       : power  :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R21       :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R22       :        :                   :         : 5A        :                
+depT[1]                      : R21       : output : 2.5 V             :         : 5A        : N              
+tempoContadorAtraso[0]       : R22       : output : 2.5 V             :         : 5A        : N              
 GND                          : T1        : gnd    :                   :         :           :                
 GND                          : T2        : gnd    :                   :         :           :                
 VCCH_GXBL                    : T3        : power  :                   : 2.5V    :           :                
@@ -456,20 +456,20 @@ VCCA_FPLL                    : T5        : power  :                   : 2.5V    
 VCCIO3A                      : T6        : power  :                   : 2.5V    : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T7        :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T8        :        :                   :         : 3A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T9        :        :                   :         : 3B        :                
-saidaDisplay[18]             : T10       : output : 2.5 V             :         : 3B        : N              
+depTT2                       : T9        : output : 2.5 V             :         : 3B        : N              
+tempoCicladoBCD[1]           : T10       : output : 2.5 V             :         : 3B        : N              
 VCCIO3B                      : T11       : power  :                   : 2.5V    : 3B        :                
-saidaDisplay[26]             : T12       : output : 2.5 V             :         : 4A        : N              
-saidaDisplay[27]             : T13       : output : 2.5 V             :         : 4A        : N              
-saida[10]                    : T14       : output : 2.5 V             :         : 4A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : T15       :        :                   :         : 5A        :                
+depT[3]                      : T12       : output : 2.5 V             :         : 4A        : N              
+tempoCicladoBCD[13]          : T13       : output : 2.5 V             :         : 4A        : N              
+tempoUsado[13]               : T14       : output : 2.5 V             :         : 4A        : N              
+tempoUsado[8]                : T15       : output : 2.5 V             :         : 5A        : N              
 GND                          : T16       : gnd    :                   :         :           :                
-sig_medida[14]               : T17       : output : 2.5 V             :         : 5A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : T18       :        :                   :         : 5A        :                
-sig_medida[10]               : T19       : output : 2.5 V             :         : 5A        : N              
-sig_medida[15]               : T20       : output : 2.5 V             :         : 5A        : N              
+tempoUsado[2]                : T17       : output : 2.5 V             :         : 5A        : N              
+tempoCicladobit[7]           : T18       : output : 2.5 V             :         : 5A        : N              
+tempoCicladobit[12]          : T19       : output : 2.5 V             :         : 5A        : N              
+tempoCicladoBCD[7]           : T20       : output : 2.5 V             :         : 5A        : N              
 GND                          : T21       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T22       :        :                   :         : 5A        :                
+tempoContadorAtraso[7]       : T22       : output : 2.5 V             :         : 5A        : N              
 GXB_NC                       : U1        :        :                   :         : B0L       :                
 GXB_NC                       : U2        :        :                   :         : B0L       :                
 GND                          : U3        : gnd    :                   :         :           :                
@@ -479,19 +479,19 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : U6        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : U7        :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U8        :        :                   :         : 3A        :                
 GND                          : U9        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U10       :        :                   :         : 3B        :                
-saida[2]                     : U11       : output : 2.5 V             :         : 3B        : N              
-saidaDisplay[12]             : U12       : output : 2.5 V             :         : 3B        : N              
-saida[0]                     : U13       : output : 2.5 V             :         : 4A        : N              
+tempoCicladobit[9]           : U10       : output : 2.5 V             :         : 3B        : N              
+tempoCicladoBCD[14]          : U11       : output : 2.5 V             :         : 3B        : N              
+tempoCicladoBCD[8]           : U12       : output : 2.5 V             :         : 3B        : N              
+tempoAtraso[10]              : U13       : output : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : U14       : power  :                   : 2.5V    : 4A        :                
-saida[14]                    : U15       : output : 2.5 V             :         : 4A        : N              
-sig_medida[1]                : U16       : output : 2.5 V             :         : 4A        : N              
-fim                          : U17       : output : 2.5 V             :         : 4A        : N              
+tempoUsado[10]               : U15       : output : 2.5 V             :         : 4A        : N              
+tempoContadorAtraso[10]      : U16       : output : 2.5 V             :         : 4A        : N              
+tempoContadorAtraso[9]       : U17       : output : 2.5 V             :         : 4A        : N              
 VCCA_FPLL                    : U18       : power  :                   : 2.5V    :           :                
 VCCIO4A                      : U19       : power  :                   : 2.5V    : 4A        :                
-saidaDisplay[6]              : U20       : output : 2.5 V             :         : 4A        : N              
-saida[13]                    : U21       : output : 2.5 V             :         : 4A        : N              
-sig_medida[7]                : U22       : output : 2.5 V             :         : 4A        : N              
+depT[0]                      : U20       : output : 2.5 V             :         : 4A        : N              
+tempoCicladobit[15]          : U21       : output : 2.5 V             :         : 4A        : N              
+tempoUsado[11]               : U22       : output : 2.5 V             :         : 4A        : N              
 GND                          : V1        : gnd    :                   :         :           :                
 GND                          : V2        : gnd    :                   :         :           :                
 DCLK                         : V3        :        :                   :         : 3A        :                
@@ -500,19 +500,19 @@ TCK                          : V5        : input  :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : V6        :        :                   :         : 3A        :                
 GND                          : V7        : gnd    :                   :         :           :                
 VCCPGM                       : V8        : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V9        :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V10       :        :                   :         : 3B        :                
+contaAtraso                  : V9        : input  : 2.5 V             :         : 3B        : N              
+tempoCicladoBCD[2]           : V10       : output : 2.5 V             :         : 3B        : N              
 DNU                          : V11       :        :                   :         :           :                
 GND                          : V12       : gnd    :                   :         :           :                
-saidaDisplay[17]             : V13       : output : 2.5 V             :         : 4A        : N              
-saidaDisplay[11]             : V14       : output : 2.5 V             :         : 4A        : N              
-saida[3]                     : V15       : output : 2.5 V             :         : 4A        : N              
-sig_medida[6]                : V16       : output : 2.5 V             :         : 4A        : N              
+tempoCicladoBCD[12]          : V13       : output : 2.5 V             :         : 4A        : N              
+estado[1]                    : V14       : output : 2.5 V             :         : 4A        : N              
+tempoAtraso[7]               : V15       : output : 2.5 V             :         : 4A        : N              
+tempoContadorAtraso[14]      : V16       : output : 2.5 V             :         : 4A        : N              
 GND                          : V17       : gnd    :                   :         :           :                
-sig_medida[8]                : V18       : output : 2.5 V             :         : 4A        : N              
-sig_medida[13]               : V19       : output : 2.5 V             :         : 4A        : N              
-sig_resetr                   : V20       : output : 2.5 V             :         : 4A        : N              
-sig_medida[0]                : V21       : output : 2.5 V             :         : 4A        : N              
+tempoContadorAtraso[6]       : V18       : output : 2.5 V             :         : 4A        : N              
+tempoCicladobit[2]           : V19       : output : 2.5 V             :         : 4A        : N              
+tempoCicladobit[5]           : V20       : output : 2.5 V             :         : 4A        : N              
+tempoCicladobit[6]           : V21       : output : 2.5 V             :         : 4A        : N              
 GND                          : V22       : gnd    :                   :         :           :                
 GND                          : W1        :        :                   :         : B0L       :                
 GND                          : W2        :        :                   :         : B0L       :                
@@ -529,13 +529,13 @@ VCCPD3B4A                    : W12       : power  :                   : 2.5V    
 VCC_AUX                      : W13       : power  :                   : 2.5V    :           :                
 VCCPD3B4A                    : W14       : power  :                   : 2.5V    : 3B, 4A    :                
 VCCIO4A                      : W15       : power  :                   : 2.5V    : 4A        :                
-sig_medida[11]               : W16       : output : 2.5 V             :         : 4A        : N              
+tempoAtraso[4]               : W16       : output : 2.5 V             :         : 4A        : N              
 VCCPD3B4A                    : W17       : power  :                   : 2.5V    : 3B, 4A    :                
 VCC_AUX                      : W18       : power  :                   : 2.5V    :           :                
-saida[6]                     : W19       : output : 2.5 V             :         : 4A        : N              
+tempoCicladoBCD[9]           : W19       : output : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : W20       : power  :                   : 2.5V    : 4A        :                
-iniciar                      : W21       : input  : 2.5 V             :         : 4A        : N              
-sig_medida[9]                : W22       : output : 2.5 V             :         : 4A        : N              
+tempoContadorAtraso[4]       : W21       : output : 2.5 V             :         : 4A        : N              
+depConta                     : W22       : output : 2.5 V             :         : 4A        : N              
 GND                          : Y1        : gnd    :                   :         :           :                
 GND                          : Y2        : gnd    :                   :         :           :                
 GXB_NC                       : Y3        :        :                   :         : B0L       :                
@@ -544,17 +544,17 @@ GND                          : Y5        : gnd    :                   :         
 DNU                          : Y6        :        :                   :         :           :                
 VREFB3AN0                    : Y7        : power  :                   :         : 3A        :                
 VCCIO3A                      : Y8        : power  :                   : 2.5V    : 3A        :                
-zerar                        : Y9        : input  : 2.5 V             :         : 3B        : N              
-saidaDisplay[25]             : Y10       : output : 2.5 V             :         : 3B        : N              
-sig_enabler                  : Y11       : output : 2.5 V             :         : 3B        : N              
+tempoAtraso[15]              : Y9        : output : 2.5 V             :         : 3B        : N              
+tempoCicladoBCD[5]           : Y10       : output : 2.5 V             :         : 3B        : N              
+tempoCicladoBCD[15]          : Y11       : output : 2.5 V             :         : 3B        : N              
 VREFB3BN0                    : Y12       : power  :                   :         : 3B        :                
 VCCIO3B                      : Y13       : power  :                   : 2.5V    : 3B        :                
-saida[12]                    : Y14       : output : 2.5 V             :         : 4A        : N              
-saidaDisplay[19]             : Y15       : output : 2.5 V             :         : 4A        : N              
-saida[5]                     : Y16       : output : 2.5 V             :         : 4A        : N              
-saida[8]                     : Y17       : output : 2.5 V             :         : 4A        : N              
+estado[0]                    : Y14       : output : 2.5 V             :         : 4A        : N              
+tempoUsado[0]                : Y15       : output : 2.5 V             :         : 4A        : N              
+depT[2]                      : Y16       : output : 2.5 V             :         : 4A        : N              
+tempoCicladobit[13]          : Y17       : output : 2.5 V             :         : 4A        : N              
 GND                          : Y18       : gnd    :                   :         :           :                
-sig_medida[5]                : Y19       : output : 2.5 V             :         : 4A        : N              
-saidaDisplay[0]              : Y20       : output : 2.5 V             :         : 4A        : N              
-sig_medida[2]                : Y21       : output : 2.5 V             :         : 4A        : N              
-sig_liga                     : Y22       : output : 2.5 V             :         : 4A        : N              
+tempoContadorAtraso[15]      : Y19       : output : 2.5 V             :         : 4A        : N              
+tempoUsado[4]                : Y20       : output : 2.5 V             :         : 4A        : N              
+tempoContadorAtraso[3]       : Y21       : output : 2.5 V             :         : 4A        : N              
+reset                        : Y22       : input  : 2.5 V             :         : 4A        : N              

@@ -4,259 +4,367 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "saida[0]",
+					"name" : "sinalAtraso",
 					"strict" : false
 				},
 				{
-					"name" : "saida[1]",
+					"name" : "depTT1",
 					"strict" : false
 				},
 				{
-					"name" : "saida[2]",
+					"name" : "depTT2",
 					"strict" : false
 				},
 				{
-					"name" : "saida[3]",
+					"name" : "depConta",
 					"strict" : false
 				},
 				{
-					"name" : "saida[4]",
+					"name" : "depT[0]",
 					"strict" : false
 				},
 				{
-					"name" : "saida[5]",
+					"name" : "depT[1]",
 					"strict" : false
 				},
 				{
-					"name" : "saida[6]",
+					"name" : "depT[2]",
 					"strict" : false
 				},
 				{
-					"name" : "saida[7]",
+					"name" : "depT[3]",
 					"strict" : false
 				},
 				{
-					"name" : "saida[8]",
+					"name" : "estado[0]",
 					"strict" : false
 				},
 				{
-					"name" : "saida[9]",
+					"name" : "estado[1]",
 					"strict" : false
 				},
 				{
-					"name" : "saida[10]",
+					"name" : "estado[2]",
 					"strict" : false
 				},
 				{
-					"name" : "saida[11]",
+					"name" : "tempoAtraso[0]",
 					"strict" : false
 				},
 				{
-					"name" : "saida[12]",
+					"name" : "tempoAtraso[1]",
 					"strict" : false
 				},
 				{
-					"name" : "saida[13]",
+					"name" : "tempoAtraso[2]",
 					"strict" : false
 				},
 				{
-					"name" : "saida[14]",
+					"name" : "tempoAtraso[3]",
 					"strict" : false
 				},
 				{
-					"name" : "saida[15]",
+					"name" : "tempoAtraso[4]",
 					"strict" : false
 				},
 				{
-					"name" : "fim",
+					"name" : "tempoAtraso[5]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_resetr",
+					"name" : "tempoAtraso[6]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_enabler",
+					"name" : "tempoAtraso[7]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_liga",
+					"name" : "tempoAtraso[8]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[0]",
+					"name" : "tempoAtraso[9]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[1]",
+					"name" : "tempoAtraso[10]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[2]",
+					"name" : "tempoAtraso[11]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[3]",
+					"name" : "tempoAtraso[12]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[4]",
+					"name" : "tempoAtraso[13]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[5]",
+					"name" : "tempoAtraso[14]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[6]",
+					"name" : "tempoAtraso[15]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[7]",
+					"name" : "tempoUsado[0]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[8]",
+					"name" : "tempoUsado[1]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[9]",
+					"name" : "tempoUsado[2]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[10]",
+					"name" : "tempoUsado[3]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[11]",
+					"name" : "tempoUsado[4]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[12]",
+					"name" : "tempoUsado[5]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[13]",
+					"name" : "tempoUsado[6]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[14]",
+					"name" : "tempoUsado[7]",
 					"strict" : false
 				},
 				{
-					"name" : "sig_medida[15]",
+					"name" : "tempoUsado[8]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[0]",
+					"name" : "tempoUsado[9]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[1]",
+					"name" : "tempoUsado[10]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[2]",
+					"name" : "tempoUsado[11]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[3]",
+					"name" : "tempoUsado[12]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[4]",
+					"name" : "tempoUsado[13]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[5]",
+					"name" : "tempoUsado[14]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[6]",
+					"name" : "tempoUsado[15]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[7]",
+					"name" : "tempoCicladobit[0]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[8]",
+					"name" : "tempoCicladobit[1]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[9]",
+					"name" : "tempoCicladobit[2]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[10]",
+					"name" : "tempoCicladobit[3]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[11]",
+					"name" : "tempoCicladobit[4]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[12]",
+					"name" : "tempoCicladobit[5]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[13]",
+					"name" : "tempoCicladobit[6]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[14]",
+					"name" : "tempoCicladobit[7]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[15]",
+					"name" : "tempoCicladobit[8]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[16]",
+					"name" : "tempoCicladobit[9]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[17]",
+					"name" : "tempoCicladobit[10]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[18]",
+					"name" : "tempoCicladobit[11]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[19]",
+					"name" : "tempoCicladobit[12]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[20]",
+					"name" : "tempoCicladobit[13]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[21]",
+					"name" : "tempoCicladobit[14]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[22]",
+					"name" : "tempoCicladobit[15]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[23]",
+					"name" : "tempoCicladoBCD[0]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[24]",
+					"name" : "tempoCicladoBCD[1]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[25]",
+					"name" : "tempoCicladoBCD[2]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[26]",
+					"name" : "tempoCicladoBCD[3]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDisplay[27]",
+					"name" : "tempoCicladoBCD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoCicladoBCD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoCicladoBCD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoCicladoBCD[7]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoCicladoBCD[8]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoCicladoBCD[9]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoCicladoBCD[10]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoCicladoBCD[11]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoCicladoBCD[12]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoCicladoBCD[13]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoCicladoBCD[14]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoCicladoBCD[15]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[7]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[8]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[9]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[10]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[11]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[12]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[13]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[14]",
+					"strict" : false
+				},
+				{
+					"name" : "tempoContadorAtraso[15]",
 					"strict" : false
 				},
 				{
@@ -264,19 +372,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "iniciar",
-					"strict" : false
-				},
-				{
 					"name" : "reset",
 					"strict" : false
 				},
 				{
-					"name" : "zerar",
-					"strict" : false
-				},
-				{
-					"name" : "pulso",
+					"name" : "contaAtraso",
 					"strict" : false
 				}
 			]
