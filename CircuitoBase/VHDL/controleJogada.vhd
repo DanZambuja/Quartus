@@ -1,0 +1,115 @@
+	library IEEE;
+use IEEE.std_logic_1164.all;
+
+
+entity controleJogada is 
+
+	port (clock, reset, jogada, finalizaRodada, fimRodada, vacilou : in std_logic;
+			rodada, perde, fimJogada : out std_logic;
+			estado : out std_logic_vector(3 downto 0));
+
+end controleJogada;
+
+
+architecture maquinaDeEstados of controleJogada is
+
+type Estados is (Inicial, Rodada1, Rodada2, Rodada3, Rodada4, CompletouJogada, Perdeu);
+
+signal Eatual, Eprox : Estados;
+
+begin
+	
+	process(clock, reset)
+	begin
+	
+		if (reset = '1') then Eatual <= Inicial;
+		elsif (clock'event and clock = '1') then Eatual <= Eprox;
+		end if;
+		
+	end process;
+	
+	process(Eatual, Eprox, jogada, finalizaRodada, fimRodada, vacilou)
+	begin
+	
+		case Eatual is 
+		
+			when Inicial => if (jogada = '1') then 
+									Eprox <= Rodada1; 
+								 else 
+									Eprox <= Eatual;
+								 end if;
+								 
+			when Rodada1 => if (fimRodada = '1' and finalizaRodada ='1' and vacilou = '0') then 
+									Eprox <= Rodada2;
+								 elsif (vacilou = '1') then
+									Eprox <= Perdeu;
+								 else 
+									Eprox <= Eatual;
+								 end if;
+								 
+			when Rodada2 => if (fimRodada = '1' and finalizaRodada = '1' and vacilou = '0') then 
+									Eprox <= Rodada3;
+								 elsif (vacilou = '1') then
+									Eprox <= Perdeu;
+								 else 
+									Eprox <= Eatual;
+								 end if;
+								 
+			when Rodada3 => if (fimRodada = '1' and finalizaRodada = '1' and vacilou = '0') then 
+									Eprox <= Rodada4;
+								 elsif (vacilou = '1') then
+									Eprox <= Perdeu;
+								 else 
+									Eprox <= Eatual;
+								 end if;
+								 
+			when Rodada4 => if (fimRodada = '1' and finalizaRodada = '1' and vacilou = '0') then 
+									Eprox <= CompletouJogada;
+								 elsif (vacilou = '1') then 
+									Eprox <= Perdeu;
+								 else 
+									Eprox <= Eatual;
+								 end if;
+								 
+			when CompletouJogada => if (finalizaRodada = '1') then
+												Eprox <= Inicial;
+											else 
+												Eprox <= Eatual;
+											end if;
+											
+			when Perdeu => if (finalizaRodada = '1') then 
+									Eprox <= Inicial;
+								else 
+									Eprox <= Eatual;
+								end if;
+								
+		end case;
+		
+	end process;
+	
+	with Eatual select
+		
+		estado <= "0000" when Inicial,
+					 "0001" when Rodada1,
+					 "0010" when Rodada2,
+					 "0011" when Rodada3,
+					 "0100" when Rodada4,
+					 "0101" when CompletouJogada,
+					 "0110" when Perdeu;
+
+	with Eatual select
+	
+		rodada <= '1' when Rodada1 | Rodada2 | Rodada3 | Rodada4,
+					 '0' when others;
+					 
+	with Eatual select
+	
+		fimJogada <= '1' when Perdeu | CompletouJogada,
+						 '0' when others;
+						 
+	with Eatual select
+	
+		perde <= '1' when Perdeu,
+					'0' when others;
+
+end maquinaDeEstados;

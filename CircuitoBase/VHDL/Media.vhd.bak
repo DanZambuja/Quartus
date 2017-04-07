@@ -1,0 +1,18 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+
+entity Media is
+
+	port ();
+end Media;
+
+architecture arch of Media is 
+
+
+begin
+
+
+
+
+end arch;
