@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/06/2017 10:55:41"
+// Generated on "04/08/2017 10:45:15"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          BoxRodada
 // 
@@ -87,6 +87,8 @@ begin
 	finalizaRodada = 1'b0;
 	finalizaRodada = #9920000 1'b1;
 	finalizaRodada = #320000 1'b0;
+	finalizaRodada = #7040000 1'b1;
+	finalizaRodada = #320000 1'b0;
 end 
 
 // reset
@@ -102,8 +104,8 @@ begin
 	resposta = 1'b0;
 	resposta = #9600000 1'b1;
 	resposta = #320000 1'b0;
-	resposta = #12160000 1'b1;
-	resposta = #640000 1'b0;
+	resposta = #5920000 1'b1;
+	resposta = #480000 1'b0;
 end 
 
 // rodada
@@ -113,6 +115,8 @@ begin
 	rodada = #1280000 1'b1;
 	rodada = #1600000 1'b0;
 	rodada = #7360000 1'b1;
+	rodada = #320000 1'b0;
+	rodada = #7680000 1'b1;
 	rodada = #320000 1'b0;
 end 
 endmodule

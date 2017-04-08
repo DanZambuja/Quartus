@@ -1,0 +1,58 @@
+Quartus Prime Archive log --	/home/danzambuja/Quartus/Projetos/CircuitoBase/Backup/CircuitoBase_BoxRodada.qarlog
+
+Archive:	/home/danzambuja/Quartus/Projetos/CircuitoBase/Backup/CircuitoBase_BoxRodada.qar
+Date:		Sat Apr  8 12:06:06 2017
+Quartus Prime		15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/danzambuja/Quartus/Projetos/CircuitoBase/CircuitoBase.qpf
+/home/danzambuja/Quartus/Projetos/CircuitoBase/CircuitoBase.qsf
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Atrasador.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/BCDTo32Bit.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/BoxRodada.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vwf
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/DetectorCodigoInvalido.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Four_Digit_BCD_Counter.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/IC_74163.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Media.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Somador4bits_comportamental.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/SomadorBCD.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/bitToBCD.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/comparador.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/compare.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/contador2bits.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controlador.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controle.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controleAtrasador.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controleJogada.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controleRodada.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/dadosMedidas.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux4_1bit.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/hex7seg_en.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/hierarquico.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/medidor.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/reg16bits_en.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/reg16bits_en2.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/regbit_en.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/somadorBCD16_bits.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/somadorBCD32_bits.vhd
+/home/danzambuja/Quartus/Projetos/CircuitoBase/Waveforms/Atrasador.vwf
+/home/danzambuja/Quartus/Projetos/CircuitoBase/Waveforms/BCDto32bit.vwf
+/home/danzambuja/Quartus/Projetos/CircuitoBase/Waveforms/BoxRodada.vwf
+/home/danzambuja/Quartus/Projetos/CircuitoBase/Waveforms/BoxRodada_sem_depura.vwf
+/home/danzambuja/Quartus/Projetos/CircuitoBase/Waveforms/CircuitoBase.vwf
+/home/danzambuja/Quartus/Projetos/CircuitoBase/Waveforms/Media.vwf
+/home/danzambuja/Quartus/Projetos/CircuitoBase/Waveforms/Medidor.vwf
+/home/danzambuja/Quartus/Projetos/CircuitoBase/Waveforms/Waveform.vwf
+/home/danzambuja/Quartus/Projetos/CircuitoBase/Waveforms/dadosMedida.vwf
+/home/danzambuja/Quartus/Projetos/CircuitoBase/Waveforms/hierarquico.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Waveforms/CircuitoBase.vwf
+/home/danzambuja/Quartus/Projetos/Jogo_Reflexo/mux4to1.vhd
+/home/danzambuja/Quartus/quartus/linux64/assignment_defaults.qdf
+	======= Total: 47 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

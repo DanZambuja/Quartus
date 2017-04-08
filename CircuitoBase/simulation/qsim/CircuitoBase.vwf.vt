@@ -19,15 +19,15 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/06/2017 11:51:27"
+// Generated on "04/08/2017 11:47:44"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          CircuitoBase
+// Verilog Test Bench (with test vectors) for design :                          BoxRodada
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module CircuitoBase_vlg_vec_tst();
+module BoxRodada_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg clock;
@@ -35,42 +35,22 @@ reg finalizaRodada;
 reg reset;
 reg resposta;
 reg rodada;
-reg [1:0] selectDisplay;
 // wires                                               
 wire aguardando;
-wire contaAtraso;
-wire demora;
 wire erro;
-wire [3:0] estadoAtrasador;
-wire [3:0] estadoRodada;
-wire fimHierarquico;
-wire fimRodada;
-wire MostraContaAtraso;
-wire MostraSinalAtraso;
 wire [15:0] pulso;
-wire [15:0] saida;
 
 // assign statements (if any)                          
-CircuitoBase i1 (
+BoxRodada i1 (
 // port map - connection between master ports and signals/registers   
 	.aguardando(aguardando),
 	.clock(clock),
-	.contaAtraso(contaAtraso),
-	.demora(demora),
 	.erro(erro),
-	.estadoAtrasador(estadoAtrasador),
-	.estadoRodada(estadoRodada),
-	.fimHierarquico(fimHierarquico),
-	.fimRodada(fimRodada),
 	.finalizaRodada(finalizaRodada),
-	.MostraContaAtraso(MostraContaAtraso),
-	.MostraSinalAtraso(MostraSinalAtraso),
 	.pulso(pulso),
 	.reset(reset),
 	.resposta(resposta),
-	.rodada(rodada),
-	.saida(saida),
-	.selectDisplay(selectDisplay)
+	.rodada(rodada)
 );
 initial 
 begin 
@@ -89,39 +69,31 @@ end
 initial
 begin
 	finalizaRodada = 1'b0;
+	finalizaRodada = #2400000 1'b1;
+	finalizaRodada = #160000 1'b0;
+	finalizaRodada = #4960000 1'b1;
+	finalizaRodada = #160000 1'b0;
+	finalizaRodada = #5120000 1'b1;
+	finalizaRodada = #160000 1'b0;
 end 
 
 // reset
 initial
 begin
 	reset = 1'b1;
-	reset = #320000 1'b0;
+	reset = #160000 1'b0;
 end 
 
 // resposta
 initial
 begin
 	resposta = 1'b0;
-	resposta = #3520000 1'b1;
-	resposta = #320000 1'b0;
-end 
-
-// rodada
-initial
-begin
-	rodada = 1'b0;
-	rodada = #320000 1'b1;
-	rodada = #320000 1'b0;
-end 
-// selectDisplay[ 1 ]
-initial
-begin
-	selectDisplay[1] = 1'b0;
-end 
-// selectDisplay[ 0 ]
-initial
-begin
-	selectDisplay[0] = 1'b0;
+	resposta = #2080000 1'b1;
+	resposta = #160000 1'b0;
+	resposta = #4800000 1'b1;
+	resposta = #160000 1'b0;
+	resposta = #5120000 1'b1;
+	resposta = #160000 1'b0;
 end 
 endmodule
 

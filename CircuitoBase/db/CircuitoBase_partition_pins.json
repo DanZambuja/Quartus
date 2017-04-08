@@ -4,211 +4,11 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "media[0]",
+					"name" : "aguardando",
 					"strict" : false
 				},
 				{
-					"name" : "media[1]",
-					"strict" : false
-				},
-				{
-					"name" : "media[2]",
-					"strict" : false
-				},
-				{
-					"name" : "media[3]",
-					"strict" : false
-				},
-				{
-					"name" : "media[4]",
-					"strict" : false
-				},
-				{
-					"name" : "media[5]",
-					"strict" : false
-				},
-				{
-					"name" : "media[6]",
-					"strict" : false
-				},
-				{
-					"name" : "media[7]",
-					"strict" : false
-				},
-				{
-					"name" : "media[8]",
-					"strict" : false
-				},
-				{
-					"name" : "media[9]",
-					"strict" : false
-				},
-				{
-					"name" : "media[10]",
-					"strict" : false
-				},
-				{
-					"name" : "media[11]",
-					"strict" : false
-				},
-				{
-					"name" : "media[12]",
-					"strict" : false
-				},
-				{
-					"name" : "media[13]",
-					"strict" : false
-				},
-				{
-					"name" : "media[14]",
-					"strict" : false
-				},
-				{
-					"name" : "media[15]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[0]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[1]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[2]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[3]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[4]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[5]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[6]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[7]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[8]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[9]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[10]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[11]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[12]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[13]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[14]",
-					"strict" : false
-				},
-				{
-					"name" : "depuraMedia[15]",
-					"strict" : false
-				},
-				{
-					"name" : "rodada",
-					"strict" : false
-				},
-				{
-					"name" : "perde",
-					"strict" : false
-				},
-				{
-					"name" : "fimJogada",
-					"strict" : false
-				},
-				{
-					"name" : "estadoJogada[0]",
-					"strict" : false
-				},
-				{
-					"name" : "estadoJogada[1]",
-					"strict" : false
-				},
-				{
-					"name" : "estadoJogada[2]",
-					"strict" : false
-				},
-				{
-					"name" : "clock",
-					"strict" : false
-				},
-				{
-					"name" : "finalizaRodada",
-					"strict" : false
-				},
-				{
-					"name" : "inicio",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "fimRodada",
-					"strict" : false
-				},
-				{
-					"name" : "vacilou",
-					"strict" : false
-				},
-				{
-					"name" : "pulso[14]",
-					"strict" : false
-				},
-				{
-					"name" : "pulso[13]",
-					"strict" : false
-				},
-				{
-					"name" : "pulso[15]",
-					"strict" : false
-				},
-				{
-					"name" : "pulso[12]",
-					"strict" : false
-				},
-				{
-					"name" : "pulso[11]",
-					"strict" : false
-				},
-				{
-					"name" : "pulso[9]",
-					"strict" : false
-				},
-				{
-					"name" : "pulso[10]",
-					"strict" : false
-				},
-				{
-					"name" : "pulso[8]",
+					"name" : "erro",
 					"strict" : false
 				},
 				{
@@ -216,7 +16,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "pulso[7]",
+					"name" : "pulso[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pulso[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pulso[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pulso[4]",
 					"strict" : false
 				},
 				{
@@ -228,19 +40,59 @@
 					"strict" : false
 				},
 				{
-					"name" : "pulso[4]",
+					"name" : "pulso[7]",
 					"strict" : false
 				},
 				{
-					"name" : "pulso[3]",
+					"name" : "pulso[8]",
 					"strict" : false
 				},
 				{
-					"name" : "pulso[1]",
+					"name" : "pulso[9]",
 					"strict" : false
 				},
 				{
-					"name" : "pulso[2]",
+					"name" : "pulso[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pulso[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pulso[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pulso[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pulso[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pulso[15]",
+					"strict" : false
+				},
+				{
+					"name" : "resposta",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "finalizaRodada",
+					"strict" : false
+				},
+				{
+					"name" : "rodada",
 					"strict" : false
 				}
 			]

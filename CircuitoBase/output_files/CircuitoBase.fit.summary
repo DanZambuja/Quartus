@@ -1,17 +1,17 @@
-Fitter Status : Successful - Sat Apr  8 00:42:52 2017
+Fitter Status : Successful - Sat Apr  8 11:59:59 2017
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : CircuitoBase
-Top-level Entity Name : Media
+Top-level Entity Name : BoxRodada
 Family : Cyclone V
 Device : 5CGXFC7C7F23C8
 Timing Models : Final
-Logic utilization (in ALMs) : 146 / 56,480 ( < 1 % )
-Total registers : 229
-Total pins : 62 / 268 ( 23 % )
+Logic utilization (in ALMs) : 197 / 56,480 ( < 1 % )
+Total registers : 308
+Total pins : 23 / 268 ( 9 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 7,024,640 ( 0 % )
 Total RAM Blocks : 0 / 686 ( 0 % )
-Total DSP Blocks : 6 / 156 ( 4 % )
+Total DSP Blocks : 0 / 156 ( 0 % )
 Total HSSI RX PCSs : 0 / 6 ( 0 % )
 Total HSSI PMA RX Deserializers : 0 / 6 ( 0 % )
 Total HSSI TX PCSs : 0 / 6 ( 0 % )

@@ -1,5 +1,5 @@
 Archive Project report for CircuitoBase
-Thu Apr  6 09:55:03 2017
+Sat Apr  8 12:06:07 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ agreement for further details.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Thu Apr  6 09:55:03 2017 ;
+; Archive Project Status ; Successful - Sat Apr  8 12:06:07 2017 ;
 ; Revision Name          ; CircuitoBase                          ;
 ; Top-level Entity Name  ; BoxRodada                             ;
 ; Family                 ; Cyclone V                             ;
@@ -50,51 +50,75 @@ Info: File Set 'Source control' contains:
     Info: Project source and settings files
     Info: Automatically detected source files
 Info: Archive will store files relative to the closest common parent directory
-Info (13213): Using common directory /home/danzambuja/Quartus/Projetos/CircuitoBase/
+Info (13213): Using common directory /home/danzambuja/Quartus/Projetos/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive '/home/danzambuja/Quartus/Projetos/CircuitoBase/CircuitoBaseQar/CircuitoBase.qar'
+Info: Generated archive '/home/danzambuja/Quartus/Projetos/CircuitoBase/Backup/CircuitoBase_BoxRodada.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'CircuitoBase.archive.rpt'
 Info (23030): Evaluation of Tcl script /home/danzambuja/Quartus/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 1199 megabytes
-    Info: Processing ended: Thu Apr  6 09:55:03 2017
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 1198 megabytes
+    Info: Processing ended: Sat Apr  8 12:06:07 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
-+------------------------------------------------------------------+
-; Files Archived                                                   ;
-+------------------------------------------------------------------+
-; File Name                                                        ;
-+------------------------------------------------------------------+
-; /home/danzambuja/Quartus/quartus/linux64/assignment_defaults.qdf ;
-; CircuitoBase.qpf                                                 ;
-; CircuitoBase.qsf                                                 ;
-; VHDL/Atrasador.vhd                                               ;
-; VHDL/bitToBCD.vhd                                                ;
-; VHDL/BoxRodada.vhd                                               ;
-; VHDL/CircuitoBase.vwf                                            ;
-; VHDL/comparador.vhd                                              ;
-; VHDL/compare.vhd                                                 ;
-; VHDL/controlador.vhd                                             ;
-; VHDL/controle.vhd                                                ;
-; VHDL/controleAtrasador.vhd                                       ;
-; VHDL/controleRodada.vhd                                          ;
-; VHDL/Four_Digit_BCD_Counter.vhd                                  ;
-; VHDL/hex7seg_en.vhd                                              ;
-; VHDL/hierarquico.vhd                                             ;
-; VHDL/IC_74163.vhd                                                ;
-; VHDL/LFSR.vhd                                                    ;
-; VHDL/medidor.vhd                                                 ;
-; VHDL/reg16bits_en.vhd                                            ;
-; VHDL/reg16bits_en2.vhd                                           ;
-; Waveforms/Atrasador.vwf                                          ;
-; Waveforms/BoxRodada.vwf                                          ;
-; Waveforms/hierarquico.vwf                                        ;
-; Waveforms/Medidor.vwf                                            ;
-+------------------------------------------------------------------+
++---------------------------------------------------------------------------+
+; Files Archived                                                            ;
++---------------------------------------------------------------------------+
+; File Name                                                                 ;
++---------------------------------------------------------------------------+
+; ../Jogo_Reflexo/mux4to1.vhd                                               ;
+; ../Jogo_Reflexo/Waveforms/CircuitoBase.vwf                                ;
+; /home/danzambuja/Quartus/Projetos/Jogo_Reflexo/mux4to1.vhd                ;
+; /home/danzambuja/Quartus/Projetos/Jogo_Reflexo/Waveforms/CircuitoBase.vwf ;
+; /home/danzambuja/Quartus/quartus/linux64/assignment_defaults.qdf          ;
+; CircuitoBase.qpf                                                          ;
+; CircuitoBase.qsf                                                          ;
+; VHDL/Atrasador.vhd                                                        ;
+; VHDL/BCDTo32Bit.vhd                                                       ;
+; VHDL/bitToBCD.vhd                                                         ;
+; VHDL/BoxRodada.vhd                                                        ;
+; VHDL/CircuitoBase.vhd                                                     ;
+; VHDL/CircuitoBase.vwf                                                     ;
+; VHDL/comparador.vhd                                                       ;
+; VHDL/compare.vhd                                                          ;
+; VHDL/contador2bits.vhd                                                    ;
+; VHDL/controlador.vhd                                                      ;
+; VHDL/controle.vhd                                                         ;
+; VHDL/controleAtrasador.vhd                                                ;
+; VHDL/controleJogada.vhd                                                   ;
+; VHDL/controleRodada.vhd                                                   ;
+; VHDL/dadosMedidas.vhd                                                     ;
+; VHDL/deMux4_1bit.vhd                                                      ;
+; VHDL/deMux_4.vhd                                                          ;
+; VHDL/DetectorCodigoInvalido.vhd                                           ;
+; VHDL/Four_Digit_BCD_Counter.vhd                                           ;
+; VHDL/hex7seg_en.vhd                                                       ;
+; VHDL/hierarquico.vhd                                                      ;
+; VHDL/IC_74163.vhd                                                         ;
+; VHDL/LFSR.vhd                                                             ;
+; VHDL/Media.vhd                                                            ;
+; VHDL/medidor.vhd                                                          ;
+; VHDL/reg16bits_en.vhd                                                     ;
+; VHDL/reg16bits_en2.vhd                                                    ;
+; VHDL/regbit_en.vhd                                                        ;
+; VHDL/Somador4bits_comportamental.vhd                                      ;
+; VHDL/SomadorBCD.vhd                                                       ;
+; VHDL/somadorBCD16_bits.vhd                                                ;
+; VHDL/somadorBCD32_bits.vhd                                                ;
+; Waveforms/Atrasador.vwf                                                   ;
+; Waveforms/BCDto32bit.vwf                                                  ;
+; Waveforms/BoxRodada.vwf                                                   ;
+; Waveforms/BoxRodada_sem_depura.vwf                                        ;
+; Waveforms/CircuitoBase.vwf                                                ;
+; Waveforms/dadosMedida.vwf                                                 ;
+; Waveforms/hierarquico.vwf                                                 ;
+; Waveforms/Media.vwf                                                       ;
+; Waveforms/Medidor.vwf                                                     ;
+; Waveforms/Waveform.vwf                                                    ;
++---------------------------------------------------------------------------+
 
 

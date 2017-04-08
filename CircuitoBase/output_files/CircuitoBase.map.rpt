@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CircuitoBase
-Sat Apr  8 01:04:16 2017
+Sat Apr  8 11:56:20 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -10,7 +10,52 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |BoxRodada|hierarquico:Medicao|controlador:C1|Ereg
+  9. State Machine - |BoxRodada|hierarquico:Medicao|medidor:M1|controle:C1|Ereg
+ 10. State Machine - |BoxRodada|Atrasador:D|bitToBCD:Converte|state
+ 11. State Machine - |BoxRodada|Atrasador:D|controleAtrasador:C|Eatual
+ 12. State Machine - |BoxRodada|controleRodada:C|Eatual
+ 13. Registers Removed During Synthesis
+ 14. General Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Port Connectivity Checks: "hierarquico:Medicao|hex7seg_en:D4"
+ 17. Port Connectivity Checks: "hierarquico:Medicao|hex7seg_en:D3"
+ 18. Port Connectivity Checks: "hierarquico:Medicao|hex7seg_en:D2"
+ 19. Port Connectivity Checks: "hierarquico:Medicao|hex7seg_en:D1"
+ 20. Port Connectivity Checks: "hierarquico:Medicao|medidor:M1|compare:geraRCO4"
+ 21. Port Connectivity Checks: "hierarquico:Medicao|medidor:M1|compare:geraRCO3"
+ 22. Port Connectivity Checks: "hierarquico:Medicao|medidor:M1|compare:geraRCO2"
+ 23. Port Connectivity Checks: "hierarquico:Medicao|medidor:M1|compare:geraRCO1"
+ 24. Port Connectivity Checks: "hierarquico:Medicao|medidor:M1"
+ 25. Port Connectivity Checks: "hierarquico:Medicao"
+ 26. Port Connectivity Checks: "compare:C4"
+ 27. Port Connectivity Checks: "compare:C3"
+ 28. Port Connectivity Checks: "compare:C2"
+ 29. Port Connectivity Checks: "compare:C1"
+ 30. Port Connectivity Checks: "Atrasador:D|Four_Digit_BCD_Counter:geraSeed"
+ 31. Port Connectivity Checks: "Atrasador:D|comparador:ciclagensLFSR"
+ 32. Port Connectivity Checks: "Atrasador:D|comparador:ContadordeConversao|compare:C4"
+ 33. Port Connectivity Checks: "Atrasador:D|comparador:ContadordeConversao|compare:C3"
+ 34. Port Connectivity Checks: "Atrasador:D|comparador:ContadordeConversao|compare:C2"
+ 35. Port Connectivity Checks: "Atrasador:D|comparador:ContadordeConversao|compare:C1"
+ 36. Port Connectivity Checks: "Atrasador:D|comparador:ContadordeConversao"
+ 37. Port Connectivity Checks: "Atrasador:D|compare:C4"
+ 38. Port Connectivity Checks: "Atrasador:D|compare:C3"
+ 39. Port Connectivity Checks: "Atrasador:D|compare:C2"
+ 40. Port Connectivity Checks: "Atrasador:D|compare:C1"
+ 41. Port Connectivity Checks: "Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_4"
+ 42. Port Connectivity Checks: "Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_3"
+ 43. Port Connectivity Checks: "Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_2"
+ 44. Port Connectivity Checks: "Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_1"
+ 45. Port Connectivity Checks: "Atrasador:D|controleAtrasador:C"
+ 46. Port Connectivity Checks: "Atrasador:D"
+ 47. Port Connectivity Checks: "controleRodada:C"
+ 48. Post-Synthesis Netlist Statistics for Top Partition
+ 49. Elapsed Time Per Partition
+ 50. Analysis & Synthesis Messages
 
 
 
@@ -34,22 +79,27 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sat Apr  8 01:04:16 2017           ;
-; Quartus Prime Version       ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
-; Revision Name               ; CircuitoBase                                ;
-; Top-level Entity Name       ; CircuitoBase                                ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Apr  8 11:56:20 2017       ;
+; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Revision Name                   ; CircuitoBase                                ;
+; Top-level Entity Name           ; BoxRodada                                   ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 285                                         ;
+; Total pins                      ; 23                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -58,7 +108,7 @@ agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; CircuitoBase       ; CircuitoBase       ;
+; Top-level entity name                                                           ; BoxRodada          ; CircuitoBase       ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -151,13 +201,653 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; VHDL/reg16bits_en2.vhd           ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/reg16bits_en2.vhd          ;         ;
+; VHDL/LFSR.vhd                    ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd                   ;         ;
+; VHDL/bitToBCD.vhd                ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/bitToBCD.vhd               ;         ;
+; VHDL/comparador.vhd              ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/comparador.vhd             ;         ;
+; VHDL/controleAtrasador.vhd       ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controleAtrasador.vhd      ;         ;
+; VHDL/Atrasador.vhd               ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Atrasador.vhd              ;         ;
+; VHDL/controleRodada.vhd          ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controleRodada.vhd         ;         ;
+; VHDL/hex7seg_en.vhd              ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/hex7seg_en.vhd             ;         ;
+; VHDL/controlador.vhd             ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controlador.vhd            ;         ;
+; VHDL/reg16bits_en.vhd            ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/reg16bits_en.vhd           ;         ;
+; VHDL/compare.vhd                 ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/compare.vhd                ;         ;
+; VHDL/IC_74163.vhd                ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/IC_74163.vhd               ;         ;
+; VHDL/controle.vhd                ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controle.vhd               ;         ;
+; VHDL/Four_Digit_BCD_Counter.vhd  ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Four_Digit_BCD_Counter.vhd ;         ;
+; VHDL/medidor.vhd                 ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/medidor.vhd                ;         ;
+; VHDL/hierarquico.vhd             ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/hierarquico.vhd            ;         ;
+; VHDL/BoxRodada.vhd               ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/BoxRodada.vhd              ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 196         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 294         ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 72          ;
+;     -- 5 input functions                    ; 57          ;
+;     -- 4 input functions                    ; 74          ;
+;     -- <=3 input functions                  ; 91          ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 285         ;
+;                                             ;             ;
+; I/O pins                                    ; 23          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 285         ;
+; Total fan-out                               ; 2195        ;
+; Average fan-out                             ; 3.51        ;
++---------------------------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                            ;
++-------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                 ; Library Name ;
++-------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
+; |BoxRodada                                      ; 294 (7)           ; 285 (0)      ; 0                 ; 0          ; 23   ; 0            ; |BoxRodada                                                                                          ; work         ;
+;    |Atrasador:D|                                ; 202 (8)           ; 172 (0)      ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D                                                                              ; work         ;
+;       |Four_Digit_BCD_Counter:ContadordoAtraso| ; 26 (2)            ; 16 (0)       ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso                                      ; work         ;
+;          |IC_74163:IC_1|                        ; 5 (5)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_1                        ; work         ;
+;          |IC_74163:IC_2|                        ; 7 (7)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_2                        ; work         ;
+;          |IC_74163:IC_3|                        ; 6 (6)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_3                        ; work         ;
+;          |IC_74163:IC_4|                        ; 6 (6)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_4                        ; work         ;
+;       |Four_Digit_BCD_Counter:geraSeed|         ; 22 (3)            ; 16 (0)       ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:geraSeed                                              ; work         ;
+;          |IC_74163:IC_1|                        ; 5 (5)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_1                                ; work         ;
+;          |IC_74163:IC_2|                        ; 5 (5)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_2                                ; work         ;
+;          |IC_74163:IC_3|                        ; 5 (5)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_3                                ; work         ;
+;          |IC_74163:IC_4|                        ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_4                                ; work         ;
+;       |LFSR:PSEUDORANDOM|                       ; 48 (48)           ; 16 (16)      ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|LFSR:PSEUDORANDOM                                                            ; work         ;
+;       |bitToBCD:Converte|                       ; 29 (29)           ; 53 (53)      ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|bitToBCD:Converte                                                            ; work         ;
+;       |comparador:ContadordeConversao|          ; 30 (4)            ; 16 (0)       ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|comparador:ContadordeConversao                                               ; work         ;
+;          |Four_Digit_BCD_Counter:Contador|      ; 26 (1)            ; 16 (0)       ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador               ; work         ;
+;             |IC_74163:IC_1|                     ; 5 (5)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_1 ; work         ;
+;             |IC_74163:IC_2|                     ; 8 (8)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_2 ; work         ;
+;             |IC_74163:IC_3|                     ; 6 (6)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_3 ; work         ;
+;             |IC_74163:IC_4|                     ; 6 (6)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_4 ; work         ;
+;       |comparador:ciclagensLFSR|                ; 32 (6)            ; 16 (0)       ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|comparador:ciclagensLFSR                                                     ; work         ;
+;          |Four_Digit_BCD_Counter:Contador|      ; 26 (2)            ; 16 (0)       ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador                     ; work         ;
+;             |IC_74163:IC_1|                     ; 5 (5)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_1       ; work         ;
+;             |IC_74163:IC_2|                     ; 7 (7)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_2       ; work         ;
+;             |IC_74163:IC_3|                     ; 6 (6)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_3       ; work         ;
+;             |IC_74163:IC_4|                     ; 6 (6)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_4       ; work         ;
+;       |compare:C4|                              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|compare:C4                                                                   ; work         ;
+;       |controleAtrasador:C|                     ; 5 (5)             ; 7 (7)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|controleAtrasador:C                                                          ; work         ;
+;       |reg16bits_en:Registrador|                ; 1 (1)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Atrasador:D|reg16bits_en:Registrador                                                     ; work         ;
+;    |Four_Digit_BCD_Counter:ContaDemora|         ; 27 (2)            ; 16 (0)       ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Four_Digit_BCD_Counter:ContaDemora                                                       ; work         ;
+;       |IC_74163:IC_1|                           ; 5 (5)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_1                                         ; work         ;
+;       |IC_74163:IC_2|                           ; 7 (7)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_2                                         ; work         ;
+;       |IC_74163:IC_3|                           ; 7 (7)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_3                                         ; work         ;
+;       |IC_74163:IC_4|                           ; 6 (6)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_4                                         ; work         ;
+;    |controleRodada:C|                           ; 11 (11)           ; 6 (6)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|controleRodada:C                                                                         ; work         ;
+;    |hierarquico:Medicao|                        ; 36 (0)            ; 59 (0)       ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|hierarquico:Medicao                                                                      ; work         ;
+;       |controlador:C1|                          ; 6 (6)             ; 7 (7)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|hierarquico:Medicao|controlador:C1                                                       ; work         ;
+;       |medidor:M1|                              ; 30 (0)            ; 20 (0)       ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|hierarquico:Medicao|medidor:M1                                                           ; work         ;
+;          |Four_Digit_BCD_Counter:D1|            ; 26 (2)            ; 16 (0)       ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1                                 ; work         ;
+;             |IC_74163:IC_1|                     ; 5 (5)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_1                   ; work         ;
+;             |IC_74163:IC_2|                     ; 7 (7)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_2                   ; work         ;
+;             |IC_74163:IC_3|                     ; 6 (6)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_3                   ; work         ;
+;             |IC_74163:IC_4|                     ; 6 (6)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_4                   ; work         ;
+;          |controle:C1|                          ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|hierarquico:Medicao|medidor:M1|controle:C1                                               ; work         ;
+;       |reg16bits_en2:R1|                        ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|hierarquico:Medicao|reg16bits_en2:R1                                                     ; work         ;
+;    |reg16bits_en2:R|                            ; 11 (11)           ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |BoxRodada|reg16bits_en2:R                                                                          ; work         ;
++-------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |BoxRodada|hierarquico:Medicao|controlador:C1|Ereg                                                                   ;
++-----------------+-------------+-----------------+-----------+---------------+--------------+---------------+-----------+-------------+
+; Name            ; Ereg.espera ; Ereg.esperasoma ; Ereg.soma ; Ereg.registra ; Ereg.medindo ; Ereg.iniciado ; Ereg.zera ; Ereg.parado ;
++-----------------+-------------+-----------------+-----------+---------------+--------------+---------------+-----------+-------------+
+; Ereg.parado     ; 0           ; 0               ; 0         ; 0             ; 0            ; 0             ; 0         ; 0           ;
+; Ereg.zera       ; 0           ; 0               ; 0         ; 0             ; 0            ; 0             ; 1         ; 1           ;
+; Ereg.iniciado   ; 0           ; 0               ; 0         ; 0             ; 0            ; 1             ; 0         ; 1           ;
+; Ereg.medindo    ; 0           ; 0               ; 0         ; 0             ; 1            ; 0             ; 0         ; 1           ;
+; Ereg.registra   ; 0           ; 0               ; 0         ; 1             ; 0            ; 0             ; 0         ; 1           ;
+; Ereg.soma       ; 0           ; 0               ; 1         ; 0             ; 0            ; 0             ; 0         ; 1           ;
+; Ereg.esperasoma ; 0           ; 1               ; 0         ; 0             ; 0            ; 0             ; 0         ; 1           ;
+; Ereg.espera     ; 1           ; 0               ; 0         ; 0             ; 0            ; 0             ; 0         ; 1           ;
++-----------------+-------------+-----------------+-----------+---------------+--------------+---------------+-----------+-------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------+
+; State Machine - |BoxRodada|hierarquico:Medicao|medidor:M1|controle:C1|Ereg                       ;
++--------------+--------------+-------------+------------+------------+-------------+--------------+
+; Name         ; Ereg.EPRONTO ; Ereg.ESPERA ; Ereg.LIMPA ; Ereg.CONTA ; Ereg.LIGADO ; Ereg.INICIAL ;
++--------------+--------------+-------------+------------+------------+-------------+--------------+
+; Ereg.INICIAL ; 0            ; 0           ; 0          ; 0          ; 0           ; 0            ;
+; Ereg.LIGADO  ; 0            ; 0           ; 0          ; 0          ; 1           ; 1            ;
+; Ereg.CONTA   ; 0            ; 0           ; 0          ; 1          ; 0           ; 1            ;
+; Ereg.LIMPA   ; 0            ; 0           ; 1          ; 0          ; 0           ; 1            ;
+; Ereg.ESPERA  ; 0            ; 1           ; 0          ; 0          ; 0           ; 1            ;
+; Ereg.EPRONTO ; 1            ; 0           ; 0          ; 0          ; 0           ; 1            ;
++--------------+--------------+-------------+------------+------------+-------------+--------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------+
+; State Machine - |BoxRodada|Atrasador:D|bitToBCD:Converte|state ;
++-------------+------------+-------------+-----------------------+
+; Name        ; state.done ; state.shift ; state.start           ;
++-------------+------------+-------------+-----------------------+
+; state.start ; 0          ; 0           ; 0                     ;
+; state.shift ; 0          ; 1           ; 1                     ;
+; state.done  ; 1          ; 0           ; 1                     ;
++-------------+------------+-------------+-----------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |BoxRodada|Atrasador:D|controleAtrasador:C|Eatual                                                                                    ;
++----------------------+------------+-----------------+------------------+--------------+----------------------+----------------------+----------------+
+; Name                 ; Eatual.Fim ; Eatual.Contando ; Eatual.Conversao ; Eatual.Cicla ; Eatual.RegistraSeed2 ; Eatual.RegistraSeed1 ; Eatual.Inicial ;
++----------------------+------------+-----------------+------------------+--------------+----------------------+----------------------+----------------+
+; Eatual.Inicial       ; 0          ; 0               ; 0                ; 0            ; 0                    ; 0                    ; 0              ;
+; Eatual.RegistraSeed1 ; 0          ; 0               ; 0                ; 0            ; 0                    ; 1                    ; 1              ;
+; Eatual.RegistraSeed2 ; 0          ; 0               ; 0                ; 0            ; 1                    ; 0                    ; 1              ;
+; Eatual.Cicla         ; 0          ; 0               ; 0                ; 1            ; 0                    ; 0                    ; 1              ;
+; Eatual.Conversao     ; 0          ; 0               ; 1                ; 0            ; 0                    ; 0                    ; 1              ;
+; Eatual.Contando      ; 0          ; 1               ; 0                ; 0            ; 0                    ; 0                    ; 1              ;
+; Eatual.Fim           ; 1          ; 0               ; 0                ; 0            ; 0                    ; 0                    ; 1              ;
++----------------------+------------+-----------------+------------------+--------------+----------------------+----------------------+----------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |BoxRodada|controleRodada:C|Eatual                                                                       ;
++------------------+----------------+------------------+-----------------+----------------+---------------+----------------+
+; Name             ; Eatual.Afobado ; Eatual.Respondeu ; Eatual.Demorado ; Eatual.Aguarda ; Eatual.Atraso ; Eatual.Inicial ;
++------------------+----------------+------------------+-----------------+----------------+---------------+----------------+
+; Eatual.Inicial   ; 0              ; 0                ; 0               ; 0              ; 0             ; 0              ;
+; Eatual.Atraso    ; 0              ; 0                ; 0               ; 0              ; 1             ; 1              ;
+; Eatual.Aguarda   ; 0              ; 0                ; 0               ; 1              ; 0             ; 1              ;
+; Eatual.Demorado  ; 0              ; 0                ; 1               ; 0              ; 0             ; 1              ;
+; Eatual.Respondeu ; 0              ; 1                ; 0               ; 0              ; 0             ; 1              ;
+; Eatual.Afobado   ; 1              ; 0                ; 0               ; 0              ; 0             ; 1              ;
++------------------+----------------+------------------+-----------------+----------------+---------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                              ;
++--------------------------------------------------------+----------------------------------------+
+; Register name                                          ; Reason for Removal                     ;
++--------------------------------------------------------+----------------------------------------+
+; hierarquico:Medicao|controlador:C1|Ereg.zera           ; Stuck at GND due to stuck port data_in ;
+; hierarquico:Medicao|medidor:M1|controle:C1|Ereg.LIGADO ; Lost fanout                            ;
+; hierarquico:Medicao|medidor:M1|controle:C1|Ereg.ESPERA ; Lost fanout                            ;
+; Total Number of Removed Registers = 3                  ;                                        ;
++--------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 285   ;
+; Number of registers using Synchronous Clear  ; 24    ;
+; Number of registers using Synchronous Load   ; 14    ;
+; Number of registers using Asynchronous Clear ; 93    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 190   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_1|Qout[0]~reg0                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |BoxRodada|reg16bits_en2:R|IQ[0]                                                                                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |BoxRodada|reg16bits_en2:R|IQ[14]                                                                                ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |BoxRodada|Atrasador:D|reg16bits_en:Registrador|IQ[2]                                                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |BoxRodada|hierarquico:Medicao|reg16bits_en2:R1|IQ[0]                                                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |BoxRodada|hierarquico:Medicao|reg16bits_en2:R1|IQ[10]                                                           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_1|Qout[2]~reg0                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_1|Qout[3]~reg0       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_1|Qout[3]~reg0 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_1|Qout[0]~reg0                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_1|Qout[3]~reg0                                         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_4|Qout[0]~reg0       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_2|Qout[1]~reg0       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|comparador:ciclagensLFSR|Four_Digit_BCD_Counter:Contador|IC_74163:IC_3|Qout[3]~reg0       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_2|Qout[0]~reg0 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_3|Qout[3]~reg0 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|comparador:ContadordeConversao|Four_Digit_BCD_Counter:Contador|IC_74163:IC_4|Qout[2]~reg0 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_2|Qout[2]~reg0                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_3|Qout[3]~reg0                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_4|Qout[0]~reg0                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_2|Qout[0]~reg0                                         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_3|Qout[3]~reg0                                         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Four_Digit_BCD_Counter:ContaDemora|IC_74163:IC_4|Qout[0]~reg0                                         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_2|Qout[1]~reg0                                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_3|Qout[0]~reg0                                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_2|Qout[3]~reg0                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_3|Qout[1]~reg0                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|hierarquico:Medicao|medidor:M1|Four_Digit_BCD_Counter:D1|IC_74163:IC_4|Qout[3]~reg0                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BoxRodada|Atrasador:D|Four_Digit_BCD_Counter:geraSeed|IC_74163:IC_4|Qout[3]~reg0                                ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |BoxRodada|Atrasador:D|bitToBCD:Converte|binary[1]                                                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |BoxRodada|controleRodada:C|Eprox                                                                                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |BoxRodada|controleRodada:C|Eprox                                                                                ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |BoxRodada|Atrasador:D|bitToBCD:Converte|bcds_next                                                               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |BoxRodada|Atrasador:D|bitToBCD:Converte|bcds_next                                                               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |BoxRodada|Atrasador:D|bitToBCD:Converte|bcds_next                                                               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |BoxRodada|Atrasador:D|bitToBCD:Converte|bcds_next                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "hierarquico:Medicao|hex7seg_en:D4" ;
++--------+-------+----------+-----------------------------------+
+; Port   ; Type  ; Severity ; Details                           ;
++--------+-------+----------+-----------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                      ;
++--------+-------+----------+-----------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "hierarquico:Medicao|hex7seg_en:D3" ;
++--------+-------+----------+-----------------------------------+
+; Port   ; Type  ; Severity ; Details                           ;
++--------+-------+----------+-----------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                      ;
++--------+-------+----------+-----------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "hierarquico:Medicao|hex7seg_en:D2" ;
++--------+-------+----------+-----------------------------------+
+; Port   ; Type  ; Severity ; Details                           ;
++--------+-------+----------+-----------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                      ;
++--------+-------+----------+-----------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "hierarquico:Medicao|hex7seg_en:D1" ;
++--------+-------+----------+-----------------------------------+
+; Port   ; Type  ; Severity ; Details                           ;
++--------+-------+----------+-----------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                      ;
++--------+-------+----------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hierarquico:Medicao|medidor:M1|compare:geraRCO4"                                       ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; b[2..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[3]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; agtb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hierarquico:Medicao|medidor:M1|compare:geraRCO3"                                       ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; b[2..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[3]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; agtb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hierarquico:Medicao|medidor:M1|compare:geraRCO2"                                       ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; b[2..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[3]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; agtb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hierarquico:Medicao|medidor:M1|compare:geraRCO1"                                       ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; b[2..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[3]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; agtb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hierarquico:Medicao|medidor:M1"                                                       ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; rco    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; estado ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hierarquico:Medicao"                                                                        ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; zerar        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; fim          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sig_resetr   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sig_enabler  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sig_liga     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sig_medida   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saidadisplay ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "compare:C4"                                                                            ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; a[2..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; a[3]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; a[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; agtb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "compare:C3"                                                                            ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; a[2..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; a[3]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; a[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; agtb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "compare:C2"                                                                            ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; a[2..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; a[3]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; a[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; agtb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "compare:C1"                                                                            ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; a[2..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; a[3]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; a[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; agtb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|Four_Digit_BCD_Counter:geraSeed" ;
++--------+-------+----------+---------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                     ;
++--------+-------+----------+---------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                ;
++--------+-------+----------+---------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|comparador:ciclagensLFSR" ;
++-----------+-------+----------+-----------------------------------+
+; Port      ; Type  ; Severity ; Details                           ;
++-----------+-------+----------+-----------------------------------+
+; a[15..12] ; Input ; Info     ; Stuck at GND                      ;
++-----------+-------+----------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|comparador:ContadordeConversao|compare:C4"                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; agtb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|comparador:ContadordeConversao|compare:C3"                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; agtb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|comparador:ContadordeConversao|compare:C2"                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; agtb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|comparador:ContadordeConversao|compare:C1"                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; agtb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|comparador:ContadordeConversao" ;
++----------+-------+----------+------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                  ;
++----------+-------+----------+------------------------------------------+
+; a[15..6] ; Input ; Info     ; Stuck at GND                             ;
+; a[4..0]  ; Input ; Info     ; Stuck at GND                             ;
+; a[5]     ; Input ; Info     ; Stuck at VCC                             ;
++----------+-------+----------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|compare:C4"                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; agtb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|compare:C3"                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; agtb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|compare:C2"                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; agtb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|compare:C1"                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; agtb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; altb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_4"                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; d    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_3"                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; d    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_2"                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; d    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_1"                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; t    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D|controleAtrasador:C"                                                      ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; inicio ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Atrasador:D"                                                                                                            ;
++---------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                                                  ;
++---------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; estado              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; deptt1              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; deptt2              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; depconta            ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; dept                ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; tempoatraso         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; tempousado          ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; tempocicladobit     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; tempocicladobcd     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; tempocontadoratraso ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controleRodada:C"                                                                     ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; estado ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 285                         ;
+;     CLR               ; 47                          ;
+;     ENA               ; 120                         ;
+;     ENA CLR           ; 32                          ;
+;     ENA CLR SLD       ; 14                          ;
+;     ENA SCLR          ; 24                          ;
+;     plain             ; 48                          ;
+; arriav_lcell_comb     ; 295                         ;
+;     normal            ; 295                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 35                          ;
+;         3 data inputs ; 55                          ;
+;         4 data inputs ; 74                          ;
+;         5 data inputs ; 57                          ;
+;         6 data inputs ; 72                          ;
+; boundary_port         ; 23                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.90                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Sat Apr  8 01:03:56 2017
+    Info: Processing started: Sat Apr  8 11:55:30 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CircuitoBase -c CircuitoBase
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file VHDL/Somador4bits_comportamental.vhd
@@ -236,7 +926,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file VHDL/hi
     Info (12022): Found design unit 1: hierarquico-hierarquica File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/hierarquico.vhd Line: 16
     Info (12023): Found entity 1: hierarquico File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/hierarquico.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file VHDL/BoxRodada.vhd
-    Info (12022): Found design unit 1: BoxRodada-arch File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/BoxRodada.vhd Line: 13
+    Info (12022): Found design unit 1: BoxRodada-arch File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/BoxRodada.vhd Line: 14
     Info (12023): Found entity 1: BoxRodada File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/BoxRodada.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file /home/danzambuja/Quartus/Projetos/Jogo_Reflexo/mux4to1.vhd
     Info (12022): Found design unit 1: mux4to1-behavioral File: /home/danzambuja/Quartus/Projetos/Jogo_Reflexo/mux4to1.vhd Line: 11
@@ -253,12 +943,71 @@ Info (12021): Found 2 design units, including 1 entities, in source file VHDL/de
 Info (12021): Found 2 design units, including 1 entities, in source file VHDL/CircuitoBase.vhd
     Info (12022): Found design unit 1: CircuitoBase-estrutural File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 15
     Info (12023): Found entity 1: CircuitoBase File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 4
-Error (10482): VHDL error at CircuitoBase.vhd(59): object "s_media" is used but not declared File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 59
-Error (10558): VHDL error at CircuitoBase.vhd(59): cannot associate formal port "media" of mode "out" with an expression File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 59
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 1231 megabytes
-    Error: Processing ended: Sat Apr  8 01:04:16 2017
-    Error: Elapsed time: 00:00:20
-    Error: Total CPU time (on all processors): 00:00:28
+Info (12021): Found 2 design units, including 1 entities, in source file VHDL/regbit_en.vhd
+    Info (12022): Found design unit 1: regbit_en-regbit_en File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/regbit_en.vhd Line: 11
+    Info (12023): Found entity 1: regbit_en File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/regbit_en.vhd Line: 5
+Info (12127): Elaborating entity "BoxRodada" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at BoxRodada.vhd(69): object "s_fim" assigned a value but never read File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/BoxRodada.vhd Line: 69
+Warning (10036): Verilog HDL or VHDL warning at BoxRodada.vhd(70): object "s_pulsoRodada" assigned a value but never read File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/BoxRodada.vhd Line: 70
+Warning (10036): Verilog HDL or VHDL warning at BoxRodada.vhd(73): object "s_estadoRodada" assigned a value but never read File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/BoxRodada.vhd Line: 73
+Warning (10036): Verilog HDL or VHDL warning at BoxRodada.vhd(73): object "s_estadoAtrasador" assigned a value but never read File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/BoxRodada.vhd Line: 73
+Info (12128): Elaborating entity "controleRodada" for hierarchy "controleRodada:C" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/BoxRodada.vhd Line: 78
+Info (12128): Elaborating entity "Atrasador" for hierarchy "Atrasador:D" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/BoxRodada.vhd Line: 80
+Warning (10036): Verilog HDL or VHDL warning at Atrasador.vhd(70): object "s_inicio" assigned a value but never read File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Atrasador.vhd Line: 70
+Info (12128): Elaborating entity "controleAtrasador" for hierarchy "Atrasador:D|controleAtrasador:C" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Atrasador.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at controleAtrasador.vhd(24): signal "Eatual" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controleAtrasador.vhd Line: 24
+Warning (10492): VHDL Process Statement warning at controleAtrasador.vhd(30): signal "Eatual" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controleAtrasador.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at controleAtrasador.vhd(41): signal "Eatual" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controleAtrasador.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at controleAtrasador.vhd(48): signal "Eatual" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controleAtrasador.vhd Line: 48
+Warning (10492): VHDL Process Statement warning at controleAtrasador.vhd(55): signal "Eatual" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controleAtrasador.vhd Line: 55
+Info (12128): Elaborating entity "Four_Digit_BCD_Counter" for hierarchy "Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Atrasador.vhd Line: 86
+Info (12128): Elaborating entity "IC_74163" for hierarchy "Atrasador:D|Four_Digit_BCD_Counter:ContadordoAtraso|IC_74163:IC_1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Four_Digit_BCD_Counter.vhd Line: 26
+Info (12128): Elaborating entity "compare" for hierarchy "Atrasador:D|compare:C1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Atrasador.vhd Line: 88
+Warning (10036): Verilog HDL or VHDL warning at compare.vhd(11): object "s_A" assigned a value but never read File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/compare.vhd Line: 11
+Warning (10036): Verilog HDL or VHDL warning at compare.vhd(11): object "S_B" assigned a value but never read File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/compare.vhd Line: 11
+Info (12128): Elaborating entity "bitToBCD" for hierarchy "Atrasador:D|bitToBCD:Converte" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Atrasador.vhd Line: 97
+Info (12128): Elaborating entity "comparador" for hierarchy "Atrasador:D|comparador:ContadordeConversao" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Atrasador.vhd Line: 99
+Info (12128): Elaborating entity "LFSR" for hierarchy "Atrasador:D|LFSR:PSEUDORANDOM" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Atrasador.vhd Line: 101
+Warning (10036): Verilog HDL or VHDL warning at LFSR.vhd(16): object "conta" assigned a value but never read File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at LFSR.vhd(23): signal "seed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 23
+Info (12128): Elaborating entity "reg16bits_en" for hierarchy "Atrasador:D|reg16bits_en:Registrador" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Atrasador.vhd Line: 105
+Info (12128): Elaborating entity "hierarquico" for hierarchy "hierarquico:Medicao" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/BoxRodada.vhd Line: 96
+Info (12128): Elaborating entity "medidor" for hierarchy "hierarquico:Medicao|medidor:M1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/hierarquico.vhd Line: 51
+Info (12128): Elaborating entity "controle" for hierarchy "hierarquico:Medicao|medidor:M1|controle:C1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/medidor.vhd Line: 39
+Info (12128): Elaborating entity "controlador" for hierarchy "hierarquico:Medicao|controlador:C1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/hierarquico.vhd Line: 52
+Warning (10492): VHDL Process Statement warning at controlador.vhd(24): signal "Ereg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controlador.vhd Line: 24
+Info (12128): Elaborating entity "reg16bits_en2" for hierarchy "hierarquico:Medicao|reg16bits_en2:R1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/hierarquico.vhd Line: 53
+Info (12128): Elaborating entity "hex7seg_en" for hierarchy "hierarquico:Medicao|hex7seg_en:D1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/hierarquico.vhd Line: 54
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[13]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[13]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[13]~1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[12]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[12]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[12]~5" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[11]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[11]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[11]~9" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[10]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[10]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[10]~13" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[9]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[9]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[9]~17" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[8]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[8]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[8]~21" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[7]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[7]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[7]~25" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[6]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[6]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[6]~29" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[5]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[5]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[5]~33" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[4]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[4]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[4]~37" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[3]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[3]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[3]~41" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[2]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[2]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[2]~45" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[1]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[1]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[1]~49" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[0]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[0]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[0]~53" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[15]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[15]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[15]~57" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+    Warning (13310): Register "Atrasador:D|LFSR:PSEUDORANDOM|count[14]" is converted into an equivalent circuit using register "Atrasador:D|LFSR:PSEUDORANDOM|count[14]~_emulated" and latch "Atrasador:D|LFSR:PSEUDORANDOM|count[14]~61" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/LFSR.vhd Line: 22
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 438 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 415 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 1256 megabytes
+    Info: Processing ended: Sat Apr  8 11:56:20 2017
+    Info: Elapsed time: 00:00:50
+    Info: Total CPU time (on all processors): 00:00:49
 
 

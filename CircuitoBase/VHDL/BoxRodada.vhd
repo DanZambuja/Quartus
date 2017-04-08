@@ -4,8 +4,9 @@ use IEEE.std_logic_1164.all;
 entity BoxRodada is
 
 	port (clock, reset, finalizaRodada, rodada, resposta : in std_logic;
-			contaAtraso , aguardando, fimRodada, erro, demora, MostraSinalAtraso, MostraContaAtraso, fimHierarquico : out std_logic;
-			estadoRodada, estadoAtrasador : out std_logic_vector (3 downto 0);
+			-- contaAtraso, fimRodada, demora, MostraSinalAtraso, MostraContaAtraso, fimHierarquico : out std_logic;
+			aguardando, erro: out std_logic;
+			-- estadoRodada, estadoAtrasador : out std_logic_vector (3 downto 0);
 			pulso:out std_logic_vector(15 downto 0));
 			
 end BoxRodada;
@@ -69,13 +70,14 @@ signal s_sinalAtraso, s_demorou, s_contaAtraso, s_aguardando, s_fim, s_fimRodada
 signal s_pulsoRodada, s_pulso: std_logic_vector(15 downto 0);
 signal s_Q1, s_Q2, s_Q3, s_Q4: std_logic_vector(3 downto 0);
 signal SS1, SS2, S1, S2, S3, S4:std_logic;
+signal s_estadoRodada, s_estadoAtrasador: std_logic_vector(3 downto 0);
 
 begin
 
 
-	C: controleRodada port map(clock, reset, finalizaRodada, rodada, s_sinalAtraso, s_demorou, resposta, s_contaAtraso, s_aguardando, s_fimRodada, s_erro, estadoRodada);
+	C: controleRodada port map(clock, reset, finalizaRodada, rodada, s_sinalAtraso, s_demorou, resposta, s_contaAtraso, s_aguardando, s_fimRodada, s_erro, s_estadoRodada);
 	
-	D: Atrasador port map(clock, reset or s_fimRodada, s_contaAtraso, s_sinalAtraso, estadoAtrasador);
+	D: Atrasador port map(clock, reset or s_fimRodada, s_contaAtraso, s_sinalAtraso, s_estadoAtrasador);
 	
 	--VerificaDemora: comparador port map(clock, reset, s_aguardando, "1001100110011001", s_demorou);
 	
@@ -95,12 +97,12 @@ begin
 	
 	R: reg16bits_en2 port map(clock, s_demorou or s_erro, s_fimRodada, s_pulso, pulso);
 	
-fimHierarquico <= s_fim;
+-- fimHierarquico <= s_fim;
 erro <= s_erro;
-fimRodada <= s_fimRodada;	
-MostraSinalAtraso<=s_sinalAtraso;
-mostraContaAtraso<=s_contaAtraso;
+-- fimRodada <= s_fimRodada;	
+-- MostraSinalAtraso<=s_sinalAtraso;
+-- mostraContaAtraso<=s_contaAtraso;
 aguardando <= s_aguardando;
-demora <= s_demorou;
+-- demora <= s_demorou;
 	
 end arch;

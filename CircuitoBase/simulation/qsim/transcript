@@ -1,176 +1,30 @@
 # do CircuitoBase.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
-# Start time: 00:48:47 on Apr 08,2017
+# Start time: 12:04:39 on Apr 08,2017
 # vlog -work work CircuitoBase.vo 
-# -- Compiling module Media
+# -- Compiling module BoxRodada
 # 
 # Top level modules:
-# 	Media
-# End time: 00:48:47 on Apr 08,2017, Elapsed time: 0:00:00
+# 	BoxRodada
+# End time: 12:04:39 on Apr 08,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
-# Start time: 00:48:47 on Apr 08,2017
-# vlog -work work Media.vwf.vt 
-# -- Compiling module Media_vlg_vec_tst
+# Start time: 12:04:39 on Apr 08,2017
+# vlog -work work BoxRodada_sem_depura.vwf.vt 
+# -- Compiling module BoxRodada_vlg_vec_tst
 # 
 # Top level modules:
-# 	Media_vlg_vec_tst
-# End time: 00:48:47 on Apr 08,2017, Elapsed time: 0:00:00
+# 	BoxRodada_vlg_vec_tst
+# End time: 12:04:39 on Apr 08,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Media_vlg_vec_tst -voptargs=""+acc"" 
-# Start time: 00:48:47 on Apr 08,2017
-# Loading work.Media_vlg_vec_tst
-# Loading work.Media
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.BoxRodada_vlg_vec_tst -voptargs=""+acc"" 
+# Start time: 12:04:39 on Apr 08,2017
+# Loading work.BoxRodada_vlg_vec_tst
+# Loading work.BoxRodada
 # Loading altera_ver.dffeas
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: (vsim-3016) CircuitoBase.vo(11153): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult0~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11153): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult0~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11153): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult0~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11153): [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult0~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11153): [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult0~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11153): [PCDPC] - Port size (7) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult0~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11153): [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult0~mac  File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult0~mac /<protected>/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult0~mac /<protected>/<protected> File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11234): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult1~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11234): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult1~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11234): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult1~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11234): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult1~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11234): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult1~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11234): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult1~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11234): [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult1~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11234): [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult1~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11234): [PCDPC] - Port size (10) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult1~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11234): [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult1~mac  File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult1~mac /<protected>/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult1~mac /<protected>/<protected> File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11315): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult2~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11315): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult2~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11315): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult2~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11315): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult2~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11315): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult2~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11315): [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult2~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11315): [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult2~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11315): [PCDPC] - Port size (14) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult2~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11315): [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult2~mac  File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult2~mac /<protected>/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult2~mac /<protected>/<protected> File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11396): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult3~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11396): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult3~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11396): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult3~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11396): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult3~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11396): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult3~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11396): Port type is incompatible with connection (port 'ay').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult3~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11396): [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult3~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11396): [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult3~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11396): [PCDPC] - Port size (17) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult3~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11396): [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult3~mac  File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult3~mac /<protected>/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult3~mac /<protected>/<protected> File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11478): Port type is incompatible with connection (port 'ax').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult4~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11478): Port type is incompatible with connection (port 'ax').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult4~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11478): Port type is incompatible with connection (port 'ax').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult4~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11478): Port type is incompatible with connection (port 'ax').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult4~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11478): Port type is incompatible with connection (port 'ax').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult4~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11478): Port type is incompatible with connection (port 'ax').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult4~mac  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11478): Port type is incompatible with connection (port 'ax').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult4~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11478): [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult4~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11478): [PCDPC] - Port size (16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult4~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11478): [PCDPC] - Port size (16) does not match connection size (19) for port 'by'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult4~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11478): [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult4~mac  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11478): [PCDPC] - Port size (3) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult4~mac  File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult4~mac /<protected>/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult4~mac /<protected>/<protected> File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11565): Port type is incompatible with connection (port 'ax').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult5~8  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11565): Port type is incompatible with connection (port 'ax').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult5~8  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11565): Port type is incompatible with connection (port 'ax').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult5~8  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11565): Port type is incompatible with connection (port 'ax').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult5~8  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11565): Port type is incompatible with connection (port 'ax').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult5~8  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11565): Port type is incompatible with connection (port 'ax').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult5~8  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11565): Port type is incompatible with connection (port 'ax').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult5~8  File: nofile
-# ** Warning: (vsim-3016) CircuitoBase.vo(11565): Port type is incompatible with connection (port 'ax').
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult5~8  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11565): [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult5~8  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11565): [PCDPC] - Port size (16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult5~8  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11565): [PCDPC] - Port size (16) does not match connection size (19) for port 'by'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult5~8  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11565): [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult5~8  File: nofile
-# ** Warning: (vsim-3015) CircuitoBase.vo(11565): [PCDPC] - Port size (3) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(38).
-#    Time: 0 ps  Iteration: 0  Instance: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult5~8  File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult5~8 /<protected>/<protected> File: nofile
-# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
-#    Time: 0 ps  Iteration: 0  Protected: /Media_vlg_vec_tst/i1/\CalculaMedia|Converte|Mult5~8 /<protected>/<protected> File: nofile
-# ** Note: $finish    : Media.vwf.vt(69)
-#    Time: 10 us  Iteration: 0  Instance: /Media_vlg_vec_tst
-# End time: 00:48:48 on Apr 08,2017, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 73
+# ** Note: $finish    : BoxRodada_sem_depura.vwf.vt(57)
+#    Time: 25 us  Iteration: 0  Instance: /BoxRodada_vlg_vec_tst
+# End time: 12:04:43 on Apr 08,2017, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
