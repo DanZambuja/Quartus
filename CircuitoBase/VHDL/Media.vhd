@@ -4,7 +4,7 @@ use IEEE.std_logic_1164.all;
 
 entity Media is
 
-	port (clock, reset, enable, inicio, finalizaRodada, fimRodada, vacilou: in std_logic;
+	port (clock, reset, inicio, finalizaRodada, fimRodada, vacilou: in std_logic;
 			pulso : in std_logic_vector(15 downto 0);
 			media, depuraMedia: out std_logic_vector(15 downto 0);
 			rodada, perde, fimJogada: out std_logic;
@@ -15,7 +15,7 @@ end Media;
 architecture arch of Media is 
 
 component dadosMedidas is
-	port(	clock, clear, enable: in std_logic;
+	port(	clock, clear: in std_logic;
 			estadoRodada: in std_logic_vector(3 downto 0);
 			pulsoRodada: in std_logic_vector(15 downto 0);
 			medida:out std_logic_vector(15 downto 0));
@@ -40,7 +40,7 @@ signal s_rodada, s_perde, s_fimJogada: std_logic;
 signal s_media: std_logic_vector(15 downto 0);
 begin
 
-	CalculaMedia: dadosMedidas port map(clock, '0', enable, s_estadoJogada, pulso, s_media);
+	CalculaMedia: dadosMedidas port map(clock, '0', s_estadoJogada, pulso, s_media);
 	controlador: controleJogada port map(clock, reset, inicio, finalizaRodada, fimRodada, vacilou, s_rodada, s_perde, s_fimJogada, s_estadoJogada);
 	RegistraMedia: reg16bits_en2 port map(clock, s_perde, s_fimJogada, s_media, media);
 	

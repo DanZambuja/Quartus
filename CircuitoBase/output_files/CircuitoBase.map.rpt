@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CircuitoBase
-Fri Apr  7 08:59:58 2017
+Sat Apr  8 01:04:16 2017
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -10,30 +10,7 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. State Machine - |Media|controleJogada:controlador|Eatual
- 10. State Machine - |Media|dadosMedidas:CalculaMedia|bitToBCD:ConverteBCD|state
- 11. User-Specified and Inferred Latches
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Port Connectivity Checks: "dadosMedidas:CalculaMedia|BCDTo32Bit:Converte"
- 15. Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3"
- 16. Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2"
- 17. Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S2"
- 18. Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S4"
- 19. Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S3"
- 20. Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S2"
- 21. Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S1|Somador4bits_comportamental:s2"
- 22. Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S1"
- 23. Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1"
- 24. Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1"
- 25. Port Connectivity Checks: "dadosMedidas:CalculaMedia"
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -57,27 +34,22 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Apr  7 08:59:58 2017       ;
-; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
-; Revision Name                   ; CircuitoBase                                ;
-; Top-level Entity Name           ; Media                                       ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 220                                         ;
-; Total pins                      ; 62                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 6                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Sat Apr  8 01:04:16 2017           ;
+; Quartus Prime Version       ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Revision Name               ; CircuitoBase                                ;
+; Top-level Entity Name       ; CircuitoBase                                ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -86,7 +58,7 @@ agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; Media              ; CircuitoBase       ;
+; Top-level entity name                                                           ; CircuitoBase       ; CircuitoBase       ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -179,470 +151,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+--------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path     ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                        ; Library ;
-+--------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
-; VHDL/Somador4bits_comportamental.vhd ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Somador4bits_comportamental.vhd ;         ;
-; VHDL/DetectorCodigoInvalido.vhd      ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/DetectorCodigoInvalido.vhd      ;         ;
-; VHDL/SomadorBCD.vhd                  ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/SomadorBCD.vhd                  ;         ;
-; VHDL/somadorBCD16_bits.vhd           ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/somadorBCD16_bits.vhd           ;         ;
-; VHDL/BCDTo32Bit.vhd                  ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/BCDTo32Bit.vhd                  ;         ;
-; VHDL/deMux_4.vhd                     ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd                     ;         ;
-; VHDL/somadorBCD32_bits.vhd           ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/somadorBCD32_bits.vhd           ;         ;
-; VHDL/controleJogada.vhd              ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controleJogada.vhd              ;         ;
-; VHDL/dadosMedidas.vhd                ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/dadosMedidas.vhd                ;         ;
-; VHDL/reg16bits_en2.vhd               ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/reg16bits_en2.vhd               ;         ;
-; VHDL/bitToBCD.vhd                    ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/bitToBCD.vhd                    ;         ;
-; VHDL/Media.vhd                       ; yes             ; User VHDL File  ; /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Media.vhd                       ;         ;
-+--------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 151         ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 243         ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 17          ;
-;     -- 5 input functions                    ; 6           ;
-;     -- 4 input functions                    ; 54          ;
-;     -- <=3 input functions                  ; 166         ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 220         ;
-;                                             ;             ;
-; I/O pins                                    ; 62          ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 6           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 220         ;
-; Total fan-out                               ; 1601        ;
-; Average fan-out                             ; 2.70        ;
-+---------------------------------------------+-------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                  ;
-+-------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                       ; Library Name ;
-+-------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
-; |Media                                          ; 243 (0)           ; 220 (0)      ; 0                 ; 6          ; 62   ; 0            ; |Media                                                                                                                    ;              ;
-;    |controleJogada:controlador|                 ; 14 (14)           ; 7 (7)        ; 0                 ; 0          ; 0    ; 0            ; |Media|controleJogada:controlador                                                                                         ; work         ;
-;    |dadosMedidas:CalculaMedia|                  ; 221 (0)           ; 181 (0)      ; 0                 ; 6          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia                                                                                          ; work         ;
-;       |BCDTo32Bit:Converte|                     ; 7 (7)             ; 0 (0)        ; 0                 ; 6          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|BCDTo32Bit:Converte                                                                      ; work         ;
-;       |bitToBCD:ConverteBCD|                    ; 29 (29)           ; 53 (53)      ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|bitToBCD:ConverteBCD                                                                     ; work         ;
-;       |deMux_4:DEMUX4|                          ; 68 (68)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|deMux_4:DEMUX4                                                                           ; work         ;
-;       |reg16bits_en2:REG1|                      ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|reg16bits_en2:REG1                                                                       ; work         ;
-;       |reg16bits_en2:REG2|                      ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|reg16bits_en2:REG2                                                                       ; work         ;
-;       |reg16bits_en2:REG3|                      ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|reg16bits_en2:REG3                                                                       ; work         ;
-;       |reg16bits_en2:REG4|                      ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|reg16bits_en2:REG4                                                                       ; work         ;
-;       |somadorBCD32_bits:SUM1|                  ; 36 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1                                                                   ; work         ;
-;          |somadorBCD16_bits:S1|                 ; 35 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1                                              ; work         ;
-;             |SomadorBCD:S1|                     ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S1                                ; work         ;
-;                |DetectorCodigoInvalido:d1|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S1|DetectorCodigoInvalido:d1      ; work         ;
-;                |Somador4bits_comportamental:s1| ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S1|Somador4bits_comportamental:s1 ; work         ;
-;                |Somador4bits_comportamental:s2| ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S1|Somador4bits_comportamental:s2 ; work         ;
-;             |SomadorBCD:S2|                     ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S2                                ; work         ;
-;                |DetectorCodigoInvalido:d1|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S2|DetectorCodigoInvalido:d1      ; work         ;
-;                |Somador4bits_comportamental:s1| ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S2|Somador4bits_comportamental:s1 ; work         ;
-;                |Somador4bits_comportamental:s2| ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S2|Somador4bits_comportamental:s2 ; work         ;
-;             |SomadorBCD:S3|                     ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S3                                ; work         ;
-;                |DetectorCodigoInvalido:d1|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S3|DetectorCodigoInvalido:d1      ; work         ;
-;                |Somador4bits_comportamental:s1| ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S3|Somador4bits_comportamental:s1 ; work         ;
-;                |Somador4bits_comportamental:s2| ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S3|Somador4bits_comportamental:s2 ; work         ;
-;             |SomadorBCD:S4|                     ; 8 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S4                                ; work         ;
-;                |Somador4bits_comportamental:s1| ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S4|Somador4bits_comportamental:s1 ; work         ;
-;                |Somador4bits_comportamental:s2| ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S4|Somador4bits_comportamental:s2 ; work         ;
-;          |somadorBCD16_bits:S2|                 ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S2                                              ; work         ;
-;             |SomadorBCD:S1|                     ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S2|SomadorBCD:S1                                ; work         ;
-;                |Somador4bits_comportamental:s2| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S2|SomadorBCD:S1|Somador4bits_comportamental:s2 ; work         ;
-;       |somadorBCD32_bits:SUM2|                  ; 36 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2                                                                   ; work         ;
-;          |somadorBCD16_bits:S1|                 ; 35 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1                                              ; work         ;
-;             |SomadorBCD:S1|                     ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1|SomadorBCD:S1                                ; work         ;
-;                |DetectorCodigoInvalido:d1|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1|SomadorBCD:S1|DetectorCodigoInvalido:d1      ; work         ;
-;                |Somador4bits_comportamental:s1| ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1|SomadorBCD:S1|Somador4bits_comportamental:s1 ; work         ;
-;                |Somador4bits_comportamental:s2| ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1|SomadorBCD:S1|Somador4bits_comportamental:s2 ; work         ;
-;             |SomadorBCD:S2|                     ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1|SomadorBCD:S2                                ; work         ;
-;                |DetectorCodigoInvalido:d1|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1|SomadorBCD:S2|DetectorCodigoInvalido:d1      ; work         ;
-;                |Somador4bits_comportamental:s1| ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1|SomadorBCD:S2|Somador4bits_comportamental:s1 ; work         ;
-;                |Somador4bits_comportamental:s2| ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1|SomadorBCD:S2|Somador4bits_comportamental:s2 ; work         ;
-;             |SomadorBCD:S3|                     ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1|SomadorBCD:S3                                ; work         ;
-;                |DetectorCodigoInvalido:d1|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1|SomadorBCD:S3|DetectorCodigoInvalido:d1      ; work         ;
-;                |Somador4bits_comportamental:s1| ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1|SomadorBCD:S3|Somador4bits_comportamental:s1 ; work         ;
-;                |Somador4bits_comportamental:s2| ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1|SomadorBCD:S3|Somador4bits_comportamental:s2 ; work         ;
-;             |SomadorBCD:S4|                     ; 8 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1|SomadorBCD:S4                                ; work         ;
-;                |Somador4bits_comportamental:s1| ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1|SomadorBCD:S4|Somador4bits_comportamental:s1 ; work         ;
-;                |Somador4bits_comportamental:s2| ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S1|SomadorBCD:S4|Somador4bits_comportamental:s2 ; work         ;
-;          |somadorBCD16_bits:S2|                 ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S2                                              ; work         ;
-;             |SomadorBCD:S1|                     ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S2|SomadorBCD:S1                                ; work         ;
-;                |Somador4bits_comportamental:s2| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2|somadorBCD16_bits:S2|SomadorBCD:S1|Somador4bits_comportamental:s2 ; work         ;
-;       |somadorBCD32_bits:SUM3|                  ; 45 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3                                                                   ; work         ;
-;          |somadorBCD16_bits:S1|                 ; 36 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1                                              ; work         ;
-;             |SomadorBCD:S1|                     ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S1                                ; work         ;
-;                |DetectorCodigoInvalido:d1|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S1|DetectorCodigoInvalido:d1      ; work         ;
-;                |Somador4bits_comportamental:s1| ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S1|Somador4bits_comportamental:s1 ; work         ;
-;                |Somador4bits_comportamental:s2| ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S1|Somador4bits_comportamental:s2 ; work         ;
-;             |SomadorBCD:S2|                     ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S2                                ; work         ;
-;                |DetectorCodigoInvalido:d1|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S2|DetectorCodigoInvalido:d1      ; work         ;
-;                |Somador4bits_comportamental:s1| ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S2|Somador4bits_comportamental:s1 ; work         ;
-;                |Somador4bits_comportamental:s2| ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S2|Somador4bits_comportamental:s2 ; work         ;
-;             |SomadorBCD:S3|                     ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S3                                ; work         ;
-;                |DetectorCodigoInvalido:d1|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S3|DetectorCodigoInvalido:d1      ; work         ;
-;                |Somador4bits_comportamental:s1| ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S3|Somador4bits_comportamental:s1 ; work         ;
-;                |Somador4bits_comportamental:s2| ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S3|Somador4bits_comportamental:s2 ; work         ;
-;             |SomadorBCD:S4|                     ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S4                                ; work         ;
-;                |DetectorCodigoInvalido:d1|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S4|DetectorCodigoInvalido:d1      ; work         ;
-;                |Somador4bits_comportamental:s1| ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S4|Somador4bits_comportamental:s1 ; work         ;
-;                |Somador4bits_comportamental:s2| ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S1|SomadorBCD:S4|Somador4bits_comportamental:s2 ; work         ;
-;          |somadorBCD16_bits:S2|                 ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S2                                              ; work         ;
-;             |SomadorBCD:S1|                     ; 8 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S2|SomadorBCD:S1                                ; work         ;
-;                |Somador4bits_comportamental:s1| ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S2|SomadorBCD:S1|Somador4bits_comportamental:s1 ; work         ;
-;                |Somador4bits_comportamental:s2| ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S2|SomadorBCD:S1|Somador4bits_comportamental:s2 ; work         ;
-;             |SomadorBCD:S2|                     ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S2|SomadorBCD:S2                                ; work         ;
-;                |Somador4bits_comportamental:s2| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Media|dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3|somadorBCD16_bits:S2|SomadorBCD:S2|Somador4bits_comportamental:s2 ; work         ;
-;    |reg16bits_en2:RegistraMedia|                ; 8 (8)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |Media|reg16bits_en2:RegistraMedia                                                                                        ; work         ;
-+-------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary           ;
-+------------------------------------------+-------------+
-; Statistic                                ; Number Used ;
-+------------------------------------------+-------------+
-; Independent 18x18 plus 36                ; 4           ;
-; Independent 27x27                        ; 2           ;
-; Total number of DSP blocks               ; 6           ;
-;                                          ;             ;
-; Fixed Point Unsigned Multiplier          ; 6           ;
-; Fixed Point Dedicated Output Adder Chain ; 2           ;
-+------------------------------------------+-------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |Media|controleJogada:controlador|Eatual                                                                                             ;
-+------------------------+---------------+------------------------+----------------+----------------+----------------+----------------+----------------+
-; Name                   ; Eatual.Perdeu ; Eatual.CompletouJogada ; Eatual.Rodada4 ; Eatual.Rodada3 ; Eatual.Rodada2 ; Eatual.Rodada1 ; Eatual.Inicial ;
-+------------------------+---------------+------------------------+----------------+----------------+----------------+----------------+----------------+
-; Eatual.Inicial         ; 0             ; 0                      ; 0              ; 0              ; 0              ; 0              ; 0              ;
-; Eatual.Rodada1         ; 0             ; 0                      ; 0              ; 0              ; 0              ; 1              ; 1              ;
-; Eatual.Rodada2         ; 0             ; 0                      ; 0              ; 0              ; 1              ; 0              ; 1              ;
-; Eatual.Rodada3         ; 0             ; 0                      ; 0              ; 1              ; 0              ; 0              ; 1              ;
-; Eatual.Rodada4         ; 0             ; 0                      ; 1              ; 0              ; 0              ; 0              ; 1              ;
-; Eatual.CompletouJogada ; 0             ; 1                      ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Eatual.Perdeu          ; 1             ; 0                      ; 0              ; 0              ; 0              ; 0              ; 1              ;
-+------------------------+---------------+------------------------+----------------+----------------+----------------+----------------+----------------+
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------+
-; State Machine - |Media|dadosMedidas:CalculaMedia|bitToBCD:ConverteBCD|state ;
-+-------------+------------+-------------+------------------------------------+
-; Name        ; state.done ; state.shift ; state.start                        ;
-+-------------+------------+-------------+------------------------------------+
-; state.start ; 0          ; 0           ; 0                                  ;
-; state.shift ; 0          ; 1           ; 1                                  ;
-; state.done  ; 1          ; 0           ; 1                                  ;
-+-------------+------------+-------------+------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                            ;
-+-----------------------------------------------------+-------------------------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal                             ; Free of Timing Hazards ;
-+-----------------------------------------------------+-------------------------------------------------+------------------------+
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[14]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[14]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[13]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[13]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[15]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[15]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[14]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[14]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[13]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[13]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[15]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[12]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[12]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[12]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[12]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[11]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[11]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[9]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[9]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[10]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[10]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[11]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[11]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[9]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[9]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[10]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[10]     ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[8]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[8]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[8]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[8]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[0]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[0]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[0]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[0]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[7]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[7]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[5]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[5]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[6]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[6]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[7]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[7]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[5]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[5]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[6]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[6]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[4]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[4]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[4]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[4]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[3]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[3]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[1]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[1]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S2[2]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal1 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S1[2]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal0 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[3]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[3]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[1]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[1]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[2]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S4[15] ; yes                    ;
-; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|S3[2]      ; dadosMedidas:CalculaMedia|deMux_4:DEMUX4|Equal2 ; yes                    ;
-; Number of user-specified and inferred latches = 64  ;                                                 ;                        ;
-+-----------------------------------------------------+-------------------------------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 220   ;
-; Number of registers using Synchronous Clear  ; 8     ;
-; Number of registers using Synchronous Load   ; 14    ;
-; Number of registers using Asynchronous Clear ; 7     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 193   ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Media|reg16bits_en2:RegistraMedia|IQ[15]                       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Media|reg16bits_en2:RegistraMedia|IQ[10]                       ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |Media|dadosMedidas:CalculaMedia|bitToBCD:ConverteBCD|binary[2] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Media|dadosMedidas:CalculaMedia|bitToBCD:ConverteBCD|bcds_next ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Media|dadosMedidas:CalculaMedia|bitToBCD:ConverteBCD|bcds_next ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Media|dadosMedidas:CalculaMedia|bitToBCD:ConverteBCD|bcds_next ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Media|dadosMedidas:CalculaMedia|bitToBCD:ConverteBCD|bcds_next ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dadosMedidas:CalculaMedia|BCDTo32Bit:Converte"                                                 ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; bin_out[27..16] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; bin_out[1..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM3"                                      ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; vem_um  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; vai_um  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; s_cout1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; s_soma1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM2"                                        ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; a[31..16] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[31..16] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; vem_um    ; Input  ; Info     ; Stuck at GND                                                                        ;
-; vai_um    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; s_cout1   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; s_soma1   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S2"                 ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; s_cout1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; s_soma1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S4"   ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; s_cout1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; s_soma1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S3"   ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; s_cout1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; s_soma1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S2"   ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; s_cout1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; s_soma1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S1|Somador4bits_comportamental:s2" ;
-+------+--------+----------+---------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                             ;
-+------+--------+----------+---------------------------------------------------------------------------------------------------------------------+
-; a[3] ; Input  ; Info     ; Stuck at GND                                                                                                        ;
-; a[0] ; Input  ; Info     ; Stuck at GND                                                                                                        ;
-; cin  ; Input  ; Info     ; Stuck at GND                                                                                                        ;
-; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                 ;
-+------+--------+----------+---------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S1"   ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; s_cout1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; s_soma1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1"                 ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; s_cout1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; s_soma1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1"                                        ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; a[31..16] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[31..16] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; vem_um    ; Input  ; Info     ; Stuck at GND                                                                        ;
-; vai_um    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; s_cout1   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; s_soma1   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------+
-; Port Connectivity Checks: "dadosMedidas:CalculaMedia" ;
-+-------+-------+----------+----------------------------+
-; Port  ; Type  ; Severity ; Details                    ;
-+-------+-------+----------+----------------------------+
-; clear ; Input ; Info     ; Stuck at GND               ;
-+-------+-------+----------+----------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 220                         ;
-;     CLR               ; 4                           ;
-;     ENA               ; 168                         ;
-;     ENA CLR           ; 3                           ;
-;     ENA SCLR          ; 8                           ;
-;     ENA SLD           ; 14                          ;
-;     plain             ; 23                          ;
-; arriav_lcell_comb     ; 245                         ;
-;     arith             ; 7                           ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 2                           ;
-;     normal            ; 134                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 83                          ;
-;         4 data inputs ; 16                          ;
-;         5 data inputs ; 6                           ;
-;         6 data inputs ; 17                          ;
-;     shared            ; 104                         ;
-;         0 data inputs ; 16                          ;
-;         1 data inputs ; 13                          ;
-;         2 data inputs ; 39                          ;
-;         4 data inputs ; 36                          ;
-; arriav_mac            ; 6                           ;
-; boundary_port         ; 62                          ;
-;                       ;                             ;
-; Max LUT depth         ; 14.10                       ;
-; Average LUT depth     ; 5.26                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Fri Apr  7 08:59:36 2017
+    Info: Processing started: Sat Apr  8 01:03:56 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CircuitoBase -c CircuitoBase
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file VHDL/Somador4bits_comportamental.vhd
@@ -670,7 +185,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file VHDL/co
     Info (12022): Found design unit 1: controleJogada-maquinaDeEstados File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controleJogada.vhd Line: 14
     Info (12023): Found entity 1: controleJogada File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/controleJogada.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file VHDL/dadosMedidas.vhd
-    Info (12022): Found design unit 1: dadosMedidas-fluxoDados File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/dadosMedidas.vhd Line: 11
+    Info (12022): Found design unit 1: dadosMedidas-fluxoDados File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/dadosMedidas.vhd Line: 14
     Info (12023): Found entity 1: dadosMedidas File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/dadosMedidas.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file VHDL/reg16bits_en2.vhd
     Info (12022): Found design unit 1: reg16bits_en2-reg16bits_en2 File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/reg16bits_en2.vhd Line: 11
@@ -732,109 +247,18 @@ Info (12021): Found 2 design units, including 1 entities, in source file VHDL/Me
 Info (12021): Found 2 design units, including 1 entities, in source file VHDL/contador2bits.vhd
     Info (12022): Found design unit 1: contador2bits-arch File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/contador2bits.vhd Line: 12
     Info (12023): Found entity 1: contador2bits File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/contador2bits.vhd Line: 4
-Info (12127): Elaborating entity "Media" for the top level hierarchy
-Info (12128): Elaborating entity "dadosMedidas" for hierarchy "dadosMedidas:CalculaMedia" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Media.vhd Line: 43
-Info (12128): Elaborating entity "deMux_4" for hierarchy "dadosMedidas:CalculaMedia|deMux_4:DEMUX4" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/dadosMedidas.vhd Line: 67
-Warning (10492): VHDL Process Statement warning at deMux_4.vhd(17): signal "E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 17
-Warning (10492): VHDL Process Statement warning at deMux_4.vhd(19): signal "E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 19
-Warning (10492): VHDL Process Statement warning at deMux_4.vhd(21): signal "E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 21
-Warning (10492): VHDL Process Statement warning at deMux_4.vhd(23): signal "E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 23
-Warning (10631): VHDL Process Statement warning at deMux_4.vhd(14): inferring latch(es) for signal or variable "S1", which holds its previous value in one or more paths through the process File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Warning (10631): VHDL Process Statement warning at deMux_4.vhd(14): inferring latch(es) for signal or variable "S2", which holds its previous value in one or more paths through the process File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Warning (10631): VHDL Process Statement warning at deMux_4.vhd(14): inferring latch(es) for signal or variable "S3", which holds its previous value in one or more paths through the process File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Warning (10631): VHDL Process Statement warning at deMux_4.vhd(14): inferring latch(es) for signal or variable "S4", which holds its previous value in one or more paths through the process File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[0]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[1]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[2]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[3]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[4]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[5]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[6]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[7]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[8]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[9]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[10]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[11]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[12]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[13]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[14]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S4[15]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[0]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[1]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[2]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[3]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[4]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[5]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[6]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[7]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[8]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[9]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[10]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[11]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[12]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[13]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[14]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S3[15]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[0]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[1]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[2]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[3]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[4]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[5]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[6]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[7]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[8]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[9]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[10]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[11]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[12]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[13]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[14]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S2[15]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[0]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[1]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[2]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[3]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[4]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[5]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[6]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[7]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[8]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[9]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[10]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[11]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[12]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[13]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[14]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (10041): Inferred latch for "S1[15]" at deMux_4.vhd(14) File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux_4.vhd Line: 14
-Info (12128): Elaborating entity "reg16bits_en2" for hierarchy "dadosMedidas:CalculaMedia|reg16bits_en2:REG1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/dadosMedidas.vhd Line: 68
-Info (12128): Elaborating entity "somadorBCD32_bits" for hierarchy "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/dadosMedidas.vhd Line: 72
-Warning (10541): VHDL Signal Declaration warning at somadorBCD32_bits.vhd(10): used implicit default value for signal "s_cout1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/somadorBCD32_bits.vhd Line: 10
-Warning (10541): VHDL Signal Declaration warning at somadorBCD32_bits.vhd(11): used implicit default value for signal "s_soma1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/somadorBCD32_bits.vhd Line: 11
-Info (12128): Elaborating entity "somadorBCD16_bits" for hierarchy "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/somadorBCD32_bits.vhd Line: 31
-Warning (10541): VHDL Signal Declaration warning at somadorBCD16_bits.vhd(10): used implicit default value for signal "s_cout1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/somadorBCD16_bits.vhd Line: 10
-Warning (10541): VHDL Signal Declaration warning at somadorBCD16_bits.vhd(11): used implicit default value for signal "s_soma1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/somadorBCD16_bits.vhd Line: 11
-Info (12128): Elaborating entity "SomadorBCD" for hierarchy "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/somadorBCD16_bits.vhd Line: 32
-Warning (10036): Verilog HDL or VHDL warning at SomadorBCD.vhd(28): object "y" assigned a value but never read File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/SomadorBCD.vhd Line: 28
-Info (12128): Elaborating entity "Somador4bits_comportamental" for hierarchy "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S1|Somador4bits_comportamental:s1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/SomadorBCD.vhd Line: 32
-Info (12128): Elaborating entity "DetectorCodigoInvalido" for hierarchy "dadosMedidas:CalculaMedia|somadorBCD32_bits:SUM1|somadorBCD16_bits:S1|SomadorBCD:S1|DetectorCodigoInvalido:d1" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/SomadorBCD.vhd Line: 34
-Info (12128): Elaborating entity "BCDTo32Bit" for hierarchy "dadosMedidas:CalculaMedia|BCDTo32Bit:Converte" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/dadosMedidas.vhd Line: 75
-Info (12128): Elaborating entity "bitToBCD" for hierarchy "dadosMedidas:CalculaMedia|bitToBCD:ConverteBCD" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/dadosMedidas.vhd Line: 77
-Info (12128): Elaborating entity "controleJogada" for hierarchy "controleJogada:controlador" File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Media.vhd Line: 44
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "estadoJogada[3]" is stuck at GND File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/Media.vhd Line: 11
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 492 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 23 input pins
-    Info (21059): Implemented 39 output pins
-    Info (21061): Implemented 424 logic cells
-    Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 1264 megabytes
-    Info: Processing ended: Fri Apr  7 08:59:58 2017
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:30
+Info (12021): Found 2 design units, including 1 entities, in source file VHDL/deMux4_1bit.vhd
+    Info (12022): Found design unit 1: deMux_4_1bit-behavioral File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux4_1bit.vhd Line: 12
+    Info (12023): Found entity 1: deMux_4_1bit File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/deMux4_1bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file VHDL/CircuitoBase.vhd
+    Info (12022): Found design unit 1: CircuitoBase-estrutural File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 15
+    Info (12023): Found entity 1: CircuitoBase File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 4
+Error (10482): VHDL error at CircuitoBase.vhd(59): object "s_media" is used but not declared File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 59
+Error (10558): VHDL error at CircuitoBase.vhd(59): cannot associate formal port "media" of mode "out" with an expression File: /home/danzambuja/Quartus/Projetos/CircuitoBase/VHDL/CircuitoBase.vhd Line: 59
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
+    Error: Peak virtual memory: 1231 megabytes
+    Error: Processing ended: Sat Apr  8 01:04:16 2017
+    Error: Elapsed time: 00:00:20
+    Error: Total CPU time (on all processors): 00:00:28
 
 

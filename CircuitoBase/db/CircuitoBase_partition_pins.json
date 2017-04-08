@@ -180,10 +180,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "enable",
-					"strict" : false
-				},
-				{
 					"name" : "pulso[14]",
 					"strict" : false
 				},

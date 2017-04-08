@@ -37,7 +37,7 @@ end component;
 
 component Media is
 
-	port (clock, reset, enable, inicio, finalizaRodada, fimRodada, vacilou: in std_logic;
+	port (clock, reset, inicio, finalizaRodada, fimRodada, vacilou: in std_logic;
 			pulso : in std_logic_vector(15 downto 0);
 			media, depuraMedia: out std_logic_vector(15 downto 0);
 			rodada, perde, fimJogada: out std_logic;
@@ -47,16 +47,16 @@ end component;
 
 signal s_pulso: std_logic_vector(15 downto 0);
 signal s_estadoRodada: std_logic_vector(3 downto 0);
-signal s_jogador, s_erro, s_demora, s_vacilou, s_fimRodada: std_logic;
+signal s_jogador, s_erro, s_demora, s_vacilou, s_fimRodada, s_fimHierarquico, s_rodada: std_logic;
 
 begin
 	
 	
 	s_vacilou <= s_erro or s_demora;
 	
-	INTERFACE: BoxRodada port map(clock, reset, finalizaRodada, START, resposta, contaAtraso , aguardando, s_fimRodada, s_erro, s_demora, MostraSinalAtraso, MostraContaAtraso, fimHierarquico, s_estadoRodada, estadoAtrasador, s_pulso);	
+	INTERFACE: BoxRodada port map(clock, reset, finalizaRodada, START, resposta, contaAtraso , aguardando, s_fimRodada, s_erro, s_demora, MostraSinalAtraso, MostraContaAtraso, s_fimHierarquico, s_estadoRodada, estadoAtrasador, s_pulso);	
 	RegistraJogador: regbit_en port map(clock, reset, not(s_estadoRodada(3)) and not(s_estadoRodada(2)) and not(s_estadoRodada(1)) and not(s_estadoRodada(0)), selectJogador, s_jogador);
-	CalculaMedia: Media port map(clock, reset, fimHierarquico, START, finalizaRodada, s_fimRodada, s_vacilou, s_pulso, s_media, depuraMedia, s_rodada, perdeu, fimJogada, estadoJogada);
+	CalculaMedia: Media port map(clock, reset, s_fimHierarquico, finalizaRodada, s_fimRodada, s_vacilou, s_pulso, s_media, depuraMedia, s_rodada, perdeu, fimJogada, estadoJogada);
 	
 	
 	MultiplexadorFinal: mux4to1 port map(selectDisplay, s_pulso, "0000000000000001", "0000000000000010", "0000000000000011", saida);

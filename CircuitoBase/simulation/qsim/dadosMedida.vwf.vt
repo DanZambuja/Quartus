@@ -1,0 +1,204 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "04/08/2017 00:39:16"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          dadosMedidas
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module dadosMedidas_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clear;
+reg clock;
+reg enable;
+reg [3:0] estadoRodada;
+reg [15:0] pulsoRodada;
+// wires                                               
+wire depuraEn1;
+wire depuraEn2;
+wire depuraEn3;
+wire depuraEn4;
+wire [27:0] depuraMedida;
+wire [15:0] depuraReg1;
+wire [15:0] depuraReg2;
+wire [15:0] depuraReg3;
+wire [15:0] depuraReg4;
+wire [31:0] depuraSaida3;
+wire [15:0] medida;
+
+// assign statements (if any)                          
+dadosMedidas i1 (
+// port map - connection between master ports and signals/registers   
+	.clear(clear),
+	.clock(clock),
+	.depuraEn1(depuraEn1),
+	.depuraEn2(depuraEn2),
+	.depuraEn3(depuraEn3),
+	.depuraEn4(depuraEn4),
+	.depuraMedida(depuraMedida),
+	.depuraReg1(depuraReg1),
+	.depuraReg2(depuraReg2),
+	.depuraReg3(depuraReg3),
+	.depuraReg4(depuraReg4),
+	.depuraSaida3(depuraSaida3),
+	.enable(enable),
+	.estadoRodada(estadoRodada),
+	.medida(medida),
+	.pulsoRodada(pulsoRodada)
+);
+initial 
+begin 
+#10000000 $finish;
+end 
+
+// clear
+initial
+begin
+	clear = 1'b1;
+	clear = #80000 1'b0;
+end 
+
+// clock
+always
+begin
+	clock = 1'b0;
+	clock = #500 1'b1;
+	#500;
+end 
+
+// enable
+initial
+begin
+	enable = 1'b0;
+end 
+// estadoRodada[ 3 ]
+initial
+begin
+	estadoRodada[3] = 1'b0;
+end 
+// estadoRodada[ 2 ]
+initial
+begin
+	estadoRodada[2] = 1'b0;
+	estadoRodada[2] = #7600000 1'b1;
+end 
+// estadoRodada[ 1 ]
+initial
+begin
+	estadoRodada[1] = 1'b0;
+	estadoRodada[1] = #2480000 1'b1;
+	estadoRodada[1] = #5120000 1'b0;
+end 
+// estadoRodada[ 0 ]
+initial
+begin
+	estadoRodada[0] = 1'b0;
+	estadoRodada[0] = #320000 1'b1;
+	estadoRodada[0] = #2160000 1'b0;
+	estadoRodada[0] = #2560000 1'b1;
+	estadoRodada[0] = #2560000 1'b0;
+end 
+// pulsoRodada[ 15 ]
+initial
+begin
+	pulsoRodada[15] = 1'b1;
+end 
+// pulsoRodada[ 14 ]
+initial
+begin
+	pulsoRodada[14] = 1'b0;
+end 
+// pulsoRodada[ 13 ]
+initial
+begin
+	pulsoRodada[13] = 1'b0;
+end 
+// pulsoRodada[ 12 ]
+initial
+begin
+	pulsoRodada[12] = 1'b1;
+end 
+// pulsoRodada[ 11 ]
+initial
+begin
+	pulsoRodada[11] = 1'b0;
+end 
+// pulsoRodada[ 10 ]
+initial
+begin
+	pulsoRodada[10] = 1'b0;
+end 
+// pulsoRodada[ 9 ]
+initial
+begin
+	pulsoRodada[9] = 1'b0;
+end 
+// pulsoRodada[ 8 ]
+initial
+begin
+	pulsoRodada[8] = 1'b0;
+end 
+// pulsoRodada[ 7 ]
+initial
+begin
+	pulsoRodada[7] = 1'b0;
+end 
+// pulsoRodada[ 6 ]
+initial
+begin
+	pulsoRodada[6] = 1'b0;
+end 
+// pulsoRodada[ 5 ]
+initial
+begin
+	pulsoRodada[5] = 1'b0;
+end 
+// pulsoRodada[ 4 ]
+initial
+begin
+	pulsoRodada[4] = 1'b0;
+end 
+// pulsoRodada[ 3 ]
+initial
+begin
+	pulsoRodada[3] = 1'b1;
+end 
+// pulsoRodada[ 2 ]
+initial
+begin
+	pulsoRodada[2] = 1'b0;
+end 
+// pulsoRodada[ 1 ]
+initial
+begin
+	pulsoRodada[1] = 1'b0;
+end 
+// pulsoRodada[ 0 ]
+initial
+begin
+	pulsoRodada[0] = 1'b1;
+end 
+endmodule
+

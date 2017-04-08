@@ -50,8 +50,50 @@ r1
 !i113 1
 R8
 n@atrasador_vlg_vec_tst
+vBCDTo32Bit
+Z10 !s110 1491619220
+!i10b 1
+!s100 c@3e5zZU`HbbK^=do^B7E3
+IA=C[:O1[e9MNf<]FPQjZ20
+R1
+R0
+w1491619218
+R2
+R3
+R4
+R5
+r1
+!s85 0
+31
+Z11 !s108 1491619220.000000
+R6
+R7
+!i113 1
+R8
+n@b@c@d@to32@bit
+vBCDTo32Bit_vlg_vec_tst
+R10
+!i10b 1
+!s100 T7XbdC^RicloN5GoWmFSi2
+I<2XANb0@k2T4X]KJXV4n22
+R1
+R0
+w1491619211
+8BCDto32bit.vwf.vt
+FBCDto32bit.vwf.vt
+R9
+R5
+r1
+!s85 0
+31
+R11
+!s107 BCDto32bit.vwf.vt|
+!s90 -work|work|BCDto32bit.vwf.vt|
+!i113 1
+R8
+n@b@c@d@to32@bit_vlg_vec_tst
 vBoxRodada
-Z10 !s110 1491486952
+Z12 !s110 1491486952
 !i10b 1
 !s100 V0i017QjlFD1;^=JD4^9h1
 I8TiYdkTjASQ>Lh_3I7:>B1
@@ -72,7 +114,7 @@ R7
 R8
 n@box@rodada
 vBoxRodada_vlg_vec_tst
-R10
+R12
 !i10b 1
 !s100 53YJ[2UG0UiL99nW1S62d3
 I:JJBdDZMk?_dONgBeheRY3
@@ -93,7 +135,7 @@ r1
 R8
 n@box@rodada_vlg_vec_tst
 vCircuitoBase
-Z11 !s110 1491490298
+Z13 !s110 1491490298
 !i10b 1
 !s100 Y?S9<PghK_Y>[:^6?;UB^1
 IH:kL75=ga_QEFJMmzV3k]0
@@ -107,14 +149,14 @@ R5
 r1
 !s85 0
 31
-Z12 !s108 1491490298.000000
+Z14 !s108 1491490298.000000
 R6
 R7
 !i113 1
 R8
 n@circuito@base
 vCircuitoBase_vlg_vec_tst
-R11
+R13
 !i10b 1
 !s100 f2<2dl4S]gl`<SNS>XAJB2
 ILV45lRF;=ZaObm]OmIj`P0
@@ -128,14 +170,56 @@ R5
 r1
 !s85 0
 31
-R12
+R14
 !s107 CircuitoBase.vwf.vt|
 !s90 -work|work|CircuitoBase.vwf.vt|
 !i113 1
 R8
 n@circuito@base_vlg_vec_tst
+vdadosMedidas
+Z15 !s110 1491622767
+!i10b 1
+!s100 [:ONz4RdChdPbPXYnWKfQ1
+I[T1A^XZf_HPfzZbO?Uc^e0
+R1
+R0
+w1491622765
+R2
+R3
+R4
+R5
+r1
+!s85 0
+31
+Z16 !s108 1491622767.000000
+R6
+R7
+!i113 1
+R8
+ndados@medidas
+vdadosMedidas_vlg_vec_tst
+R15
+!i10b 1
+!s100 bTzNM0JzTj=eBDLP;Vab62
+IzMgK_AV[TF100l^8VSRh[1
+R1
+R0
+w1491622757
+8dadosMedida.vwf.vt
+FdadosMedida.vwf.vt
+R9
+R5
+r1
+!s85 0
+31
+R16
+!s107 dadosMedida.vwf.vt|
+!s90 -work|work|dadosMedida.vwf.vt|
+!i113 1
+R8
+ndados@medidas_vlg_vec_tst
 vhierarquico
-Z13 !s110 1491458954
+Z17 !s110 1491458954
 !i10b 1
 !s100 XCzT7B2QY7AdcE5?ne:Kl3
 IoI2cl;Pfec8U:UYN6]zLF0
@@ -149,13 +233,13 @@ R5
 r1
 !s85 0
 31
-Z14 !s108 1491458954.000000
+Z18 !s108 1491458954.000000
 R6
 R7
 !i113 1
 R8
 vhierarquico_vlg_vec_tst
-R13
+R17
 !i10b 1
 !s100 F41JBoc^S4CWNC9R=fkLW2
 IC_S:JT`b]Qa?b7HPed:2G2
@@ -169,19 +253,19 @@ R5
 r1
 !s85 0
 31
-R14
+R18
 !s107 hierarquico.vwf.vt|
 !s90 -work|work|hierarquico.vwf.vt|
 !i113 1
 R8
 vMedia
-Z15 !s110 1491567174
+Z19 !s110 1491623327
 !i10b 1
-!s100 0VE;@n758S77@[i8SRT6F0
-Iz[TzY_;nfW:I@:c0CV9Zm0
+!s100 9IJB8XfhTfIL:YmRQkKSL3
+I@`E:T_CMnbbdEGWJ0SbGj1
 R1
 R0
-w1491567173
+w1491623325
 R2
 R3
 R4
@@ -189,35 +273,35 @@ R5
 r1
 !s85 0
 31
-Z16 !s108 1491567174.000000
+Z20 !s108 1491623327.000000
 R6
 R7
 !i113 1
 R8
 n@media
 vMedia_vlg_vec_tst
-R15
+R19
 !i10b 1
-!s100 Zlk1TLf;SFjlmJ7fQ3]gm3
-I7:KB?MIdbP0MPZ6[Tj?0j2
+!s100 FMD40dRYlONZ;B9MUO5;h3
+I1fBCM2J[WZeXTRg]z0zi@1
 R1
 R0
-w1491567164
-8Waveform.vwf.vt
-FWaveform.vwf.vt
+w1491623317
+8Media.vwf.vt
+FMedia.vwf.vt
 R9
 R5
 r1
 !s85 0
 31
-R16
-!s107 Waveform.vwf.vt|
-!s90 -work|work|Waveform.vwf.vt|
+R20
+!s107 Media.vwf.vt|
+!s90 -work|work|Media.vwf.vt|
 !i113 1
 R8
 n@media_vlg_vec_tst
 vmedidor
-Z17 !s110 1491457772
+Z21 !s110 1491457772
 !i10b 1
 !s100 KPVETC3RO`]=3JL>TzAK11
 INY9NHgAe3nlFMmVkXRE_X2
@@ -231,13 +315,13 @@ R5
 r1
 !s85 0
 31
-Z18 !s108 1491457772.000000
+Z22 !s108 1491457772.000000
 R6
 R7
 !i113 1
 R8
 vmedidor_vlg_vec_tst
-R17
+R21
 !i10b 1
 !s100 [ORYB:HjC14m]H0^1Y6V_2
 I^zVRGZ7b>^<j0WdG>KTUg1
@@ -251,7 +335,7 @@ R5
 r1
 !s85 0
 31
-R18
+R22
 !s107 Medidor.vwf.vt|
 !s90 -work|work|Medidor.vwf.vt|
 !i113 1

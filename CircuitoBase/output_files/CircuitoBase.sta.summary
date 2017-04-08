@@ -3,67 +3,131 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clock'
-Slack : -37.996
-TNS   : -1095.707
+Slack : -36.631
+TNS   : -1294.744
+
+Type  : Slow 1100mV 85C Model Setup 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : -12.809
+TNS   : -35.842
 
 Type  : Slow 1100mV 85C Model Hold 'clock'
-Slack : -2.579
-TNS   : -62.176
+Slack : -0.257
+TNS   : -3.617
+
+Type  : Slow 1100mV 85C Model Hold 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : 2.028
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : -11.642
+TNS   : -22.524
+
+Type  : Slow 1100mV 85C Model Removal 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : 2.466
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : -1.845
+TNS   : -39.269
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
 Slack : -0.724
-TNS   : -256.144
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'controleJogada:controlador|Eatual.CompletouJogada'
-Slack : -0.484
-TNS   : -22.172
+TNS   : -255.157
 
 Type  : Slow 1100mV 0C Model Setup 'clock'
-Slack : -38.991
-TNS   : -1084.887
+Slack : -37.964
+TNS   : -1254.020
+
+Type  : Slow 1100mV 0C Model Setup 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : -12.869
+TNS   : -35.946
 
 Type  : Slow 1100mV 0C Model Hold 'clock'
-Slack : -2.755
-TNS   : -67.389
+Slack : -0.425
+TNS   : -6.209
+
+Type  : Slow 1100mV 0C Model Hold 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : 1.458
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : -11.734
+TNS   : -22.813
+
+Type  : Slow 1100mV 0C Model Removal 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : 1.891
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : -1.835
+TNS   : -53.859
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
 Slack : -0.724
-TNS   : -255.784
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'controleJogada:controlador|Eatual.CompletouJogada'
-Slack : -0.552
-TNS   : -24.669
+TNS   : -255.213
 
 Type  : Fast 1100mV 85C Model Setup 'clock'
-Slack : -14.416
-TNS   : -424.627
+Slack : -13.863
+TNS   : -520.516
+
+Type  : Fast 1100mV 85C Model Setup 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : -5.798
+TNS   : -16.225
 
 Type  : Fast 1100mV 85C Model Hold 'clock'
-Slack : -1.131
-TNS   : -24.289
+Slack : 0.129
+TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
-Slack : -0.092
-TNS   : -19.566
+Type  : Fast 1100mV 85C Model Hold 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : 1.115
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : -5.240
+TNS   : -9.717
+
+Type  : Fast 1100mV 85C Model Removal 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : 1.233
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'controleJogada:controlador|Eatual.CompletouJogada'
-Slack : 0.094
-TNS   : 0.000
+Slack : -0.413
+TNS   : -8.671
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
+Slack : -0.090
+TNS   : -19.442
 
 Type  : Fast 1100mV 0C Model Setup 'clock'
-Slack : -13.461
-TNS   : -367.404
+Slack : -12.914
+TNS   : -438.601
+
+Type  : Fast 1100mV 0C Model Setup 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : -5.193
+TNS   : -14.553
 
 Type  : Fast 1100mV 0C Model Hold 'clock'
-Slack : -1.141
-TNS   : -25.070
+Slack : 0.046
+TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
-Slack : -0.091
-TNS   : -19.945
+Type  : Fast 1100mV 0C Model Hold 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : 0.901
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : -4.700
+TNS   : -8.804
+
+Type  : Fast 1100mV 0C Model Removal 'controleJogada:controlador|Eatual.CompletouJogada'
+Slack : 1.010
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'controleJogada:controlador|Eatual.CompletouJogada'
-Slack : 0.124
-TNS   : 0.000
+Slack : -0.339
+TNS   : -3.315
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
+Slack : -0.089
+TNS   : -19.410
 
 ------------------------------------------------------------
